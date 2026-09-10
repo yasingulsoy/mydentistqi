@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  /* Koyu lacivert tonlar - navbar, hero, footer, servis bolumu */
-  --color-navy-950: #22323f;
-  --color-navy-900: #2a3d4f;
-  --color-navy-800: #33475b;
-  --color-navy-700: #3a5771;
+  /* Koyu lacivert tonlar.
+     navy-800 (navbar) Figma'dan olculdu: rgb(53,67,86).
+     Digerleri ayni farkla (+2,-4,-5) kaydirildi. */
+  --color-navy-950: #242e3a;
+  --color-navy-900: #2c394a;
+  --color-navy-800: #354356; /* olculdu */
+  --color-navy-700: #3c536c;
   --color-navy-600: #456b8c;
 
-  /* Krem bolum arka plani */
-  --color-cream: #f6f2ea;
+  /* Krem bolum arka plani - Figma'dan olculdu: rgb(247,244,238) */
+  --color-cream: #f7f4ee;
   --color-cream-200: #efe9de;
 
   /* Turuncu / kiremit vurgu */

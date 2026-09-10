@@ -1,33 +1,28 @@
 import { SectionHeading } from "./SectionHeading";
-import { processSteps } from "@/data/site";
+import type { Dict } from "@/data/content";
 
-export function HowItWorks() {
+export function HowItWorks({ dict }: { dict: Dict }) {
+  const t = dict.process;
+
   return (
     <section id="hakkimizda" className="bg-white py-16 sm:py-24 lg:py-[100px]">
       <div className="section-x lg:grid lg:grid-cols-[minmax(0,1fr)_650px] lg:items-start lg:gap-12">
         <SectionHeading
-          eyebrow="POPÜLER SÜRECİ"
-          title="Nasıl İşliyor?"
-          description="Uzman doktorlarımız, akredite ve şeffaf bir süreçle yönetiyoruz."
+          eyebrow={t.eyebrow}
+          title={t.title}
+          description={t.description}
           size="md"
           className="lg:pt-4"
         />
 
         <ul className="mt-12 grid grid-cols-2 gap-x-4 gap-y-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-0 lg:mt-0">
-          {processSteps.map((step) => (
-            <li
-              key={step.no}
-              className="flex flex-col items-center text-center sm:w-[160px]"
-            >
+          {t.steps.map((step) => (
+            <li key={step.no} className="flex flex-col items-center text-center sm:w-[160px]">
               <span className="flex h-14 w-14 items-center justify-center rounded-full bg-sky-soft text-[14px] font-semibold text-sky-ink">
                 {step.no}
               </span>
-              <h3 className="mt-4 text-[14px] font-semibold leading-snug text-ink">
-                {step.title}
-              </h3>
-              <p className="mt-2.5 px-1 text-[13px] leading-[1.6] text-muted">
-                {step.description}
-              </p>
+              <h3 className="mt-4 text-[14px] font-semibold leading-snug text-ink">{step.title}</h3>
+              <p className="mt-2.5 px-1 text-[13px] leading-[1.6] text-muted">{step.description}</p>
             </li>
           ))}
         </ul>

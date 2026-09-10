@@ -5,7 +5,7 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "./icons";
-import { brand, footerColumns } from "@/data/site";
+import { brand, type Dict } from "@/data/content";
 
 const socials = [
   { label: "Instagram", Icon: InstagramIcon, href: "#" },
@@ -14,12 +14,12 @@ const socials = [
   { label: "LinkedIn", Icon: LinkedinIcon, href: "#" },
 ];
 
-const headingClass =
-  "text-[13px] font-semibold uppercase tracking-[0.08em] text-white";
-const linkClass =
-  "text-[14px] leading-[1.5] text-white/60 transition-colors hover:text-white";
+const headingClass = "text-[13px] font-semibold uppercase tracking-[0.08em] text-white";
+const linkClass = "text-[14px] leading-[1.5] text-white/60 transition-colors hover:text-white";
 
-export function Footer() {
+export function Footer({ dict }: { dict: Dict }) {
+  const t = dict.footer;
+
   return (
     <footer id="iletisim" className="bg-navy-900">
       <div className="section-x py-14 lg:py-16">
@@ -27,9 +27,7 @@ export function Footer() {
           {/* Marka */}
           <div className="sm:col-span-3 lg:col-span-1">
             <Logo />
-            <p className="mt-5 max-w-[260px] text-[14px] leading-[1.6] text-white/60">
-              {brand.description}
-            </p>
+            <p className="mt-5 max-w-[260px] text-[14px] leading-[1.6] text-white/60">{t.description}</p>
             <ul className="mt-7 flex gap-3">
               {socials.map(({ label, Icon, href }) => (
                 <li key={label}>
@@ -46,15 +44,13 @@ export function Footer() {
           </div>
 
           {/* Link sütunları */}
-          {footerColumns.map((column) => (
+          {t.columns.map((column) => (
             <div key={column.title}>
               <h3 className={headingClass}>{column.title}</h3>
               <ul className="mt-5 flex flex-col gap-3.5">
                 {column.links.map((link) => (
                   <li key={link}>
-                    <a href="#" className={linkClass}>
-                      {link}
-                    </a>
+                    <a href="#" className={linkClass}>{link}</a>
                   </li>
                 ))}
               </ul>
@@ -63,25 +59,19 @@ export function Footer() {
 
           {/* İletişim */}
           <div>
-            <h3 className={headingClass}>İLETİŞİM</h3>
+            <h3 className={headingClass}>{t.contactTitle}</h3>
             <ul className="mt-5 flex flex-col gap-3.5">
               {brand.phones.map((phone, i) => (
                 <li key={`${phone}-${i}`}>
-                  <a href={`tel:${phone.replace(/\s/g, "")}`} className={linkClass}>
-                    {phone}
-                  </a>
+                  <a href={`tel:${phone.replace(/\s/g, "")}`} className={linkClass}>{phone}</a>
                 </li>
               ))}
               <li>
-                <a href={`mailto:${brand.email}`} className={linkClass}>
-                  {brand.email}
-                </a>
+                <a href={`mailto:${brand.email}`} className={linkClass}>{brand.email}</a>
               </li>
               <li className="text-[14px] leading-[1.5] text-white/60">
-                {brand.address.map((line) => (
-                  <span key={line} className="block">
-                    {line}
-                  </span>
+                {t.address.map((line) => (
+                  <span key={line} className="block">{line}</span>
                 ))}
               </li>
             </ul>
@@ -90,17 +80,10 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-3 text-[13px] text-white/55 sm:flex-row sm:items-center sm:justify-between">
-            <p>
-              © {new Date().getFullYear()} {brand.legalName}. Tüm hakları
-              saklıdır.
-            </p>
+            <p>© {new Date().getFullYear()} {brand.name}. {t.legal}</p>
             <div className="flex gap-8">
-              <a href="#" className="transition-colors hover:text-white">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="transition-colors hover:text-white">
-                Kullanım Şartları
-              </a>
+              <a href="#" className="transition-colors hover:text-white">{t.privacy}</a>
+              <a href="#" className="transition-colors hover:text-white">{t.terms}</a>
             </div>
           </div>
         </div>

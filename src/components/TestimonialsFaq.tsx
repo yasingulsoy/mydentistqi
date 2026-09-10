@@ -7,18 +7,18 @@ import {
   ChevronRightIcon,
   StarIcon,
 } from "./icons";
-import { faqs, testimonials } from "@/data/site";
+import type { Dict } from "@/data/content";
 
-function Testimonials() {
+function Testimonials({ t }: { t: Dict["testimonials"] }) {
   const [index, setIndex] = useState(0);
-  const item = testimonials[index];
-  const many = testimonials.length > 1;
+  const item = t.items[index];
+  const many = t.items.length > 1;
 
   const step = (dir: number) =>
-    setIndex((i) => (i + dir + testimonials.length) % testimonials.length);
+    setIndex((i) => (i + dir + t.items.length) % t.items.length);
 
   return (
-    <div className="rounded-[20px] bg-[linear-gradient(150deg,#2f4762_0%,#35526f_55%,#3d5f80_100%)] p-7 lg:p-8">
+    <div className="rounded-[20px] bg-[linear-gradient(150deg,#2c3f57_0%,#334c68_55%,#3a5878_100%)] p-7 lg:p-8">
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3.5">
           <span className="h-11 w-11 shrink-0 rounded-full bg-[linear-gradient(160deg,#cfe0ee,#8fb2cd)]" />
@@ -40,7 +40,7 @@ function Testimonials() {
             type="button"
             onClick={() => step(-1)}
             disabled={!many}
-            aria-label="Önceki yorum"
+            aria-label={t.prev}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40"
           >
             <ChevronLeftIcon className="h-4 w-4" />
@@ -49,7 +49,7 @@ function Testimonials() {
             type="button"
             onClick={() => step(1)}
             disabled={!many}
-            aria-label="Sonraki yorum"
+            aria-label={t.next}
             className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40"
           >
             <ChevronRightIcon className="h-4 w-4" />
@@ -64,21 +64,18 @@ function Testimonials() {
   );
 }
 
-function Faq() {
+function Faq({ t }: { t: Dict["faq"] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
     <div className="rounded-[20px] border border-cream-200 bg-[#FDFBF7] p-7 lg:p-8">
-      <p className="eyebrow">SIK SORULAN SORULAR</p>
+      <p className="eyebrow">{t.eyebrow}</p>
 
       <div className="mt-6">
-        {faqs.map((faq, i) => {
+        {t.items.map((faq, i) => {
           const open = openIndex === i;
           return (
-            <div
-              key={faq.question}
-              className="border-b border-[#EAE4D9] last:border-b-0"
-            >
+            <div key={faq.question} className="border-b border-[#EAE4D9] last:border-b-0">
               <h3>
                 <button
                   type="button"
@@ -86,20 +83,14 @@ function Faq() {
                   aria-expanded={open}
                   className="flex w-full items-start justify-between gap-4 py-4 text-left"
                 >
-                  <span className="text-[15px] font-semibold leading-snug text-ink">
-                    {faq.question}
-                  </span>
+                  <span className="text-[15px] font-semibold leading-snug text-ink">{faq.question}</span>
                   <ChevronDownIcon
-                    className={`mt-0.5 h-4 w-4 shrink-0 text-brand-700 transition-transform ${
-                      open ? "rotate-180" : ""
-                    }`}
+                    className={`mt-0.5 h-4 w-4 shrink-0 text-brand-700 transition-transform ${open ? "rotate-180" : ""}`}
                   />
                 </button>
               </h3>
               {open && (
-                <p className="-mt-1 pb-5 pr-8 text-[14px] leading-[1.65] text-muted">
-                  {faq.answer}
-                </p>
+                <p className="-mt-1 pb-5 pr-8 text-[14px] leading-[1.65] text-muted">{faq.answer}</p>
               )}
             </div>
           );
@@ -109,12 +100,12 @@ function Faq() {
   );
 }
 
-export function TestimonialsFaq() {
+export function TestimonialsFaq({ dict }: { dict: Dict }) {
   return (
     <section className="bg-cream pb-16 sm:pb-24 lg:pb-[100px]">
       <div className="section-x grid gap-6 sm:grid-cols-2 lg:gap-12">
-        <Testimonials />
-        <Faq />
+        <Testimonials t={dict.testimonials} />
+        <Faq t={dict.faq} />
       </div>
     </section>
   );
