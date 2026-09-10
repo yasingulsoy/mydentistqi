@@ -133,6 +133,8 @@ export type Dict = {
   testimonials: {
     prev: string;
     next: string;
+    label: string;
+    goTo: string;
     items: { name: string; country: string; rating: number; quote: string }[];
   };
   faq: { eyebrow: string; items: { question: string; answer: string }[] };
@@ -311,6 +313,11 @@ const tr: Dict = {
   testimonials: {
     prev: "Önceki yorum",
     next: "Sonraki yorum",
+    label: "Hasta yorumları",
+    goTo: "Yoruma git",
+    // İlk yorum tasarımdan geldi. Diğerleri YER TUTUCU - yayına almadan önce
+    // gerçek hasta yorumlarıyla değiştir. Sahte yorum yapısal veriye (schema.org
+    // Review/AggregateRating) bilerek yazılmıyor.
     items: [
       {
         name: "Anna L.",
@@ -318,6 +325,34 @@ const tr: Dict = {
         rating: 5,
         quote:
           "İmplantlar için İstanbul'a geldim. Tüm süreç boyunca ekip inanılmaz destek oldu. Klinik, otel, transfer her şey mükemmeldi. Sonuçtan ve hizmetten çok memnunum.",
+      },
+      {
+        name: "Michael B.",
+        country: "Almanya",
+        rating: 5,
+        quote:
+          "Saç ekimi için geldim. Konsültasyondan operasyona kadar her adım önceden planlanmıştı. Tercüman desteği sayesinde hiçbir aşamada zorlanmadım.",
+      },
+      {
+        name: "Sofia R.",
+        country: "Portekiz",
+        rating: 5,
+        quote:
+          "Gülüş tasarımım için İzmir'deydim. Klinik çok modern, ekip çok ilgiliydi. Ülkeme döndükten sonra kontroller online devam etti.",
+      },
+      {
+        name: "James W.",
+        country: "İngiltere",
+        rating: 5,
+        quote:
+          "Diz protezi ameliyatı oldum. Havalimanı karşılama, otel, transfer... hiçbir şeyi tek başıma düşünmek zorunda kalmadım. Süreç baştan sona şeffaftı.",
+      },
+      {
+        name: "Lena K.",
+        country: "Hollanda",
+        rating: 5,
+        quote:
+          "Yüz estetiği için araştırma yaparken çok fazla seçenek vardı. Bana en uygun kliniği ve doktoru bulmamda gerçekten yol gösterdiler.",
       },
     ],
   },
@@ -562,6 +597,11 @@ const en: Dict = {
   testimonials: {
     prev: "Previous review",
     next: "Next review",
+    label: "Patient reviews",
+    goTo: "Go to review",
+    // The first review comes from the design. The rest are PLACEHOLDERS -
+    // replace them with real patient reviews before going live. They are
+    // deliberately not emitted as schema.org Review/AggregateRating data.
     items: [
       {
         name: "Anna L.",
@@ -569,6 +609,34 @@ const en: Dict = {
         rating: 5,
         quote:
           "I came to Istanbul for implants. The team was incredibly supportive throughout the entire process. The clinic, the hotel and the transfers were all perfect. I am very happy with the result and the service.",
+      },
+      {
+        name: "Michael B.",
+        country: "Germany",
+        rating: 5,
+        quote:
+          "I came for a hair transplant. Every step from the consultation to the operation was planned in advance. Thanks to the interpreter support I never struggled at any stage.",
+      },
+      {
+        name: "Sofia R.",
+        country: "Portugal",
+        rating: 5,
+        quote:
+          "I was in Izmir for my smile design. The clinic was very modern and the team was extremely attentive. My check-ups continued online after I returned home.",
+      },
+      {
+        name: "James W.",
+        country: "United Kingdom",
+        rating: 5,
+        quote:
+          "I had knee replacement surgery. Airport pick-up, hotel, transfers... I never had to arrange a single thing myself. The whole process was transparent.",
+      },
+      {
+        name: "Lena K.",
+        country: "Netherlands",
+        rating: 5,
+        quote:
+          "There were so many options when I was researching facial aesthetics. They genuinely guided me to the clinic and the doctor that suited me best.",
       },
     ],
   },
@@ -651,3 +719,12 @@ export const content: Record<Locale, Dict> = { tr, en };
 
 /** Dil değiştirici için: mevcut dilin karşısındaki sayfanın yolu. */
 export const localePath: Record<Locale, string> = { tr: "/", en: "/en" };
+
+/**
+ * Bölüm çıpalarını tam yola çevirir: "#tedaviler" -> "/#tedaviler" (tr).
+ * Alt sayfalarda (gizlilik, kullanım şartları) çıpaların çalışması için gerekli.
+ */
+export function sectionHref(locale: Locale, anchor: string) {
+  const base = localePath[locale];
+  return base === "/" ? `/${anchor}` : `${base}${anchor}`;
+}

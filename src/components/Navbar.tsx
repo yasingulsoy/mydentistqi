@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Logo } from "./Logo";
 import { ChevronDownIcon } from "./icons";
-import { localePath, type Dict, type Locale } from "@/data/content";
+import { localePath, sectionHref, type Dict, type Locale } from "@/data/content";
 
 const LOCALE_LABELS: Record<Locale, string> = { tr: "TR", en: "EN" };
 const LOCALE_NAMES: Record<Locale, string> = { tr: "Türkçe", en: "English" };
@@ -67,7 +67,7 @@ export function Navbar({ dict }: { dict: Dict }) {
           {dict.nav.links.map((link) => (
             <li key={link.href} className={link.wideOnly ? "hidden lg:block" : ""}>
               <a
-                href={link.href}
+                href={sectionHref(dict.locale, link.href)}
                 className="whitespace-nowrap transition-colors hover:text-white"
               >
                 {link.label}
@@ -82,7 +82,7 @@ export function Navbar({ dict }: { dict: Dict }) {
           </div>
 
           <a
-            href="#iletisim"
+            href={sectionHref(dict.locale, "#iletisim")}
             className="hidden rounded-full bg-brand-500 px-7 py-3 text-[15px] font-medium text-white transition-colors hover:bg-brand-600 lg:inline-block"
           >
             {dict.nav.cta}
@@ -123,7 +123,7 @@ export function Navbar({ dict }: { dict: Dict }) {
             {dict.nav.links.map((link) => (
               <li key={link.href}>
                 <a
-                  href={link.href}
+                  href={sectionHref(dict.locale, link.href)}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-[15px] text-white/85"
                 >
@@ -133,7 +133,7 @@ export function Navbar({ dict }: { dict: Dict }) {
             ))}
             <li className="flex items-center gap-4 py-3">
               <a
-                href="#iletisim"
+                href={sectionHref(dict.locale, "#iletisim")}
                 onClick={() => setOpen(false)}
                 className="inline-block rounded-full bg-brand-500 px-7 py-3 text-[15px] font-medium text-white"
               >

@@ -5,7 +5,9 @@ import {
   LinkedinIcon,
   YoutubeIcon,
 } from "./icons";
-import { brand, type Dict } from "@/data/content";
+import Link from "next/link";
+import { brand, sectionHref, type Dict } from "@/data/content";
+import { legalPath } from "@/data/legal";
 
 const socials = [
   { label: "Instagram", Icon: InstagramIcon, href: "#" },
@@ -34,6 +36,7 @@ export function Footer({ dict }: { dict: Dict }) {
                   <a
                     href={href}
                     aria-label={label}
+                    rel="noopener noreferrer"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 text-white/80 transition-colors hover:border-white/40 hover:text-white"
                   >
                     <Icon className="h-4 w-4" />
@@ -45,21 +48,21 @@ export function Footer({ dict }: { dict: Dict }) {
 
           {/* Link sütunları */}
           {t.columns.map((column) => (
-            <div key={column.title}>
-              <h3 className={headingClass}>{column.title}</h3>
+            <nav key={column.title} aria-label={column.title}>
+              <h2 className={headingClass}>{column.title}</h2>
               <ul className="mt-5 flex flex-col gap-3.5">
                 {column.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className={linkClass}>{link}</a>
+                  <li key={link.label}>
+                    <a href={sectionHref(dict.locale, link.href)} className={linkClass}>{link.label}</a>
                   </li>
                 ))}
               </ul>
-            </div>
+            </nav>
           ))}
 
           {/* İletişim */}
           <div>
-            <h3 className={headingClass}>{t.contactTitle}</h3>
+            <h2 className={headingClass}>{t.contactTitle}</h2>
             <ul className="mt-5 flex flex-col gap-3.5">
               {brand.phones.map((phone, i) => (
                 <li key={`${phone}-${i}`}>
@@ -70,9 +73,11 @@ export function Footer({ dict }: { dict: Dict }) {
                 <a href={`mailto:${brand.email}`} className={linkClass}>{brand.email}</a>
               </li>
               <li className="text-[14px] leading-[1.5] text-white/60">
-                {t.address.map((line) => (
-                  <span key={line} className="block">{line}</span>
-                ))}
+                <address className="not-italic">
+                  {t.address.map((line) => (
+                    <span key={line} className="block">{line}</span>
+                  ))}
+                </address>
               </li>
             </ul>
           </div>
@@ -82,8 +87,12 @@ export function Footer({ dict }: { dict: Dict }) {
           <div className="flex flex-col gap-3 text-[13px] text-white/55 sm:flex-row sm:items-center sm:justify-between">
             <p>© {new Date().getFullYear()} {brand.name}. {t.legal}</p>
             <div className="flex gap-8">
-              <a href="#" className="transition-colors hover:text-white">{t.privacy}</a>
-              <a href="#" className="transition-colors hover:text-white">{t.terms}</a>
+              <Link href={legalPath(dict.locale, "privacy")} className="transition-colors hover:text-white">
+                {t.privacy}
+              </Link>
+              <Link href={legalPath(dict.locale, "terms")} className="transition-colors hover:text-white">
+                {t.terms}
+              </Link>
             </div>
           </div>
         </div>

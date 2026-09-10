@@ -20,7 +20,7 @@ export function ServiceOrbit({ dict }: { dict: Dict }) {
   const t = dict.services;
 
   return (
-    <section className="bg-[linear-gradient(150deg,#253346_0%,#354356_50%,#3c536c_100%)] py-16 sm:py-24 lg:py-[100px]">
+    <section id="hizmetler" className="bg-[linear-gradient(150deg,#253346_0%,#354356_50%,#3c536c_100%)] py-16 sm:py-24 lg:py-[100px]">
       <div className="section-x lg:grid lg:grid-cols-[minmax(0,1fr)_630px] lg:items-center lg:gap-10">
         <div>
           <SectionHeading
