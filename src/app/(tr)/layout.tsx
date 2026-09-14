@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fontClass } from "../fonts";
 import "../globals.css";
 import { brand, content, siteUrl } from "@/data/content";
+import { ThemeScript } from "../theme-script";
 
 const dict = content.tr;
 
@@ -48,7 +49,10 @@ export const metadata: Metadata = {
 
 export default function TrLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" className={`${fontClass} h-full antialiased`}>
+    <html suppressHydrationWarning lang="tr" className={`${fontClass} h-full antialiased`}>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

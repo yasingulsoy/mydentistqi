@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
+import { RevealObserver } from "./RevealObserver";
 import { localePath, siteUrl, type Dict } from "@/data/content";
 import type { LegalDoc } from "@/data/legal";
 
@@ -47,6 +48,7 @@ export function LegalPage({
 
   return (
     <>
+      <RevealObserver />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -54,7 +56,7 @@ export function LegalPage({
 
       <a
         href="#icerik"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-[15px] focus:font-medium focus:text-ink"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-[15px] focus:font-medium focus:text-ink"
       >
         {dict.skipToContent}
       </a>

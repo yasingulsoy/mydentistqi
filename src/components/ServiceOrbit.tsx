@@ -20,7 +20,7 @@ export function ServiceOrbit({ dict }: { dict: Dict }) {
   const t = dict.services;
 
   return (
-    <section id="hizmetler" className="bg-[linear-gradient(150deg,#253346_0%,#354356_50%,#3c536c_100%)] py-16 sm:py-24 lg:py-[100px]">
+    <section id="hizmetler" className="bg-[image:var(--gradient-orbit)] py-16 sm:py-24 lg:py-[100px]">
       <div className="section-x lg:grid lg:grid-cols-[minmax(0,1fr)_630px] lg:items-center lg:gap-10">
         <div>
           <SectionHeading
@@ -41,14 +41,14 @@ export function ServiceOrbit({ dict }: { dict: Dict }) {
         </div>
 
         {/* Yörünge diyagramı */}
-        <div className="mt-14 flex justify-center lg:mt-0">
+        <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="mt-14 flex justify-center lg:mt-0">
           <div className="relative aspect-square w-full max-w-[630px]">
             {/* Kesikli yörüngeler */}
             <span className="absolute left-1/2 top-1/2 h-[76.43%] w-[76.43%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/20" />
             <span className="absolute left-1/2 top-1/2 h-[55%] w-[55%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/20" />
 
             {/* Merkez küre */}
-            <span className="absolute left-1/2 top-1/2 h-[17.5%] w-[17.5%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_32%_28%,#6fa8d8,#3b6d9e_70%)] shadow-[0_0_50px_-10px_rgba(90,150,205,0.8)]" />
+            <span className="absolute left-1/2 top-1/2 h-[17.5%] w-[17.5%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[image:var(--gradient-orb)] shadow-[0_0_50px_-10px_rgba(90,150,205,0.8)]" />
 
             {t.labels.map((label, i) => {
               const Icon = iconMap[serviceIcons[i]];

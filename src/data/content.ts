@@ -96,6 +96,7 @@ export type Dict = {
     links: { label: string; href: string; wideOnly?: boolean }[];
     cta: string;
     menuLabel: string;
+    themeToggle: string;
   };
   hero: {
     imageAlt: string;
@@ -106,7 +107,10 @@ export type Dict = {
       email: string;
       submit: string;
       sent: string;
-      countryAlt: string;
+      countryLabel: string;
+      searchCountry: string;
+      noResults: string;
+      invalidPhone: string;
     };
   };
   treatments: {
@@ -190,6 +194,7 @@ const tr: Dict = {
     ],
     cta: "Ücretsiz Danışma",
     menuLabel: "Menüyü aç/kapat",
+    themeToggle: "Koyu / açık temayı değiştir",
   },
   hero: {
     imageAlt: "Sağlık turizmi ile Türkiye'de tedavi olan mutlu bir hasta",
@@ -200,7 +205,10 @@ const tr: Dict = {
       email: "Mail Adresi",
       submit: "Gönder",
       sent: "Talebiniz alındı. En kısa sürede sizinle iletişime geçeceğiz.",
-      countryAlt: "Türkiye",
+      countryLabel: "Ülke kodu",
+      searchCountry: "Ülke ara",
+      noResults: "Sonuç bulunamadı",
+      invalidPhone: "Seçtiğiniz ülke için geçerli bir telefon numarası girin.",
     },
   },
   treatments: {
@@ -465,6 +473,7 @@ const en: Dict = {
     ],
     cta: "Free Consultation",
     menuLabel: "Toggle menu",
+    themeToggle: "Switch dark / light theme",
   },
   hero: {
     imageAlt: "A happy patient treated in Türkiye through health tourism",
@@ -480,7 +489,10 @@ const en: Dict = {
       email: "Email Address",
       submit: "Send",
       sent: "We have received your request. We will contact you shortly.",
-      countryAlt: "Türkiye",
+      countryLabel: "Country code",
+      searchCountry: "Search country",
+      noResults: "No results found",
+      invalidPhone: "Enter a valid phone number for the selected country.",
     },
   },
   treatments: {

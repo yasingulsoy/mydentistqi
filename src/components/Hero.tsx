@@ -8,7 +8,7 @@ export function Hero({ dict }: { dict: Dict }) {
   return (
     <section
       id="ana-sayfa"
-      className="bg-navy-800 bg-[linear-gradient(180deg,#253346_0%,#2e4159_50%,#37506c_100%)]"
+      className="bg-navy-800 bg-[image:var(--gradient-hero)]"
     >
       {/* Sayfanın tek H1'i. Tasarımda hero başlığı yok, bu yüzden görsel
           olarak gizli ama arama motorları ve ekran okuyucular için var. */}
@@ -53,7 +53,7 @@ export function Hero({ dict }: { dict: Dict }) {
               return (
                 <li
                   key={label}
-                  className="flex min-h-[58px] w-[240px] items-center gap-3 rounded-full bg-white py-2 pl-2.5 pr-4 shadow-[0_12px_30px_-14px_rgba(10,25,40,0.45)]"
+                  className="flex min-h-[58px] w-[240px] items-center gap-3 rounded-full bg-surface py-2 pl-2.5 pr-4 shadow-[0_12px_30px_-14px_rgba(10,25,40,0.45)]"
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[9px] bg-sky-soft">
                     <Icon className="h-[18px] w-[18px] text-sky-ink" />
@@ -67,7 +67,7 @@ export function Hero({ dict }: { dict: Dict }) {
 
         {/* Form */}
         <div className="px-5 py-14 sm:py-20 lg:order-1 lg:flex lg:items-center lg:px-0 lg:py-0">
-          <ContactForm t={hero.form} />
+          <ContactForm t={hero.form} locale={dict.locale} />
         </div>
       </div>
     </section>

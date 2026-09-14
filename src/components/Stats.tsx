@@ -5,10 +5,12 @@ export function Stats({ dict }: { dict: Dict }) {
     <section className="bg-cream py-14 sm:py-16 lg:py-20">
       <div className="section-x">
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-6">
-          {dict.stats.map((stat) => (
+          {dict.stats.map((stat, i) => (
             <li
               key={stat.label}
-              className="rounded-[14px] border border-cream-200 bg-white px-5 py-7 lg:px-6 lg:py-8"
+              data-reveal
+              style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}
+              className="rounded-[14px] border border-cream-200 bg-surface px-5 py-7 transition-colors duration-300 hover:border-brand-500/40 lg:px-6 lg:py-8"
             >
               <p className="font-serif text-[26px] leading-none text-ink lg:text-[35px]">{stat.value}</p>
               <p className="mt-7 text-[15px] font-semibold text-ink">{stat.label}</p>

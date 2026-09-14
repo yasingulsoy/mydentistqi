@@ -1,7 +1,13 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
+
+const mark = `data:image/png;base64,${readFileSync(
+  join(process.cwd(), "public/logo/mydentist-icon-white@300.png"),
+).toString("base64")}`;
 
 export default function AppleIcon() {
   return new ImageResponse(
@@ -13,14 +19,11 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#d97c52",
-          color: "#fff",
-          fontSize: 104,
-          fontWeight: 700,
-          fontFamily: "sans-serif",
+          background: "#354356",
         }}
       >
-        M
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={mark} width={122} height={122} alt="" />
       </div>
     ),
     size,

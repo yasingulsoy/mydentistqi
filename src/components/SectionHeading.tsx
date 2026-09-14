@@ -10,6 +10,7 @@ export function SectionHeading({
   tone = "dark",
   size = "lg",
   className = "",
+  reveal = true,
   titleClassName = "",
   descClassName = "",
 }: {
@@ -20,11 +21,13 @@ export function SectionHeading({
   tone?: "dark" | "light";
   size?: "lg" | "md";
   className?: string;
+  /** Kaydirmayla belirme animasyonu (varsayilan acik) */
+  reveal?: boolean;
   titleClassName?: string;
   descClassName?: string;
 }) {
   return (
-    <div className={className}>
+    <div className={className} {...(reveal ? { "data-reveal": "" } : {})}>
       <p className="eyebrow">{eyebrow}</p>
       <h2
         className={`mt-3 font-serif leading-[1.18] ${

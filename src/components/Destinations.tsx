@@ -15,14 +15,19 @@ export function Destinations({ dict }: { dict: Dict }) {
           {t.items.map((place, i) => {
             const asset = destinationAssets[i];
             return (
-              <li key={asset.slug} className="w-[260px] shrink-0 snap-start sm:w-auto">
-                <article className="relative aspect-[384/340] overflow-hidden rounded-[14px]">
+              <li
+                key={asset.slug}
+                data-reveal
+                style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
+                className="w-[260px] shrink-0 snap-start sm:w-auto"
+              >
+                <article className="group relative aspect-[384/340] overflow-hidden rounded-[14px] transition-transform duration-300 hover:-translate-y-1">
                   <Image
                     src={asset.image}
                     alt={`${place.title} - ${place.cities}`}
                     fill
                     sizes="(min-width: 1024px) 384px, (min-width: 640px) 33vw, 260px"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-[600ms] group-hover:scale-[1.06]"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/25 to-transparent" />
 

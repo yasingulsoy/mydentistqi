@@ -76,7 +76,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
-      className="relative flex flex-col overflow-hidden rounded-[20px] bg-[linear-gradient(150deg,#2c3f57_0%,#334c68_55%,#3a5878_100%)] p-7 outline-none focus-visible:ring-2 focus-visible:ring-white/40 lg:p-8"
+      className="relative flex h-full flex-col overflow-hidden rounded-[20px] bg-[image:var(--gradient-testimonial)] p-7 outline-none focus-visible:ring-2 focus-visible:ring-white/40 lg:p-8"
     >
       {/* Oklar sabit; içerik altlarından kayar */}
       <div className="absolute right-7 top-7 z-10 flex gap-2 lg:right-8 lg:top-8">
@@ -121,7 +121,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
               aria-label={`${i + 1} / ${count}`}
             >
               <div className="flex items-center gap-3.5 pr-24">
-                <span className="h-11 w-11 shrink-0 rounded-full bg-[linear-gradient(160deg,#cfe0ee,#8fb2cd)]" />
+                <span className="h-11 w-11 shrink-0 rounded-full bg-[image:var(--gradient-avatar)]" />
                 <div>
                   <p className="text-[15px] text-white">
                     <span className="font-semibold">{item.name}</span>{" "}
@@ -168,14 +168,14 @@ function Faq({ t }: { t: Dict["faq"] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="rounded-[20px] border border-cream-200 bg-[#FDFBF7] p-7 lg:p-8">
+    <div className="h-full rounded-[20px] border border-cream-200 bg-surface-soft p-7 lg:p-8">
       <p className="eyebrow">{t.eyebrow}</p>
 
       <div className="mt-6">
         {t.items.map((faq, i) => {
           const open = openIndex === i;
           return (
-            <div key={faq.question} className="border-b border-[#EAE4D9] last:border-b-0">
+            <div key={faq.question} className="border-b border-line-soft last:border-b-0">
               <h3>
                 <button
                   type="button"
@@ -204,8 +204,12 @@ export function TestimonialsFaq({ dict }: { dict: Dict }) {
   return (
     <section className="bg-cream pb-16 sm:pb-24 lg:pb-[100px]">
       <div className="section-x grid gap-6 sm:grid-cols-2 lg:gap-12">
-        <Testimonials t={dict.testimonials} />
-        <Faq t={dict.faq} />
+        <div data-reveal className="h-full">
+          <Testimonials t={dict.testimonials} />
+        </div>
+        <div data-reveal className="h-full" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
+          <Faq t={dict.faq} />
+        </div>
       </div>
     </section>
   );

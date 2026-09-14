@@ -155,6 +155,23 @@ export function StarIcon(props: IconProps) {
   );
 }
 
+export function SunIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <circle cx="12" cy="12" r="4.2" />
+      <path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6" />
+    </svg>
+  );
+}
+
+export function MoonIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M20.4 13.9A8.6 8.6 0 0 1 10.1 3.6a8.6 8.6 0 1 0 10.3 10.3Z" />
+    </svg>
+  );
+}
+
 /* ---------- Sosyal medya ---------- */
 
 export function InstagramIcon(props: IconProps) {

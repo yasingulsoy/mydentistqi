@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fontClass } from "../../fonts";
 import "../../globals.css";
 import { brand, content, siteUrl } from "@/data/content";
+import { ThemeScript } from "../../theme-script";
 
 const dict = content.en;
 
@@ -48,7 +49,10 @@ export const metadata: Metadata = {
 
 export default function EnLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fontClass} h-full antialiased`}>
+    <html suppressHydrationWarning lang="en" className={`${fontClass} h-full antialiased`}>
+      <head>
+        <ThemeScript />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
