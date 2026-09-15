@@ -79,7 +79,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
       className="relative flex h-full flex-col overflow-hidden rounded-[20px] bg-[image:var(--gradient-testimonial)] p-7 outline-none focus-visible:ring-2 focus-visible:ring-white/40 lg:p-8"
     >
       {/* Oklar sabit; içerik altlarından kayar */}
-      <div className="absolute right-7 top-7 z-10 flex gap-2 lg:right-8 lg:top-8">
+      <div className="absolute end-7 top-7 z-10 flex gap-2 lg:end-8 lg:top-8">
         <button
           type="button"
           onClick={() => go(index - 1)}
@@ -120,7 +120,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
               aria-roledescription="slide"
               aria-label={`${i + 1} / ${count}`}
             >
-              <div className="flex items-center gap-3.5 pr-24">
+              <div className="flex items-center gap-3.5 pe-24">
                 <span className="h-11 w-11 shrink-0 rounded-full bg-[image:var(--gradient-avatar)]" />
                 <div>
                   <p className="text-[15px] text-white">
@@ -181,7 +181,7 @@ function Faq({ t }: { t: Dict["faq"] }) {
                   type="button"
                   onClick={() => setOpenIndex(open ? -1 : i)}
                   aria-expanded={open}
-                  className="flex w-full items-start justify-between gap-4 py-4 text-left"
+                  className="flex w-full items-start justify-between gap-4 py-4 text-start"
                 >
                   <span className="text-[15px] font-semibold leading-snug text-ink">{faq.question}</span>
                   <ChevronDownIcon
@@ -190,7 +190,7 @@ function Faq({ t }: { t: Dict["faq"] }) {
                 </button>
               </h3>
               {open && (
-                <p className="-mt-1 pb-5 pr-8 text-[14px] leading-[1.65] text-muted">{faq.answer}</p>
+                <p className="-mt-1 pb-5 pe-8 text-[14px] leading-[1.65] text-muted">{faq.answer}</p>
               )}
             </div>
           );

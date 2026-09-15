@@ -22,8 +22,14 @@ const linkClass = "text-[14px] leading-[1.5] text-white/60 transition-colors hov
 export function Footer({ dict }: { dict: Dict }) {
   const t = dict.footer;
 
+  // "#iletisim" çıpası artık ContactSection'da (formun olduğu bölüm);
+
+  // footer yalnızca iletişim BİLGİSİ taşıyor. Aynı id iki yerde olursa
+
+  // tarayıcı ilkine atlıyor ve form atlanıyordu.
+
   return (
-    <footer id="iletisim" className="bg-navy-900">
+    <footer className="bg-navy-900">
       <div className="section-x py-14 lg:py-16">
         <div className="grid gap-10 sm:grid-cols-3 lg:grid-cols-[1.35fr_1fr_1fr_1fr] lg:gap-8">
           {/* Marka */}

@@ -30,7 +30,9 @@ export const tr: Dict = {
     ],
     ogAlt: "MyDentist — uluslararası sağlık turizmi",
   },
-  h1: "MyDentist — Uluslararası Sağlık Turizmi ve Tedavi Danışmanlığı",
+  h1: "Uluslararası sağlık turizminde güvenilir çözüm ortağınız",
+  heroLead:
+    "Saç ekimi, diş tedavisi, yüz estetiği ve ortopedide akredite klinikler ve uzman doktorlar. Ücretsiz ön değerlendirme için formu doldurun.",
   skipToContent: "İçeriğe geç",
   nav: {
     links: [

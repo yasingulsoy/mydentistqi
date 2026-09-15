@@ -22,7 +22,9 @@ export const es: Dict = {
     ],
     ogAlt: "MyDentist — turismo de salud internacional",
   },
-  h1: "MyDentist — Turismo de salud internacional y asesoramiento de tratamientos",
+  h1: "Su socio de confianza en turismo de salud internacional",
+  heroLead:
+    "Clínicas acreditadas y médicos expertos en injerto capilar, tratamiento dental, estética facial y ortopedia. Rellene el formulario para una evaluación previa gratuita.",
   skipToContent: "Ir al contenido",
   nav: {
     links: [

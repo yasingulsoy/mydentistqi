@@ -44,7 +44,7 @@ export function ContactForm({
         <PhoneField t={t} locale={locale} idPrefix={uid} />
 
         <label className="sr-only" htmlFor={`${uid}-mail`}>{t.email}</label>
-        <input id={`${uid}-mail`} name="mail" type="email" required placeholder={t.email} className={inputClass} />
+        <input id={`${uid}-mail`} name="mail" type="email" dir="ltr" required placeholder={t.email} className={inputClass} />
 
         <button
           type="submit"

@@ -22,7 +22,9 @@ export const fr: Dict = {
     ],
     ogAlt: "MyDentist — tourisme médical international",
   },
-  h1: "MyDentist — Tourisme médical international et conseil en traitement",
+  h1: "Votre partenaire de confiance en tourisme médical international",
+  heroLead:
+    "Cliniques accréditées et médecins experts en greffe de cheveux, soins dentaires, esthétique du visage et orthopédie. Remplissez le formulaire pour une pré-évaluation gratuite.",
   skipToContent: "Aller au contenu",
   nav: {
     links: [

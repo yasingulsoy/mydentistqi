@@ -90,7 +90,7 @@ export function DetailPage({
 
       <a
         href="#icerik"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-[15px] focus:font-medium focus:text-ink"
+        className="sr-only focus:not-sr-only focus:absolute focus:start-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-surface focus:px-4 focus:py-2 focus:text-[15px] focus:font-medium focus:text-ink"
       >
         {dict.skipToContent}
       </a>
@@ -202,7 +202,7 @@ export function DetailPage({
                     {s.list.map((item) => (
                       <li
                         key={item}
-                        className="relative pl-6 text-[16px] leading-[1.7] text-body before:absolute before:left-0 before:top-[0.6em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand-500"
+                        className="relative ps-6 text-[16px] leading-[1.7] text-body before:absolute before:start-0 before:top-[0.6em] before:h-1.5 before:w-1.5 before:rounded-full before:bg-brand-500"
                       >
                         {item}
                       </li>

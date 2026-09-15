@@ -22,7 +22,9 @@ export const de: Dict = {
     ],
     ogAlt: "MyDentist — internationaler Gesundheitstourismus",
   },
-  h1: "MyDentist — Internationaler Gesundheitstourismus und Behandlungsberatung",
+  h1: "Ihr vertrauenswürdiger Partner im internationalen Gesundheitstourismus",
+  heroLead:
+    "Akkreditierte Kliniken und erfahrene Ärzte für Haartransplantation, Zahnbehandlung, Gesichtsästhetik und Orthopädie. Füllen Sie das Formular für eine kostenlose Vorabprüfung aus.",
   skipToContent: "Zum Inhalt springen",
   nav: {
     links: [

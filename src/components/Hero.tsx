@@ -10,10 +10,6 @@ export function Hero({ dict }: { dict: Dict }) {
       id="ana-sayfa"
       className="bg-navy-800 bg-[image:var(--gradient-hero)]"
     >
-      {/* Sayfanın tek H1'i. Tasarımda hero başlığı yok, bu yüzden görsel
-          olarak gizli ama arama motorları ve ekran okuyucular için var. */}
-      <h1 className="sr-only">{dict.h1}</h1>
-
       <div className="mx-auto w-full max-w-[1240px] lg:grid lg:h-[870px] lg:grid-cols-[568px_568px] lg:justify-between lg:px-5">
         {/* Görsel: mobil ve masaüstü farklı kırpımlar, <picture> ile sadece
             eşleşen dosya indiriliyor (iki ayrı <Image> ikisini de indiriyordu). */}
@@ -71,7 +67,18 @@ export function Hero({ dict }: { dict: Dict }) {
             üstünde 227px boşluk bırakıyor, görselin 96px'iyle
             uyuşmadığı için sarkmış gibi duruyordu. */}
         <div className="px-5 py-14 sm:py-20 lg:order-1 lg:px-0 lg:py-0 lg:pt-24">
-          <ContactForm t={hero.form} locale={dict.locale} />
+          {/* Sayfanın tek H1'i. Tasarımda hero metni yoktu; sol sütun boş
+              kaldığı için form sarkmış görünüyordu. */}
+          <h1 className="max-w-[520px] font-serif text-[30px] leading-[1.2] text-white sm:text-[38px]">
+            {dict.h1}
+          </h1>
+          <p className="mt-4 max-w-[500px] text-[15px] leading-[1.65] text-white/70">
+            {dict.heroLead}
+          </p>
+
+          <div className="mt-8 lg:mt-10">
+            <ContactForm t={hero.form} locale={dict.locale} />
+          </div>
         </div>
       </div>
     </section>

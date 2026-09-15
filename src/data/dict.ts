@@ -40,8 +40,17 @@ export type Dict = {
     keywords: string[];
     ogAlt: string;
   };
-  /** Sayfanin tek H1'i. Tasarimda hero basligi olmadigi icin gorsel olarak gizli. */
+  /**
+   * Sayfanın tek H1'i — hero'da GÖRÜNÜR.
+   *
+   * Tasarımda hero metni yoktu ve H1 ekran okuyuculara gizli veriliyordu;
+   * sol sütun boş kalıyor, form 227px aşağıda sarkıyordu. Başlığı görünür
+   * yapmak hem o boşluğu anlamlı dolduruyor hem de gizli H1 sorununu
+   * çözüyor. Metin uydurulmadı, meta.description'dan türetildi.
+   */
   h1: string;
+  /** H1'in altındaki tek satırlık açıklama. */
+  heroLead: string;
   skipToContent: string;
   nav: {
     links: { label: string; href: string; wideOnly?: boolean }[];

@@ -22,7 +22,9 @@ export const en: Dict = {
     ],
     ogAlt: "MyDentist — international health tourism",
   },
-  h1: "MyDentist — International Health Tourism and Treatment Consultancy",
+  h1: "Your trusted partner in international health tourism",
+  heroLead:
+    "Accredited clinics and expert doctors for hair transplants, dental treatment, facial aesthetics and orthopedics. Fill in the form for a free pre-assessment.",
   skipToContent: "Skip to content",
   nav: {
     links: [

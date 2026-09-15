@@ -150,6 +150,7 @@ export function PhoneField({
           ref={numberRef}
           id={fieldId}
           type="tel"
+          dir="ltr"
           inputMode="numeric"
           autoComplete="tel-national"
           required
@@ -200,7 +201,7 @@ export function PhoneField({
                   aria-selected={c.iso2 === country.iso2}
                   onMouseEnter={() => setActiveIndex(i)}
                   onClick={() => choose(c)}
-                  className={`flex w-full items-center gap-2.5 px-3 py-2 text-left text-[14px] transition-colors ${
+                  className={`flex w-full items-center gap-2.5 px-3 py-2 text-start text-[14px] transition-colors ${
                     i === activeIndex ? "bg-cream" : ""
                   } ${c.iso2 === country.iso2 ? "font-semibold text-ink" : "text-body"}`}
                 >

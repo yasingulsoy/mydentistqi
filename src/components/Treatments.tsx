@@ -34,7 +34,7 @@ export function Treatments({ dict }: { dict: Dict }) {
                       height={180}
                       className="aspect-[280/180] w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
                     />
-                    <span className="absolute -bottom-5 left-5 flex h-10 w-10 items-center justify-center rounded-[10px] bg-surface shadow-[0_6px_16px_-6px_rgba(10,25,40,0.3)]">
+                    <span className="absolute -bottom-5 start-5 flex h-10 w-10 items-center justify-center rounded-[10px] bg-surface shadow-[0_6px_16px_-6px_rgba(10,25,40,0.3)]">
                       <Icon className="h-5 w-5 text-sky-ink" />
                     </span>
                   </div>
