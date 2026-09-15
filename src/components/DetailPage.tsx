@@ -5,7 +5,7 @@ import { Footer } from "./Footer";
 import { RevealObserver } from "./RevealObserver";
 import { ArrowRightIcon, treatmentIcons } from "./icons";
 import { CountryFlag } from "./CountryFlag";
-import { clinicsByCountry } from "@/data/partners";
+import { clinicCountry, clinicsByCountry } from "@/data/partners";
 import { localePath, sectionHref, siteUrl, type Dict } from "@/data/content";
 import {
   detailPath,
@@ -274,7 +274,7 @@ export function DetailPage({
                       </h3>
                       <p className="mt-2 flex items-center gap-2 text-[13px] text-muted">
                         <CountryFlag iso2={clinic.countryCode} />
-                        {clinic.city[dict.locale]} · {clinic.country[dict.locale]}
+                        {clinic.city[dict.locale]} · {clinicCountry(clinic, dict.locale)}
                       </p>
                       {clinic.address && (
                         <p className="mt-2 text-[14px] leading-[1.6] text-body">

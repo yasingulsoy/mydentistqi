@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 import { SectionHeading } from "./SectionHeading";
 import { CountryFlag } from "./CountryFlag";
-import { CLINICS_PER_PAGE, clinics, type Clinic } from "@/data/partners";
+import { CLINICS_PER_PAGE, clinicCountry, clinics, type Clinic } from "@/data/partners";
 import type { Dict } from "@/data/content";
 
 const SWIPE_THRESHOLD = 50;
@@ -17,7 +17,7 @@ function ClinicCard({ clinic, locale }: { clinic: Clinic; locale: Dict["locale"]
       </span>
       <span className="flex items-center gap-1.5 text-[9px] font-semibold uppercase tracking-[0.06em] text-muted">
         <CountryFlag iso2={clinic.countryCode} className="h-[9px] w-[13px] shrink-0 rounded-[1px]" />
-        {clinic.city[locale]} · {clinic.country[locale]}
+        {clinic.city[locale]} · {clinicCountry(clinic, locale)}
       </span>
     </div>
   );
