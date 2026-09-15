@@ -176,10 +176,10 @@ export const fr: Dict = {
         "Chaque année, des milliers de patients internationaux retrouvent la santé avec nous.",
     },
     {
-      value: "150+",
-      label: "Médecins experts",
+      value: "16+",
+      label: "Ans d'expérience",
       description:
-        "Notre équipe médicale expérimentée et certifiée à l'international.",
+        "Depuis plus de 16 ans, nous accompagnons nos patients tout au long de leurs soins dentaires.",
     },
     {
       value: "98 %",
@@ -211,6 +211,13 @@ export const fr: Dict = {
         rating: 5,
         quote:
           "Je suis venu pour deux implants. Après l'envoi de mes photographies intrabuccales, nous avons discuté du plan à l'avance : aucune surprise à mon arrivée à Istanbul. Mes contrôles ont également été réguliers.",
+      },
+      {
+        name: "Zeynep A.",
+        country: "Turquie",
+        rating: 5,
+        quote:
+          "J'ai opté pour un Hollywood Smile. Voir le résultat dès l'essayage m'a rassurée, et nous y avons fait quelques ajustements que je souhaitais. Mes contrôles ensuite n'ont jamais été négligés.",
       },
       {
         name: "Anna L.",

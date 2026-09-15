@@ -116,7 +116,7 @@ export const tr: Dict = {
     goToPage: "Sayfaya git",
   },
   process: {
-    eyebrow: "POPÜLER SÜRECİ",
+    eyebrow: "SÜRECİMİZ",
     title: "Nasıl İşliyor?",
     // Tasarımda "Uzman doktorlarımız, pkred ve şeffaf bir süreçle yönetiliz." yazıyordu
     description: "Ücretsiz randevunuzu oluşturabilir veya ağız içi fotoğraf ve röntgenlerinizi bizimle paylaşabilirsiniz. Uzman diş hekimlerimizin değerlendirmesiyle size özel tedavi planınızı kolayca öğrenebilirsiniz.",
@@ -180,9 +180,10 @@ export const tr: Dict = {
       description: "Yıllık binlerce uluslararası hasta bizimle sağlığına kavuşuyor.",
     },
     {
-      value: "150+",
-      label: "Uzman Doktor",
-      description: "Alanında deneyimli ve uluslararası sertifikalı doktor kadromuz.",
+      value: "16+",
+      label: "Yıl Deneyim",
+      description:
+        "16 yılı aşkın süredir diş tedavisi süreçlerinde hastalarımızın yanındayız.",
     },
     {
       value: "98%",
@@ -212,6 +213,13 @@ export const tr: Dict = {
         rating: 5,
         quote:
           "İki implant için başvurdum. Ağız içi fotoğraflarımı gönderdikten sonra planı önceden konuştuk, İstanbul'a gittiğimde hiçbir sürpriz olmadı. Kontrollerim de düzenli yapıldı.",
+      },
+      {
+        name: "Zeynep A.",
+        country: "Türkiye",
+        rating: 5,
+        quote:
+          "Hollywood Smile için başvurdum. Provada sonucu önceden görünce içim rahat etti, istediğim birkaç ayarı da orada yaptık. İşlem sonrası kontrollerim hiç aksamadı.",
       },
       {
         name: "Anna L.",

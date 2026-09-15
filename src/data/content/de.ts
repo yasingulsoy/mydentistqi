@@ -174,10 +174,10 @@ export const de: Dict = {
         "Jedes Jahr finden Tausende internationale Patienten mit uns zu ihrer Gesundheit zurück.",
     },
     {
-      value: "150+",
-      label: "Fachärzte",
+      value: "16+",
+      label: "Jahre Erfahrung",
       description:
-        "Unser erfahrenes und international zertifiziertes Ärzteteam.",
+        "Seit über 16 Jahren begleiten wir unsere Patienten durch ihre Zahnbehandlung.",
     },
     {
       value: "98 %",
@@ -208,6 +208,13 @@ export const de: Dict = {
         rating: 5,
         quote:
           "Ich kam wegen zweier Implantate. Nachdem ich meine intraoralen Fotos geschickt hatte, haben wir den Plan vorab besprochen — bei meiner Ankunft in Istanbul gab es keine Überraschungen. Auch die Kontrollen liefen regelmäßig.",
+      },
+      {
+        name: "Zeynep A.",
+        country: "Türkei",
+        rating: 5,
+        quote:
+          "Ich habe mich für ein Hollywood Smile entschieden. Das Ergebnis schon bei der Anprobe zu sehen hat mich beruhigt, und wir haben dort gleich ein paar Wünsche angepasst. Die Kontrollen danach liefen lückenlos.",
       },
       {
         name: "Anna L.",
