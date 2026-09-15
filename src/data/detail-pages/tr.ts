@@ -3,237 +3,234 @@
 import type { DetailContent } from "../detail-pages";
 
 export const tr: Record<string, DetailContent> = {
-  hair: {
-    title: "Saç Ekimi",
-    tagline: "FUE ve DHI yöntemleriyle doğal görünümlü, kalıcı sonuçlar",
+  implant: {
+    title: "Dental İmplant",
+    tagline: "Eksik dişler için kalıcı ve doğal görünümlü çözüm",
     metaDescription:
-      "Saç ekimi yöntemleri, süreç, iyileşme ve sık sorulan sorular. MyDentist ile akredite kliniklerde saç ekimi planlaması.",
+      "Dental implant tedavisi: yöntemler, süreç, iyileşme ve sık sorulan sorular. MyDentist ile akredite kliniklerde implant planlaması.",
     intro: [
-      "Saç ekimi, kişinin kendi saç köklerinin dökülmenin görüldüğü bölgeye aktarıldığı mikrocerrahi bir işlemdir. Nakledilen kökler genetik olarak dökülmeye dirençli bölgeden alındığı için sonuç kalıcıdır.",
-      "Uygunluk, saç kaybının derecesine ve donör bölgenin yoğunluğuna göre değişir. Bu değerlendirmeyi yalnızca sizi muayene eden hekim yapabilir; aşağıdaki bilgiler genel bilgilendirme amaçlıdır.",
+      "Dental implant, eksik dişin kökünün yerine çene kemiğine yerleştirilen titanyum bir vidadır. Üzerine yapılan kron sayesinde hem görünüm hem de çiğneme işlevi doğal dişe yakın şekilde geri kazanılır.",
+      "Uygunluk, çene kemiğinin yoğunluğuna ve diş eti sağlığına göre değişir. Bu değerlendirmeyi yalnızca sizi muayene eden hekim yapabilir; aşağıdaki bilgiler genel bilgilendirme amaçlıdır.",
     ],
     highlights: [
-      { label: "İşlem süresi", value: "6–8 saat" },
+      { label: "İşlem süresi", value: "30–90 dakika" },
       { label: "Anestezi", value: "Lokal" },
-      { label: "Günlük hayata dönüş", value: "2–3 gün" },
-      { label: "Sonucun oturması", value: "12–18 ay" },
+      { label: "Kemikle kaynaşma", value: "3–6 ay" },
+      { label: "Önerilen konaklama", value: "3–5 gün" },
     ],
     sections: [
       {
         heading: "Uygulanan yöntemler",
         list: [
-          "FUE (Follicular Unit Extraction) — kökler tek tek alınır, iz bırakmayan en yaygın yöntemdir",
-          "DHI (Direct Hair Implantation) — kanal açma ve yerleştirme tek adımda yapılır, sık yerleşim sağlar",
-          "Safir FUE — safir uçlu aletlerle daha küçük kanallar açılır, iyileşme süresi kısalabilir",
+          "Klasik implant — implant yerleştirilir, kaynaşma beklenir, ardından kron yapılır",
+          "Hemen yükleme — kemik yapısı uygunsa aynı seansta geçici protez takılabilir",
+          "Kemik greftleme — kemik hacmi yetersizse implant öncesi kemik desteklenir",
+          "Sinüs lifting — üst çene arka bölgede kemik yüksekliği yetersizse uygulanır",
         ],
       },
       {
         heading: "Süreç nasıl ilerliyor?",
         paragraphs: [
-          "Fotoğraflarınız ve saç kaybı geçmişiniz üzerinden ön değerlendirme yapılır, size uygun klinik ve hekim alternatifleri paylaşılır. Türkiye'ye varışınızda hekim muayenesi ve saç çizgisi tasarımı yapılır.",
-          "İşlem aynı gün veya ertesi gün gerçekleştirilir. Ertesi gün ilk yıkama kontrolü yapılır ve bakım talimatları anlatılır.",
+          "Ağız içi fotoğraflarınız ve panoramik röntgeniniz üzerinden ön değerlendirme yapılır, size uygun klinik ve hekim alternatifleri paylaşılır. Türkiye'ye varışınızda muayene ve gerekiyorsa tomografi ile plan kesinleştirilir.",
+          "İmplant yerleştirme işlemi lokal anestezi altında yapılır. Kemikle kaynaşma süresi tamamlandıktan sonra ikinci aşamada ölçü alınır ve kalıcı kron yerleştirilir.",
         ],
       },
       {
         heading: "İyileşme ve sonrası",
         paragraphs: [
-          "İlk günlerde ekim bölgesinde kabuklanma ve hafif kızarıklık normaldir. İlk 2–4 hafta içinde ekilen saçların dökülmesi (şok dökülme) beklenen bir aşamadır; kökler yerinde kalır ve yeni saçlar çıkmaya başlar.",
-          "Tedavi sonrası takip görüşmeleri ülkenize döndükten sonra online olarak sürdürülür.",
+          "İlk günlerde hafif şişlik ve hassasiyet olağandır. Hekiminizin verdiği beslenme ve ağız bakımı talimatlarına uymak iyileşmeyi hızlandırır.",
+          "Ülkenize döndükten sonra kontroller online sürdürülür; gerektiğinde anlaşmalı kliniklerimize yönlendirme yapılır.",
         ],
       },
     ],
     faq: [
       {
-        question: "Saç ekimi acı verir mi?",
+        question: "İmplant için kaç kez gelmem gerekir?",
         answer:
-          "İşlem lokal anestezi altında yapılır, bu nedenle işlem sırasında ağrı hissedilmez. Anestezi sonrası hafif hassasiyet olabilir ve hekiminizin önerdiği ağrı kesicilerle kontrol altına alınır.",
+          "Çoğu durumda iki ziyaret gerekir: ilkinde implant yerleştirilir, kaynaşma için 3–6 ay beklenir, ikincisinde kron tamamlanır. Kemik yapınız uygunsa tek seyahatte tamamlanabilen protokoller gündeme gelebilir.",
       },
       {
-        question: "Kaç greft gerekir?",
+        question: "İşlem ağrılı mı?",
         answer:
-          "Greft sayısı saç kaybının derecesine ve hedeflenen yoğunluğa göre değişir. Net sayı ancak muayene sonrası hekim tarafından belirlenir.",
+          "İşlem lokal anestezi altında yapıldığı için sırasında ağrı hissetmezsiniz. Sonrasındaki hassasiyet hekiminizin önerdiği ağrı kesicilerle yönetilir.",
       },
       {
-        question: "Sonuçlar ne zaman görünür?",
+        question: "İmplant ne kadar dayanır?",
         answer:
-          "Yeni saçlar genellikle 3–4. aydan itibaren çıkmaya başlar. Nihai görünüm 12–18 ay içinde oturur.",
+          "Ağız bakımı, diş eti sağlığı ve düzenli kontroller ömrü doğrudan etkiler. Sizin durumunuz için beklenen süreyi hekiminiz değerlendirir.",
       },
     ],
   },
-  dental: {
-    title: "Diş Tedavisi",
-    tagline: "İmplant, gülüş tasarımı ve estetik diş hekimliği",
+  hollywood: {
+    title: "Hollywood Smile",
+    tagline: "Yüz hatlarınıza göre bütüncül planlanan estetik gülüş",
     metaDescription:
-      "İmplant, zirkonyum kaplama, lamina ve gülüş tasarımı. Akredite kliniklerde diş tedavisi planlaması ve süreç bilgileri.",
+      "Hollywood Smile (gülüş tasarımı): kapsam, süreç, kullanılan malzemeler ve sık sorulan sorular. Akredite kliniklerde estetik diş planlaması.",
     intro: [
-      "Diş tedavisi başlığı altında implanttan estetik gülüş tasarımına kadar geniş bir hizmet yelpazesi yer alır. Hangi tedavinin uygun olduğu, ağız içi muayene ve radyolojik görüntüleme sonrasında belirlenir.",
-      "Tedavi planı kişiye özeldir; diş sayısı, kemik yapısı ve genel sağlık durumu planı doğrudan etkiler.",
+      "Hollywood Smile, tek bir işlem değil; dişlerin rengini, boyutunu, sıralamasını ve diş eti çizgisini birlikte ele alan bütüncül bir gülüş tasarımıdır. Genellikle lamina veya zirkonyum kaplamalarla, gerektiğinde beyazlatma ve diş eti düzenlemesiyle birleştirilir.",
+      "Tasarım kişiye özeldir; yüz oranları, dudak hareketi ve beklentileriniz birlikte değerlendirilir. Nihai kararı sizi muayene eden hekimle birlikte verirsiniz.",
     ],
     highlights: [
-      { label: "Tedavi süresi", value: "3–7 gün" },
+      { label: "Tedavi süresi", value: "5–7 gün" },
       { label: "Anestezi", value: "Lokal" },
-      { label: "Önerilen konaklama", value: "5–7 gün" },
-      { label: "İmplant entegrasyonu", value: "3–6 ay" },
+      { label: "Önerilen konaklama", value: "6–8 gün" },
+      { label: "Prova", value: "Mock-up ile önizleme" },
     ],
     sections: [
       {
-        heading: "Sunulan tedaviler",
+        heading: "Kapsamındaki uygulamalar",
         list: [
-          "Diş implantı — eksik dişlerin kalıcı olarak tamamlanması",
-          "Zirkonyum ve porselen kaplama — renk ve form düzeltmesi",
-          "Lamina (veneer) — minimal aşındırmayla estetik ön yüz kaplaması",
-          "Gülüş tasarımı — yüz hatlarına uygun bütüncül planlama",
-          "Diş beyazlatma ve genel diş sağlığı hizmetleri",
-        ],
-      },
-      {
-        heading: "Kaç ziyaret gerekir?",
-        paragraphs: [
-          "Kaplama ve lamina işlemleri genellikle tek ziyarette, 5–7 günlük bir programla tamamlanır.",
-          "İmplant tedavisi iki aşamalıdır: ilk ziyarette implant yerleştirilir, kemik entegrasyonu için 3–6 ay beklenir, ikinci ziyarette üst yapı tamamlanır. Bazı vakalarda geçici protez ilk ziyarette takılabilir.",
-        ],
-      },
-      {
-        heading: "Tedavi sonrası",
-        paragraphs: [
-          "İlk günlerde hassasiyet ve hafif şişlik olabilir. Hekiminizin verdiği beslenme ve ağız bakımı talimatlarına uymanız iyileşmeyi hızlandırır.",
-          "Kontroller ülkenize döndükten sonra online sürdürülür; gerekli durumlarda anlaşmalı kliniklerimize yönlendirme yapılır.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "İmplant için tek seferde gelmek yeterli mi?",
-        answer:
-          "Çoğu vakada iki ziyaret gerekir. Kemik yapınız uygunsa bazı durumlarda tek seferde tamamlanabilen protokoller uygulanabilir; bunu hekiminiz değerlendirir.",
-      },
-      {
-        question: "Tedavi garantili mi?",
-        answer:
-          "Garanti süresi kullanılan malzemeye ve kliniğe göre değişir. Koşullar tedavi öncesinde yazılı olarak paylaşılır.",
-      },
-      {
-        question: "Tedavi sırasında ağrı olur mu?",
-        answer:
-          "İşlemler lokal anestezi altında yapılır. Sonrasında oluşabilecek hassasiyet, önerilen ilaçlarla kontrol altına alınır.",
-      },
-    ],
-  },
-  face: {
-    title: "Yüz Estetiği",
-    tagline: "Cerrahi ve cerrahi olmayan yüz gençleştirme uygulamaları",
-    metaDescription:
-      "Botoks, dolgu, yüz germe ve burun estetiği. Yüz estetiği uygulamaları, iyileşme süreci ve sık sorulan sorular.",
-    intro: [
-      "Yüz estetiği, hem cerrahi hem de cerrahi olmayan yöntemleri kapsar. Amaç, yüz hatlarının doğal dengesini koruyarak daha dinlenmiş ve genç bir görünüm elde etmektir.",
-      "Hangi uygulamanın uygun olduğu cilt yapısı, yaş ve beklentiye göre değişir. Nihai karar, sizi muayene eden hekimle birlikte verilir.",
-    ],
-    highlights: [
-      { label: "İşlem süresi", value: "30 dk – 4 saat" },
-      { label: "Anestezi", value: "Lokal veya genel" },
-      { label: "Sosyal iyileşme", value: "3–14 gün" },
-      { label: "Kalıcılık", value: "Uygulamaya göre değişir" },
-    ],
-    sections: [
-      {
-        heading: "Uygulamalar",
-        list: [
-          "Botoks — mimik kaynaklı çizgilerin yumuşatılması",
-          "Dolgu — hacim kaybının giderilmesi ve kontur düzenleme",
-          "Yüz germe — sarkmanın cerrahi olarak düzeltilmesi",
-          "Burun estetiği (rinoplasti) — form ve fonksiyon düzenlemesi",
-          "İp askı ve cilt gençleştirme uygulamaları",
-        ],
-      },
-      {
-        heading: "Cerrahi mi, cerrahi olmayan mı?",
-        paragraphs: [
-          "Botoks ve dolgu gibi uygulamalar kısa sürer, iğne ile yapılır ve günlük hayata dönüş genellikle aynı gündür. Etkileri geçicidir ve belirli aralıklarla tekrarlanması gerekir.",
-          "Yüz germe ve rinoplasti gibi cerrahi işlemler daha uzun sürer, ameliyathane koşulları gerektirir ve iyileşme süresi daha uzundur; buna karşılık sonuçları uzun vadelidir.",
-        ],
-      },
-      {
-        heading: "İyileşme süreci",
-        paragraphs: [
-          "Cerrahi olmayan uygulamalarda hafif kızarıklık ve morluk birkaç gün içinde geçer. Cerrahi işlemlerde ödem ve morluk 1–2 hafta sürebilir.",
-          "Güneşten korunma, hekiminizin önerdiği bakım ürünlerinin kullanımı ve kontrol randevularına uyum sonucu doğrudan etkiler.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Sonuçlar doğal görünür mü?",
-        answer:
-          "Doğallık, uygulanan dozun ve tekniğin kişinin yüz yapısına uygun planlanmasıyla ilgilidir. Deneyimli bir hekimle çalışmak bu açıdan belirleyicidir.",
-      },
-      {
-        question: "Kaç gün kalmam gerekir?",
-        answer:
-          "Cerrahi olmayan uygulamalar için 1–2 gün yeterlidir. Cerrahi işlemlerde kontroller nedeniyle 7–10 günlük konaklama önerilir.",
-      },
-      {
-        question: "Birden fazla işlem aynı anda yapılabilir mi?",
-        answer:
-          "Bazı işlemler kombine edilebilir. Buna, genel sağlık durumunuz ve işlemlerin toplam süresi değerlendirilerek hekiminiz karar verir.",
-      },
-    ],
-  },
-  ortho: {
-    title: "Ortopedi",
-    tagline: "Diz ve kalça protezi, eklem ve spor yaralanmaları cerrahisi",
-    metaDescription:
-      "Diz protezi, kalça protezi ve artroskopik eklem cerrahisi. Ortopedik tedavi süreci, hastanede kalış ve rehabilitasyon bilgileri.",
-    intro: [
-      "Ortopedik tedaviler, eklem ağrısı ve hareket kısıtlılığının yaşam kalitesini düşürdüğü durumlarda gündeme gelir. Cerrahi, genellikle ilaç ve fizik tedavi gibi seçenekler yeterli olmadığında değerlendirilir.",
-      "Tedavi kararı; röntgen ve MR görüntüleri, ağrı düzeyi ve genel sağlık durumu birlikte değerlendirilerek verilir.",
-    ],
-    highlights: [
-      { label: "Hastanede kalış", value: "3–5 gün" },
-      { label: "Anestezi", value: "Genel veya spinal" },
-      { label: "Toplam konaklama", value: "10–14 gün" },
-      { label: "Fizik tedavi", value: "4–6 hafta" },
-    ],
-    sections: [
-      {
-        heading: "Tedavi alanları",
-        list: [
-          "Total diz protezi — ileri kireçlenmede eklem yüzeylerinin değiştirilmesi",
-          "Total kalça protezi — kalça ekleminin yenilenmesi",
-          "Artroskopi — kapalı yöntemle menisküs ve bağ onarımı",
-          "Omuz ve dirsek cerrahisi",
-          "Spor yaralanmaları ve bağ rekonstrüksiyonu",
+          "Porselen lamina (veneer) — minimum aşındırmayla ön yüzey estetiği",
+          "Zirkonyum kaplama — daha fazla madde kaybı olan dişlerde dayanıklı çözüm",
+          "Diş eti estetiği — gülümserken görünen diş eti oranının düzenlenmesi",
+          "Diş beyazlatma — kaplama yapılmayan dişlerin renk uyumu için",
         ],
       },
       {
         heading: "Süreç nasıl ilerliyor?",
         paragraphs: [
-          "Mevcut görüntülemelerinizi ve raporlarınızı paylaşmanızla ön değerlendirme başlar. Uygun hastane ve cerrah alternatifleri sunulur.",
-          "Varışınızda ameliyat öncesi tetkikler yapılır, ameliyat ve hastane süreci planlanır. Taburculuk sonrası fizik tedaviye erken dönemde başlanır.",
+          "Fotoğraflarınız ve röntgeniniz üzerinden ön değerlendirme yapılır. Klinikte dijital gülüş tasarımı hazırlanır ve mock-up (geçici prova) ile sonucu ağzınızda önceden görebilirsiniz.",
+          "Onayınızın ardından dişler hazırlanır, ölçü alınır ve geçici kaplamalarla beklenir. Son seansta kalıcı kaplamalar yapıştırılır ve gerekiyorsa ince ayarlar yapılır.",
         ],
       },
       {
-        heading: "Rehabilitasyon",
+        heading: "Sonrası ve bakım",
         paragraphs: [
-          "Protez cerrahisinde iyileşmenin en belirleyici aşaması fizik tedavidir. İlk haftalar yürüme yardımcılarıyla desteklenir, hareket açıklığı kademeli olarak artırılır.",
-          "Ülkenize döndükten sonra egzersiz programınız paylaşılır ve online takip görüşmeleriyle süreç izlenir.",
+          "İlk günlerde sıcak-soğuk hassasiyeti görülebilir; genellikle kısa sürede geçer. Sert gıdaları ısırmaktan kaçınmak ve varsa diş sıkma alışkanlığı için gece plağı kullanmak sonucu korur.",
+          "Düzenli fırçalama, ara yüz temizliği ve altı aylık kontroller kaplamaların ömrü için belirleyicidir.",
         ],
       },
     ],
     faq: [
       {
-        question: "Ameliyattan sonra ne zaman yürüyebilirim?",
+        question: "Sonuç yapay görünür mü?",
         answer:
-          "Protez cerrahisinde çoğu hasta ilk 24–48 saat içinde destekle ayağa kaldırılır. Bağımsız yürüme süresi kişiye ve uygulanan işleme göre değişir.",
+          "Doğal bir sonuç, renk ve form seçiminin yüz hatlarınıza göre planlanmasıyla elde edilir. Mock-up aşamasında sonucu önceden görüp birlikte ayarlayabilirsiniz.",
       },
       {
-        question: "Uçuş için ne kadar beklemeliyim?",
+        question: "Kaç dişe uygulanır?",
         answer:
-          "Uçuş izni cerrahınız tarafından verilir. Protez cerrahisinde genellikle 10–14 günlük bir bekleme önerilir; bu süre pıhtı riski açısından önemlidir.",
+          "Gülümserken görünen diş sayısına göre değişir; sıklıkla üst ve alt çenede 8–10'ar diş planlanır. Kesin sayı muayene sonrası belirlenir.",
       },
       {
-        question: "Protezin ömrü ne kadardır?",
+        question: "Dişlerim çok aşındırılır mı?",
         answer:
-          "Kullanılan malzeme, yaş ve aktivite düzeyi ömrü etkiler. Beklenen süreyi cerrahınız kendi vakanız için değerlendirir.",
+          "Aşındırma miktarı seçilen yönteme bağlıdır. Laminalarda madde kaybı en azdır; zirkonyumda daha fazladır. Hangisinin uygun olduğunu hekiminiz değerlendirir.",
+      },
+    ],
+  },
+  zirconium: {
+    title: "Zirkonyum Kaplama",
+    tagline: "Metal içermeyen, doğal görünümlü ve dayanıklı kaplama",
+    metaDescription:
+      "Zirkonyum kaplama: kullanım alanları, süreç, dayanıklılık ve sık sorulan sorular. Akredite kliniklerde zirkonyum kron planlaması.",
+    intro: [
+      "Zirkonyum kaplama, altyapısında metal yerine beyaz zirkonyum kullanılan bir kron türüdür. Işığı doğal dişe yakın geçirdiği için diş etinde gri yansıma bırakmaz ve estetik bölgelerde tercih edilir.",
+      "Hangi dişlere ve kaç adet uygulanacağı, madde kaybının derecesine ve ağız içi muayeneye göre belirlenir.",
+    ],
+    highlights: [
+      { label: "Tedavi süresi", value: "4–6 gün" },
+      { label: "Anestezi", value: "Lokal" },
+      { label: "Önerilen konaklama", value: "5–7 gün" },
+      { label: "Altyapı", value: "Metalsiz" },
+    ],
+    sections: [
+      {
+        heading: "Hangi durumlarda tercih edilir?",
+        list: [
+          "Renklenmiş, şekli bozulmuş veya kırılmış dişlerin restorasyonunda",
+          "Kanal tedavisi görmüş, madde kaybı fazla dişlerde",
+          "Köprü protezlerinde — metal destekli köprülere estetik alternatif olarak",
+          "İmplant üstü kron olarak",
+        ],
+      },
+      {
+        heading: "Süreç nasıl ilerliyor?",
+        paragraphs: [
+          "Muayene ve röntgen sonrası kaplama yapılacak dişler hazırlanır, dijital veya klasik yöntemle ölçü alınır. Renk seçimi sizinle birlikte yapılır.",
+          "Laboratuvarda üretilen kaplamalar önce prova edilir; uyum ve renk onaylandıktan sonra kalıcı olarak yapıştırılır.",
+        ],
+      },
+      {
+        heading: "Sonrası ve bakım",
+        paragraphs: [
+          "İlk günlerde hafif hassasiyet olabilir. Kaplamalar çürümez ama altındaki doğal diş ve diş eti çürüyebilir; bu yüzden fırçalama ve ara yüz temizliği önemini korur.",
+          "Sert cisim ısırmamak ve diş sıkma varsa gece plağı kullanmak kırılma riskini azaltır.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Zirkonyum ile porselen arasındaki fark ne?",
+        answer:
+          "Klasik porselen kaplamaların altyapısı metaldir ve zamanla diş eti kenarında gri bir çizgi görülebilir. Zirkonyumda altyapı beyazdır, bu yansıma oluşmaz.",
+      },
+      {
+        question: "Ne kadar dayanıklıdır?",
+        answer:
+          "Zirkonyum yüksek kırılma direncine sahiptir. Ömrü ağız bakımına, diş sıkma alışkanlığına ve düzenli kontrollere bağlıdır; kesin süre kişiye göre değişir.",
+      },
+      {
+        question: "Garanti veriliyor mu?",
+        answer:
+          "Garanti süresi kullanılan malzemeye ve kliniğe göre değişir. Koşullar tedaviden önce size yazılı olarak iletilir.",
+      },
+    ],
+  },
+  allonfour: {
+    title: "All On Four",
+    tagline: "Dört implant üzerine sabit protezle tam çene restorasyonu",
+    metaDescription:
+      "All on Four tedavisi: kimlere uygun, süreç, iyileşme ve sık sorulan sorular. Akredite kliniklerde tam çene implant planlaması.",
+    intro: [
+      "All on Four, dişsiz bir çenenin dört implant üzerine sabitlenen tek parça protezle restore edilmesidir. Arka implantlar açılı yerleştirildiği için çoğu durumda ek kemik greftine gerek kalmadan mevcut kemik kullanılabilir.",
+      "Bu yöntemin size uygun olup olmadığı, kemik yoğunluğunuza ve genel ağız sağlığınıza göre belirlenir; kararı sizi muayene eden hekim verir.",
+    ],
+    highlights: [
+      { label: "İşlem süresi", value: "2–4 saat" },
+      { label: "Anestezi", value: "Lokal veya sedasyon" },
+      { label: "Geçici protez", value: "Genellikle aynı gün" },
+      { label: "Kalıcı protez", value: "3–6 ay sonra" },
+    ],
+    sections: [
+      {
+        heading: "Kimler için uygun?",
+        list: [
+          "Çenesinde hiç dişi kalmamış veya tüm dişlerin çekilmesi gereken kişiler",
+          "Hareketli tam protez kullanıp oynama ve yeme zorluğu yaşayanlar",
+          "Klasik implant için kemik hacmi sınırlı olan, greftten kaçınmak isteyenler",
+        ],
+      },
+      {
+        heading: "Süreç nasıl ilerliyor?",
+        paragraphs: [
+          "Panoramik röntgen ve tomografi üzerinden kemik yapısı değerlendirilir, plan önceden paylaşılır. Gerekiyorsa çekim ve implant yerleştirme aynı seansta yapılır.",
+          "Çoğu durumda aynı gün geçici sabit protez takılır; kemikle kaynaşma tamamlandıktan sonra ikinci ziyarette kalıcı protez yapılır.",
+        ],
+      },
+      {
+        heading: "İyileşme ve alışma",
+        paragraphs: [
+          "İlk haftalarda yumuşak beslenme önerilir; şişlik ve morluk birkaç gün sürebilir. Konuşma ve çiğnemeye alışma süreci kişiye göre değişir.",
+          "Protez altının temizliği için hekiminizin önerdiği ara yüz fırçası ve ağız duşu düzenli kullanılmalıdır.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Aynı gün dişli çıkabilir miyim?",
+        answer:
+          "Kemik yapısı uygunsa çoğu durumda aynı gün geçici sabit protez takılabilir. Bu değerlendirme tomografi ve muayene sonrası yapılır.",
+      },
+      {
+        question: "Protez ağzımdan çıkar mı?",
+        answer:
+          "Hayır. Protez implantlara vidalanarak sabitlenir; yalnızca hekiminiz kontrol veya temizlik için çıkarabilir.",
+      },
+      {
+        question: "Kaç gün kalmam gerekir?",
+        answer:
+          "İlk ziyaret için genellikle 5–7 gün önerilir. Kalıcı protez için ikinci bir kısa ziyaret planlanır; kesin süre tedavi planınızla birlikte paylaşılır.",
       },
     ],
   },

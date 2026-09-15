@@ -11,48 +11,6 @@ const base = {
   strokeLinejoin: "round" as const,
 };
 
-/* ---------- Tedavi ikonları ---------- */
-
-export function HairIcon(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path d="M6 20c0-5.5 3-10.5 7.5-13.5" />
-      <path d="M13.5 6.5c1.8-1.2 3.6-1.6 5.5-1.5-.2 2-1 3.7-2.4 5-1.4 1.3-3.1 1.9-5 1.8" />
-      <path d="M11 12.2c-1.6-.3-3-1.1-4-2.4-1-1.3-1.4-2.8-1.3-4.5 1.8.1 3.3.7 4.5 1.8" />
-    </svg>
-  );
-}
-
-export function ToothIcon(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path d="M12 4.6c-1.1-.8-2.4-1.2-3.7-1.1C6.1 3.7 4.6 5.4 4.6 7.8c0 1.5.3 2.7.7 4 .4 1.4.6 2.6.7 4.2.1 1.7.5 3.4 1.1 4.2.5.7 1.5.6 1.9-.2.5-1 .7-2.3.9-3.7.2-1.3.6-2.1 2.1-2.1s1.9.8 2.1 2.1c.2 1.4.4 2.7.9 3.7.4.8 1.4.9 1.9.2.6-.8 1-2.5 1.1-4.2.1-1.6.3-2.8.7-4.2.4-1.3.7-2.5.7-4 0-2.4-1.5-4.1-3.7-4.3-1.3-.1-2.6.3-3.7 1.1Z" />
-    </svg>
-  );
-}
-
-export function FaceIcon(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path d="M12 3c4 0 6.8 2.6 6.8 6.6 0 3.2-.8 5.6-2.2 7.6-1.3 1.8-2.9 3.1-4.6 3.7-1.7-.6-3.3-1.9-4.6-3.7C6 15.2 5.2 12.8 5.2 9.6 5.2 5.6 8 3 12 3Z" />
-      <path d="M9.4 9.6h.01M14.6 9.6h.01" strokeWidth={2} />
-      <path d="M9.8 14.4c.7.6 1.4.9 2.2.9s1.5-.3 2.2-.9" />
-    </svg>
-  );
-}
-
-export function OrthoIcon(props: IconProps) {
-  return (
-    <svg {...base} {...props}>
-      <path d="M8.6 5.2c-1.1-1-2.7-1-3.7.1-1 1.1-.9 2.7.2 3.7l.5.4" />
-      <path d="M5.6 9.4c-1.4.4-2.2 1.8-1.8 3.2.4 1.4 1.8 2.2 3.2 1.9" />
-      <path d="m7.8 9 8.4 6.2" />
-      <path d="M18.4 14.6c1.1 1 1.2 2.6.2 3.7-1 1.1-2.6 1.1-3.7.1l-.5-.4" />
-      <path d="M18.4 14.6c1.4-.4 2.2-1.8 1.8-3.2-.4-1.4-1.8-2.2-3.2-1.9" />
-    </svg>
-  );
-}
-
 /* ---------- Servis (orbit) ikonları ---------- */
 
 export function PlaneIcon(props: IconProps) {
@@ -174,6 +132,54 @@ export function MoonIcon(props: IconProps) {
 
 /* ---------- Sosyal medya ---------- */
 
+/* ---------- Diş tedavisi ikonları ---------- */
+
+export function ImplantIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      {/* kron */}
+      <path d="M8.3 3.9c1.1-.6 2.4-.8 3.7-.4 1.3-.4 2.6-.2 3.7.4 1 .6 1.4 1.7 1.1 2.7-.2.9-.7 1.6-1.4 2H8.6c-.7-.4-1.2-1.1-1.4-2-.3-1 .1-2.1 1.1-2.7Z" />
+      {/* vida dişleri */}
+      <path d="M9.7 11.3h4.6M10 13.6h4M10.4 15.9h3.2M10.8 18.2h2.4" />
+      <path d="M11.2 20.4h1.6" />
+    </svg>
+  );
+}
+
+export function SmileIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M4 9.2h16" />
+      <path d="M4.4 9.2c.5 4.8 3.6 8.1 7.6 8.1s7.1-3.3 7.6-8.1" />
+      <path d="M8.6 9.2v4.7M12 9.2v5.3M15.4 9.2v4.7" />
+    </svg>
+  );
+}
+
+export function CrownIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M5.6 12.2c0-3.6 2.9-6.5 6.4-6.5s6.4 2.9 6.4 6.5c0 2-.3 3.6-.8 5.1-.4 1.2-1.9 1.4-2.5.3l-1-1.7c-.9-1.6-3.2-1.6-4.1 0l-1 1.7c-.6 1.1-2.1.9-2.5-.3-.5-1.5-.9-3.1-.9-5.1Z" />
+      {/* kaplama katmanı — dişin üst hattını izleyen iç yay */}
+      <path d="M8.1 12.4c0-2.2 1.7-3.9 3.9-3.9s3.9 1.7 3.9 3.9" />
+    </svg>
+  );
+}
+
+export function AllOnFourIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      {/* çene kemeri */}
+      <path d="M4.2 7.8c0 5.6 3.5 9.6 7.8 9.6s7.8-4 7.8-9.6" />
+      {/* dört implant */}
+      <circle cx="7" cy="11.4" r="1.15" fill="currentColor" stroke="none" />
+      <circle cx="10.3" cy="14.1" r="1.15" fill="currentColor" stroke="none" />
+      <circle cx="13.7" cy="14.1" r="1.15" fill="currentColor" stroke="none" />
+      <circle cx="17" cy="11.4" r="1.15" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 /* ---------- İletişim ikonları ---------- */
 
 export function MailIcon(props: IconProps) {
@@ -181,6 +187,15 @@ export function MailIcon(props: IconProps) {
     <svg {...base} {...props}>
       <rect x="3" y="5" width="18" height="14" rx="2.5" />
       <path d="m3.5 7 7.3 5.2a2 2 0 0 0 2.4 0L20.5 7" />
+    </svg>
+  );
+}
+
+export function PinIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 21s6.5-5.4 6.5-10.2A6.5 6.5 0 0 0 12 4.3a6.5 6.5 0 0 0-6.5 6.5C5.5 15.6 12 21 12 21Z" />
+      <circle cx="12" cy="10.6" r="2.4" />
     </svg>
   );
 }
@@ -230,10 +245,10 @@ export function LinkedinIcon(props: IconProps) {
 /* ---------- İsimle erişim ---------- */
 
 export const treatmentIcons = {
-  hair: HairIcon,
-  tooth: ToothIcon,
-  face: FaceIcon,
-  ortho: OrthoIcon,
+  implant: ImplantIcon,
+  smile: SmileIcon,
+  crown: CrownIcon,
+  allon4: AllOnFourIcon,
 } as const;
 
 export const serviceIcons = {

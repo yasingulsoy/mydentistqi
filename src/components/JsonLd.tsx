@@ -6,7 +6,9 @@ import { brand, isPlaceholder, siteUrl, type Dict } from "@/data/content";
  */
 export function JsonLd({ dict }: { dict: Dict }) {
   const pageUrl = dict.locale === "tr" ? siteUrl : `${siteUrl}/en`;
-  const realPhones = brand.phones.filter((p) => !isPlaceholder(p));
+  const realPhones = brand.phones
+    .filter((p) => !isPlaceholder(p.number))
+    .map((p) => p.number);
 
   const organization = {
     "@type": "Organization",

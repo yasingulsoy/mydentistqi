@@ -6,25 +6,26 @@ export const de: Dict = {
   locale: "de",
   htmlLang: "de",
   meta: {
-    title: "MyDentist | Internationaler Gesundheitstourismus",
+    title: "MyDentist | Internationaler Zahntourismus",
     description:
-      "Ihr vertrauenswürdiger Partner im internationalen Gesundheitstourismus. Akkreditierte Kliniken und erfahrene Ärzte für Haartransplantation, Zahnbehandlung, Gesichtsästhetik und Orthopädie.",
+      "Ihr vertrauenswürdiger Partner im internationalen Zahntourismus. Akkreditierte Kliniken und erfahrene Zahnärzte für Zahnimplantate, Hollywood Smile, Zirkonkronen und All on Four.",
     keywords: [
-      "Gesundheitstourismus",
+      "Zahntourismus",
       "Medizintourismus Türkei",
-      "Haartransplantation",
-      "Zahnbehandlung",
       "Zahnimplantate",
+      "Hollywood Smile",
+      "Zirkonkronen",
+      "All on Four",
       "Smile Design",
-      "Gesichtsästhetik",
-      "Orthopädie",
-      "Behandlung in der Türkei",
+      "Zahnbehandlung",
+      "Zahnbehandlung in der Türkei",
     ],
-    ogAlt: "MyDentist — internationaler Gesundheitstourismus",
+    ogAlt: "MyDentist — internationaler Zahntourismus",
   },
-  h1: "Ihr vertrauenswürdiger Partner im internationalen Gesundheitstourismus",
+  h1:
+    "Planen wir gemeinsam die richtige Behandlung für Ihr Lächeln",
   heroLead:
-    "Akkreditierte Kliniken und erfahrene Ärzte für Haartransplantation, Zahnbehandlung, Gesichtsästhetik und Orthopädie. Füllen Sie das Formular für eine kostenlose Vorabprüfung aus.",
+    "Erfahren Sie, welche Behandlungsmöglichkeiten zu Ihrer Zahngesundheit passen, planen Sie Ihren Ablauf mit Sicherheit und finden Sie mühelos die passende Lösung.",
   skipToContent: "Zum Inhalt springen",
   nav: {
     links: [
@@ -41,19 +42,22 @@ export const de: Dict = {
   },
   hero: {
     imageAlt:
-      "Eine zufriedene Patientin, die über den Gesundheitstourismus in der Türkei behandelt wurde",
+      "Eine zufriedene Patientin, die für eine Zahnbehandlung in die Türkei gereist ist",
     pills: [
-      "Haartransplantation",
-      "Smile Design & Zahngesundheit",
-      "Gesichtsästhetik",
-      "Orthopädie",
+      "Zahnimplantat",
+      "Hollywood Smile",
+      "Zirkonkronen",
+      "All On Four",
     ],
     form: {
       name: "Vor- und Nachname",
       phone: "Telefonnummer",
       email: "E-Mail-Adresse",
       submit: "Senden",
+      sending: "Wird gesendet…",
       sent: "Wir haben Ihre Anfrage erhalten. Wir melden uns in Kürze bei Ihnen.",
+      error:
+        "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an info@mydentist.com.",
       countryLabel: "Ländervorwahl",
       searchCountry: "Land suchen",
       noResults: "Keine Ergebnisse gefunden",
@@ -61,32 +65,41 @@ export const de: Dict = {
         "Geben Sie eine gültige Telefonnummer für das gewählte Land ein.",
     },
   },
+  about: {
+    eyebrow: "ÜBER UNS",
+    title: "Seit 16 Jahren begleiten wir Sie sicher zur richtigen Behandlung",
+    paragraphs: [
+      "Mit über 16 Jahren Erfahrung und einem Kliniknetz in mehr als 7 Ländern haben wir bislang über 25.000 Patientinnen und Patienten während ihrer Zahnbehandlung begleitet. Unser Ziel ist es, hohe Qualitätsstandards mit zugänglichen und bezahlbaren Behandlungsmöglichkeiten zu verbinden, damit unsere Patienten sicher zur richtigen Behandlung finden. Von der ersten Beurteilung über die Behandlungsplanung bis hin zu Terminvergabe und Nachsorge bieten wir in jeder Phase einen transparenten, schnellen und professionellen Service.",
+      "Während der Behandlung nutzen wir moderne digitale Technologien und ermöglichen so eine schnellere, genauere und effizientere Planung. Indem wir eine Vorabbeurteilung anhand intraoraler Fotos, Panoramaröntgenaufnahmen und weiterer erforderlicher digitaler Bildgebung ermöglichen, helfen wir unseren Patienten, ohne Zeitverlust zu passenden Behandlungsmöglichkeiten zu gelangen. Schnelle Kommunikation, verlässliche Beratung und wirksame Koordination machen jeden Schritt so einfach und angenehm wie möglich.",
+      "Unser Anspruch endet nicht mit dem Abschluss der Behandlung. Bei Nachsorge, Kontrollterminen und einer erneuten Beurteilung bei Bedarf stehen wir unseren Patienten weiterhin zur Seite. Indem wir die Nachsorge- und Garantiebedingungen unserer Partnerkliniken transparent darlegen, sorgen wir dafür, dass sich unsere Patienten nicht nur während, sondern auch nach der Behandlung sicher fühlen.",
+    ],
+  },
   treatments: {
     eyebrow: "BEHANDLUNGEN",
     title: "Beliebte Behandlungen",
     description:
-      "Die Behandlungsbereiche, die von unseren Fachärzten und akkreditierten Kliniken am häufigsten durchgeführt werden.",
+      "Die Behandlungsbereiche, die bei unseren erfahrenen Zahnärzten und akkreditierten Kliniken am häufigsten gewählt werden.",
     link: "Mehr erfahren",
     items: [
       {
-        title: "Haartransplantation",
+        title: "Zahnimplantat",
         description:
-          "Dauerhafte und ästhetische Ergebnisse durch natürlich wirkende Transplantationstechniken.",
+          "Dauerhafte Lösung bei fehlenden Zähnen — natürliches Aussehen und bequemes Kauen.",
       },
       {
-        title: "Zahnbehandlung",
+        title: "Zirkonkronen",
         description:
-          "Ästhetisches Smile Design, Implantate und sämtliche Leistungen der Zahngesundheit.",
+          "Metallfreie, langlebige Kronen, die dem Aussehen natürlicher Zähne sehr nahekommen.",
       },
       {
-        title: "Gesichtsästhetik",
+        title: "Hollywood Smile",
         description:
-          "Botox, Filler, Facelifting und mehr für ein junges und dynamisches Aussehen.",
+          "Ein ästhetisches Smile Design, ganzheitlich auf Ihre Gesichtszüge abgestimmt.",
       },
       {
-        title: "Orthopädie",
+        title: "All On Four",
         description:
-          "Moderne chirurgische Lösungen für Knie-, Hüft- und Gelenkbehandlungen.",
+          "Versorgung des gesamten Kiefers mit festsitzendem Zahnersatz auf vier Implantaten.",
       },
     ],
   },
@@ -99,7 +112,7 @@ export const de: Dict = {
     eyebrow: "UNSER ABLAUF",
     title: "Wie läuft es ab?",
     description:
-      "Unsere Fachärzte begleiten Sie durch einen akkreditierten und transparenten Prozess.",
+      "Sie können einen kostenlosen Termin vereinbaren oder uns einfach Ihre intraoralen Fotos und Röntgenbilder senden. Unsere erfahrenen Zahnärzte beurteilen sie, sodass Sie Ihren persönlichen Behandlungsplan mühelos erfahren.",
     steps: [
       {
         no: "01",
@@ -150,7 +163,7 @@ export const de: Dict = {
   },
   stats: [
     {
-      value: "5+",
+      value: "7+",
       label: "Länder",
       description: "Wir betreuen zufriedene Patienten aus aller Welt.",
     },
@@ -183,39 +196,39 @@ export const de: Dict = {
     // Sie werden bewusst nicht als schema.org Review/AggregateRating ausgegeben.
     items: [
       {
+        name: "Elif K.",
+        country: "Türkei",
+        rating: 5,
+        quote:
+          "Ich habe Zirkonkronen bekommen. Von der Farbauswahl bis zur Anprobe wurde mir jeder Schritt vorab erklärt. Das Ergebnis sieht wirklich natürlich aus — niemand merkt, dass es Kronen sind.",
+      },
+      {
+        name: "Murat S.",
+        country: "Türkei",
+        rating: 5,
+        quote:
+          "Ich kam wegen zweier Implantate. Nachdem ich meine intraoralen Fotos geschickt hatte, haben wir den Plan vorab besprochen — bei meiner Ankunft in Istanbul gab es keine Überraschungen. Auch die Kontrollen liefen regelmäßig.",
+      },
+      {
         name: "Anna L.",
         country: "Frankreich",
         rating: 5,
         quote:
-          "Ich kam für Implantate nach Istanbul. Das Team hat mich während des gesamten Ablaufs unglaublich gut unterstützt. Klinik, Hotel und Transfers waren einwandfrei. Mit Ergebnis und Service bin ich sehr zufrieden.",
+          "Für ein Smile Design kam ich nach Istanbul. Das Team hat mich während des gesamten Ablaufs unglaublich gut unterstützt. Klinik, Hotel und Transfers waren einwandfrei. Mit Ergebnis und Service bin ich sehr zufrieden.",
       },
       {
         name: "Michael B.",
         country: "Deutschland",
         rating: 5,
         quote:
-          "Ich kam für eine Haartransplantation. Jeder Schritt von der Beratung bis zur Operation war im Voraus geplant. Dank der Dolmetscherbetreuung hatte ich zu keinem Zeitpunkt Schwierigkeiten.",
+          "Ich hatte eine All-on-Four-Behandlung. Jeder Schritt von der Beratung bis zur Operation war im Voraus geplant. Dank der Dolmetscherbetreuung hatte ich zu keinem Zeitpunkt Schwierigkeiten.",
       },
       {
         name: "Sofia R.",
         country: "Portugal",
         rating: 5,
         quote:
-          "Für mein Smile Design war ich in Izmir. Die Klinik war sehr modern und das Team äußerst aufmerksam. Nach meiner Rückkehr wurden die Kontrollen online fortgesetzt.",
-      },
-      {
-        name: "James W.",
-        country: "Vereinigtes Königreich",
-        rating: 5,
-        quote:
-          "Ich hatte eine Knieprothesen-Operation. Abholung am Flughafen, Hotel, Transfers — ich musste mich um nichts selbst kümmern. Der gesamte Ablauf war transparent.",
-      },
-      {
-        name: "Lena K.",
-        country: "Niederlande",
-        rating: 5,
-        quote:
-          "Bei der Recherche zur Gesichtsästhetik gab es unzählige Möglichkeiten. Man hat mich wirklich zu der Klinik und dem Arzt geführt, die am besten zu mir passten.",
+          "Für meine Zirkonkronen war ich in Izmir. Die Klinik war sehr modern und das Team äußerst aufmerksam. Nach meiner Rückkehr wurden die Kontrollen online fortgesetzt.",
       },
     ],
   },
@@ -308,7 +321,6 @@ export const de: Dict = {
       },
     ],
     contactTitle: "KONTAKT",
-    address: ["...Mah. ...Cad.", "No: 123 .... / Istanbul"],
     legal: "Alle Rechte vorbehalten.",
     privacy: "Datenschutzerklärung",
     terms: "Nutzungsbedingungen",

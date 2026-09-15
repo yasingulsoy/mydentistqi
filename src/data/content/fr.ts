@@ -6,25 +6,26 @@ export const fr: Dict = {
   locale: "fr",
   htmlLang: "fr",
   meta: {
-    title: "MyDentist | Tourisme médical international",
+    title: "MyDentist | Tourisme dentaire international",
     description:
-      "Votre partenaire de confiance en tourisme médical international. Cliniques accréditées et médecins experts en greffe de cheveux, soins dentaires, esthétique du visage et orthopédie.",
+      "Votre partenaire de confiance en tourisme dentaire international. Cliniques accréditées et dentistes experts en implants dentaires, Hollywood Smile, couronnes en zircone et All on Four.",
     keywords: [
-      "tourisme médical",
+      "tourisme dentaire",
       "tourisme médical Turquie",
-      "greffe de cheveux",
-      "soins dentaires",
       "implants dentaires",
+      "Hollywood Smile",
+      "couronnes en zircone",
+      "All on Four",
       "design du sourire",
-      "esthétique du visage",
-      "orthopédie",
-      "se faire soigner en Turquie",
+      "soins dentaires",
+      "soins dentaires en Turquie",
     ],
-    ogAlt: "MyDentist — tourisme médical international",
+    ogAlt: "MyDentist — tourisme dentaire international",
   },
-  h1: "Votre partenaire de confiance en tourisme médical international",
+  h1:
+    "Planifions ensemble le traitement qui convient à votre sourire",
   heroLead:
-    "Cliniques accréditées et médecins experts en greffe de cheveux, soins dentaires, esthétique du visage et orthopédie. Remplissez le formulaire pour une pré-évaluation gratuite.",
+    "Découvrez les options de traitement adaptées à vos besoins dentaires, planifiez votre parcours en toute confiance et accédez facilement à la solution qui vous convient.",
   skipToContent: "Aller au contenu",
   nav: {
     links: [
@@ -41,19 +42,22 @@ export const fr: Dict = {
   },
   hero: {
     imageAlt:
-      "Une patiente satisfaite soignée en Turquie dans le cadre du tourisme médical",
+      "Une patiente satisfaite venue en Turquie pour des soins dentaires",
     pills: [
-      "Greffe de cheveux",
-      "Design du sourire & santé dentaire",
-      "Esthétique du visage",
-      "Orthopédie",
+      "Implant dentaire",
+      "Hollywood Smile",
+      "Couronnes en zircone",
+      "All On Four",
     ],
     form: {
       name: "Nom et prénom",
       phone: "Numéro de téléphone",
       email: "Adresse e-mail",
       submit: "Envoyer",
+      sending: "Envoi en cours…",
       sent: "Nous avons bien reçu votre demande. Nous vous contacterons très prochainement.",
+      error:
+        "Votre demande n'a pas pu être envoyée. Réessayez ou écrivez à info@mydentist.com.",
       countryLabel: "Indicatif du pays",
       searchCountry: "Rechercher un pays",
       noResults: "Aucun résultat trouvé",
@@ -61,32 +65,41 @@ export const fr: Dict = {
         "Saisissez un numéro de téléphone valide pour le pays sélectionné.",
     },
   },
+  about: {
+    eyebrow: "À PROPOS",
+    title: "Depuis 16 ans, nous vous aidons à accéder au bon traitement en toute confiance",
+    paragraphs: [
+      "Forts de plus de 16 ans d'expérience et d'un réseau de cliniques réparti dans plus de 7 pays, nous avons accompagné à ce jour plus de 25 000 patients dans leur parcours de soins dentaires. Notre objectif est d'associer des standards de qualité élevés à des options de traitement accessibles et abordables, afin que nos patients accèdent au bon traitement en toute confiance. De la première évaluation à la planification du traitement, de la prise de rendez-vous au suivi post-traitement, nous offrons un service transparent, rapide et professionnel à chaque étape.",
+      "Nous nous appuyons sur les technologies numériques modernes tout au long du traitement pour proposer une planification plus rapide, plus précise et plus efficace. En permettant une évaluation préalable à partir de photographies intrabuccales, de radiographies panoramiques et de toute autre imagerie numérique nécessaire, nous aidons nos patients à accéder sans perte de temps aux options de traitement adaptées. Une communication rapide, une orientation juste et une coordination efficace rendent chaque étape aussi simple et confortable que possible.",
+      "Notre engagement ne s'arrête pas à la fin du traitement. Nous restons aux côtés de nos patients pour le suivi, les contrôles et, si nécessaire, une nouvelle évaluation. En exposant de façon transparente les conditions de suivi et de garantie proposées par nos cliniques partenaires, nous veillons à ce que nos patients se sentent en sécurité non seulement pendant le traitement, mais aussi après.",
+    ],
+  },
   treatments: {
     eyebrow: "TRAITEMENTS",
     title: "Traitements phares",
     description:
-      "Les domaines de traitement les plus demandés auprès de nos médecins experts et de nos cliniques accréditées.",
+      "Les domaines de traitement les plus demandés auprès de nos dentistes experts et de nos cliniques accréditées.",
     link: "En savoir plus",
     items: [
       {
-        title: "Greffe de cheveux",
+        title: "Implant dentaire",
         description:
-          "Des résultats durables et esthétiques grâce à des techniques de greffe au rendu naturel.",
+          "Une solution durable pour les dents manquantes : aspect naturel et mastication confortable.",
       },
       {
-        title: "Soins dentaires",
+        title: "Couronnes en zircone",
         description:
-          "Design du sourire esthétique, implants et l'ensemble des soins de santé dentaire.",
+          "Des couronnes solides et sans métal, très proches de l'aspect des dents naturelles.",
       },
       {
-        title: "Esthétique du visage",
+        title: "Hollywood Smile",
         description:
-          "Botox, injections, lifting et bien plus pour une apparence jeune et dynamique.",
+          "Un design du sourire esthétique, pensé dans son ensemble selon vos traits du visage.",
       },
       {
-        title: "Orthopédie",
+        title: "All On Four",
         description:
-          "Des solutions chirurgicales modernes pour le genou, la hanche et les articulations.",
+          "Restauration complète de l'arcade avec une prothèse fixe sur quatre implants.",
       },
     ],
   },
@@ -99,7 +112,7 @@ export const fr: Dict = {
     eyebrow: "NOTRE PROCESSUS",
     title: "Comment ça marche ?",
     description:
-      "Nos médecins experts vous accompagnent dans un processus accrédité et transparent.",
+      "Vous pouvez prendre un rendez-vous gratuit ou simplement nous transmettre vos photographies intrabuccales et vos radiographies. Nos dentistes experts les examinent, afin que vous puissiez connaître facilement votre plan de traitement personnalisé.",
     steps: [
       {
         no: "01",
@@ -151,7 +164,7 @@ export const fr: Dict = {
   },
   stats: [
     {
-      value: "5+",
+      value: "7+",
       label: "Pays",
       description:
         "Nous accompagnons des patients satisfaits venus du monde entier.",
@@ -186,39 +199,39 @@ export const fr: Dict = {
     // Review/AggregateRating.
     items: [
       {
+        name: "Elif K.",
+        country: "Turquie",
+        rating: 5,
+        quote:
+          "J'ai eu des couronnes en zircone. Du choix de la teinte à l'essayage, on m'a expliqué à l'avance ce qui allait se passer à chaque étape. Le résultat est vraiment naturel : personne ne devine que ce sont des couronnes.",
+      },
+      {
+        name: "Murat S.",
+        country: "Turquie",
+        rating: 5,
+        quote:
+          "Je suis venu pour deux implants. Après l'envoi de mes photographies intrabuccales, nous avons discuté du plan à l'avance : aucune surprise à mon arrivée à Istanbul. Mes contrôles ont également été réguliers.",
+      },
+      {
         name: "Anna L.",
         country: "France",
         rating: 5,
         quote:
-          "Je suis venue à Istanbul pour des implants. L'équipe m'a soutenue de façon remarquable tout au long du processus. La clinique, l'hôtel et les transferts étaient parfaits. Je suis très satisfaite du résultat et du service.",
+          "Je suis venue à Istanbul pour un design du sourire. L'équipe m'a soutenue de façon remarquable tout au long du processus. La clinique, l'hôtel et les transferts étaient parfaits. Je suis très satisfaite du résultat et du service.",
       },
       {
         name: "Michael B.",
         country: "Allemagne",
         rating: 5,
         quote:
-          "Je suis venu pour une greffe de cheveux. Chaque étape, de la consultation à l'opération, avait été planifiée à l'avance. Grâce à l'interprète, je n'ai eu aucune difficulté.",
+          "J'ai suivi un traitement All on Four. Chaque étape, de la consultation à l'opération, avait été planifiée à l'avance. Grâce à l'interprète, je n'ai eu aucune difficulté.",
       },
       {
         name: "Sofia R.",
         country: "Portugal",
         rating: 5,
         quote:
-          "J'étais à Izmir pour mon design du sourire. La clinique était très moderne et l'équipe extrêmement attentive. Mes contrôles se sont poursuivis en ligne après mon retour.",
-      },
-      {
-        name: "James W.",
-        country: "Royaume-Uni",
-        rating: 5,
-        quote:
-          "J'ai subi une pose de prothèse du genou. Accueil à l'aéroport, hôtel, transferts… je n'ai eu à organiser absolument rien moi-même. Tout le processus était transparent.",
-      },
-      {
-        name: "Lena K.",
-        country: "Pays-Bas",
-        rating: 5,
-        quote:
-          "Il y avait énormément d'options lorsque je me renseignais sur l'esthétique du visage. On m'a vraiment orientée vers la clinique et le médecin qui me convenaient le mieux.",
+          "J'étais à Izmir pour mes couronnes en zircone. La clinique était très moderne et l'équipe extrêmement attentive. Mes contrôles se sont poursuivis en ligne après mon retour.",
       },
     ],
   },
@@ -311,7 +324,6 @@ export const fr: Dict = {
       },
     ],
     contactTitle: "CONTACT",
-    address: ["...Mah. ...Cad.", "No: 123 .... / Istanbul"],
     legal: "Tous droits réservés.",
     privacy: "Politique de confidentialité",
     terms: "Conditions d'utilisation",

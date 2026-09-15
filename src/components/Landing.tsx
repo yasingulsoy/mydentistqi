@@ -1,5 +1,6 @@
 import { Navbar } from "./Navbar";
 import { Hero } from "./Hero";
+import { About } from "./About";
 import { Treatments } from "./Treatments";
 import { Partners } from "./Partners";
 import { HowItWorks } from "./HowItWorks";
@@ -36,6 +37,7 @@ export function Landing({
       <Navbar dict={dict} alternates={alternates} />
       <main id="icerik">
         <Hero dict={dict} />
+        <About dict={dict} />
         <Treatments dict={dict} />
         <Partners dict={dict} />
         <HowItWorks dict={dict} />

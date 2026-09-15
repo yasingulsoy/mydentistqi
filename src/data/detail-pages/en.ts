@@ -3,237 +3,234 @@
 import type { DetailContent } from "../detail-pages";
 
 export const en: Record<string, DetailContent> = {
-  hair: {
-    title: "Hair Transplant",
-    tagline: "Natural-looking, permanent results with FUE and DHI techniques",
+  implant: {
+    title: "Dental Implant",
+    tagline: "A permanent, natural-looking solution for missing teeth",
     metaDescription:
-      "Hair transplant techniques, the process, recovery and frequently asked questions. Plan your treatment with MyDentist at accredited clinics.",
+      "Dental implant treatment: techniques, the process, recovery and frequently asked questions. Plan your implant treatment with MyDentist at accredited clinics.",
     intro: [
-      "A hair transplant is a microsurgical procedure in which your own hair follicles are moved to the area affected by hair loss. Because the follicles are taken from a genetically resistant donor area, the result is permanent.",
-      "Suitability depends on the degree of hair loss and the density of your donor area. Only the physician examining you can make that assessment; the information below is general guidance.",
+      "A dental implant is a titanium screw placed in the jawbone to replace the root of a missing tooth. The crown fitted on top restores both the appearance and the chewing function close to that of a natural tooth.",
+      "Suitability depends on the density of your jawbone and the health of your gums. Only the dentist examining you can make that assessment; the information below is general guidance.",
     ],
     highlights: [
-      { label: "Procedure time", value: "6–8 hours" },
+      { label: "Procedure time", value: "30–90 minutes" },
       { label: "Anaesthesia", value: "Local" },
-      { label: "Back to daily life", value: "2–3 days" },
-      { label: "Final result", value: "12–18 months" },
+      { label: "Integration with bone", value: "3–6 months" },
+      { label: "Recommended stay", value: "3–5 days" },
     ],
     sections: [
       {
         heading: "Techniques we work with",
         list: [
-          "FUE (Follicular Unit Extraction) — follicles are extracted individually; the most common scar-free method",
-          "DHI (Direct Hair Implantation) — channel opening and placement happen in one step, allowing dense placement",
-          "Sapphire FUE — sapphire-tipped tools open smaller channels, which can shorten recovery",
+          "Conventional implant — the implant is placed, left to integrate, and the crown is fitted afterwards",
+          "Immediate loading — where the bone allows, a temporary prosthesis can be fitted in the same session",
+          "Bone grafting — the bone is built up before the implant when volume is insufficient",
+          "Sinus lifting — used when bone height is insufficient in the upper back jaw",
         ],
       },
       {
         heading: "How the process works",
         paragraphs: [
-          "A pre-assessment is made from your photographs and hair loss history, and suitable clinic and physician options are shared with you. On arrival you have a physical examination and your hairline is designed.",
-          "The procedure takes place the same day or the following day. The first wash and check-up is carried out the next day, together with aftercare instructions.",
+          "A pre-assessment is made from your intraoral photographs and panoramic X-ray, and suitable clinic and dentist options are shared with you. On arrival in Türkiye the plan is confirmed with an examination and, where needed, a CT scan.",
+          "The implant is placed under local anaesthesia. Once integration with the bone is complete, an impression is taken at the second stage and the permanent crown is fitted.",
         ],
       },
       {
         heading: "Recovery and aftercare",
         paragraphs: [
-          "Crusting and mild redness in the recipient area are normal in the first days. Shedding of the transplanted hairs within the first 2–4 weeks (shock loss) is an expected stage; the follicles stay in place and new hair begins to grow.",
-          "Follow-up consultations continue online after you return home.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Is a hair transplant painful?",
-        answer:
-          "The procedure is performed under local anaesthesia, so you do not feel pain during it. Mild tenderness afterwards is managed with the pain relief your physician recommends.",
-      },
-      {
-        question: "How many grafts will I need?",
-        answer:
-          "The number of grafts depends on the degree of hair loss and the density you are aiming for. An exact figure can only be set by the physician after an examination.",
-      },
-      {
-        question: "When will I see results?",
-        answer:
-          "New hair usually starts to appear from the third or fourth month. The final appearance settles within 12–18 months.",
-      },
-    ],
-  },
-  dental: {
-    title: "Dental Treatment",
-    tagline: "Implants, smile design and aesthetic dentistry",
-    metaDescription:
-      "Dental implants, zirconium crowns, veneers and smile design. Treatment planning and process information at accredited clinics.",
-    intro: [
-      "Dental treatment covers a wide range of services, from implants to aesthetic smile design. Which treatment suits you is determined after an oral examination and radiological imaging.",
-      "Every treatment plan is individual; the number of teeth, bone structure and general health directly affect it.",
-    ],
-    highlights: [
-      { label: "Treatment time", value: "3–7 days" },
-      { label: "Anaesthesia", value: "Local" },
-      { label: "Recommended stay", value: "5–7 days" },
-      { label: "Implant integration", value: "3–6 months" },
-    ],
-    sections: [
-      {
-        heading: "Treatments we offer",
-        list: [
-          "Dental implants — a permanent solution for missing teeth",
-          "Zirconium and porcelain crowns — colour and shape correction",
-          "Veneers — aesthetic front surfaces with minimal reduction",
-          "Smile design — holistic planning that suits your facial features",
-          "Teeth whitening and general dental health services",
-        ],
-      },
-      {
-        heading: "How many visits are needed?",
-        paragraphs: [
-          "Crowns and veneers are usually completed in a single visit over a 5–7 day programme.",
-          "Implant treatment has two stages: the implant is placed on the first visit, 3–6 months are allowed for bone integration, and the restoration is completed on the second visit. In some cases a temporary prosthesis can be fitted on the first visit.",
-        ],
-      },
-      {
-        heading: "After treatment",
-        paragraphs: [
-          "Sensitivity and mild swelling are possible in the first days. Following your physician's dietary and oral care instructions speeds up recovery.",
+          "Mild swelling and tenderness are normal in the first days. Following your dentist's dietary and oral care instructions speeds up healing.",
           "Check-ups continue online after you return home, with referral to our partner clinics where needed.",
         ],
       },
     ],
     faq: [
       {
-        question: "Is a single trip enough for implants?",
+        question: "How many visits do I need for an implant?",
         answer:
-          "Most cases require two visits. If your bone structure allows, protocols that can be completed in one trip may be an option — your physician will assess this.",
+          "Most cases require two visits: the implant is placed on the first, 3–6 months are allowed for integration, and the crown is completed on the second. If your bone structure allows, protocols that can be finished in a single trip may be an option.",
       },
       {
-        question: "Is the treatment guaranteed?",
+        question: "Is the procedure painful?",
         answer:
-          "The guarantee period depends on the materials used and the clinic. The conditions are shared with you in writing before treatment.",
+          "The procedure is carried out under local anaesthesia, so you do not feel pain during it. Any tenderness afterwards is managed with the pain relief your dentist recommends.",
       },
       {
-        question: "Will the treatment hurt?",
+        question: "How long does an implant last?",
         answer:
-          "Procedures are carried out under local anaesthesia. Any sensitivity afterwards is managed with the medication recommended to you.",
+          "Oral hygiene, gum health and regular check-ups directly affect its lifespan. Your dentist will assess the expected duration for your own case.",
       },
     ],
   },
-  face: {
-    title: "Facial Aesthetics",
-    tagline: "Surgical and non-surgical facial rejuvenation",
+  hollywood: {
+    title: "Hollywood Smile",
+    tagline: "An aesthetic smile planned as a whole around your facial features",
     metaDescription:
-      "Botox, fillers, face lifts and rhinoplasty. Facial aesthetic procedures, recovery and frequently asked questions.",
+      "Hollywood Smile (smile design): what it covers, the process, materials used and frequently asked questions. Aesthetic dental planning at accredited clinics.",
     intro: [
-      "Facial aesthetics covers both surgical and non-surgical methods. The aim is a more rested, youthful appearance while preserving the natural balance of your features.",
-      "Which procedure suits you depends on your skin, age and expectations. The final decision is made together with the physician examining you.",
+      "A Hollywood Smile is not a single procedure but a complete smile design that addresses the colour, size and alignment of the teeth together with the gum line. It usually combines laminate or zirconium crowns with whitening and gum contouring where needed.",
+      "The design is individual: facial proportions, lip movement and your expectations are assessed together. The final decision is made with the dentist examining you.",
     ],
     highlights: [
-      { label: "Procedure time", value: "30 min – 4 hours" },
-      { label: "Anaesthesia", value: "Local or general" },
-      { label: "Social recovery", value: "3–14 days" },
-      { label: "Longevity", value: "Varies by procedure" },
+      { label: "Treatment time", value: "5–7 days" },
+      { label: "Anaesthesia", value: "Local" },
+      { label: "Recommended stay", value: "6–8 days" },
+      { label: "Try-in", value: "Preview with a mock-up" },
     ],
     sections: [
       {
-        heading: "Procedures",
+        heading: "What it can include",
         list: [
-          "Botox — softening expression lines",
-          "Fillers — restoring lost volume and refining contours",
-          "Face lift — surgical correction of sagging",
-          "Rhinoplasty — adjusting both form and function",
-          "Thread lifts and skin rejuvenation treatments",
-        ],
-      },
-      {
-        heading: "Surgical or non-surgical?",
-        paragraphs: [
-          "Treatments such as Botox and fillers are quick, injection-based, and you can usually return to daily life the same day. Their effects are temporary and need repeating at intervals.",
-          "Surgical procedures such as face lifts and rhinoplasty take longer, require an operating theatre and involve a longer recovery — but their results are long-lasting.",
-        ],
-      },
-      {
-        heading: "Recovery",
-        paragraphs: [
-          "After non-surgical treatments, mild redness and bruising settle within a few days. After surgery, swelling and bruising can last one to two weeks.",
-          "Sun protection, using the products your physician recommends and attending follow-up appointments all directly affect the result.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Will the results look natural?",
-        answer:
-          "A natural result comes from planning the dose and technique around your own facial structure. Working with an experienced physician is decisive here.",
-      },
-      {
-        question: "How many days should I stay?",
-        answer:
-          "One to two days is enough for non-surgical treatments. For surgery, a stay of 7–10 days is recommended to allow for check-ups.",
-      },
-      {
-        question: "Can several procedures be combined?",
-        answer:
-          "Some procedures can be combined. Your physician decides this by assessing your general health and the total duration of the procedures.",
-      },
-    ],
-  },
-  ortho: {
-    title: "Orthopedics",
-    tagline: "Knee and hip replacement, joint and sports injury surgery",
-    metaDescription:
-      "Knee replacement, hip replacement and arthroscopic joint surgery. Treatment process, hospital stay and rehabilitation information.",
-    intro: [
-      "Orthopedic treatment comes into play when joint pain and restricted movement reduce quality of life. Surgery is usually considered when options such as medication and physiotherapy are no longer enough.",
-      "The treatment decision is made by assessing X-ray and MRI images, pain levels and general health together.",
-    ],
-    highlights: [
-      { label: "Hospital stay", value: "3–5 days" },
-      { label: "Anaesthesia", value: "General or spinal" },
-      { label: "Total stay", value: "10–14 days" },
-      { label: "Physiotherapy", value: "4–6 weeks" },
-    ],
-    sections: [
-      {
-        heading: "Areas we cover",
-        list: [
-          "Total knee replacement — resurfacing the joint in advanced arthritis",
-          "Total hip replacement — renewing the hip joint",
-          "Arthroscopy — keyhole repair of the meniscus and ligaments",
-          "Shoulder and elbow surgery",
-          "Sports injuries and ligament reconstruction",
+          "Porcelain laminates (veneers) — front-surface aesthetics with minimal reduction",
+          "Zirconium crowns — a durable solution for teeth with greater loss of structure",
+          "Gum contouring — adjusting how much gum shows when you smile",
+          "Teeth whitening — to match the shade of teeth that are not being crowned",
         ],
       },
       {
         heading: "How the process works",
         paragraphs: [
-          "The pre-assessment starts when you share your existing imaging and reports. Suitable hospital and surgeon options are then presented.",
-          "On arrival, pre-operative tests are carried out and the surgery and hospital stay are planned. Physiotherapy begins early after discharge.",
+          "A pre-assessment is made from your photographs and X-ray. At the clinic a digital smile design is prepared and a mock-up lets you preview the result in your own mouth beforehand.",
+          "Once you approve it, the teeth are prepared, impressions are taken and temporary crowns are fitted. At the final session the permanent restorations are bonded and fine adjustments are made if needed.",
         ],
       },
       {
-        heading: "Rehabilitation",
+        heading: "Afterwards and care",
         paragraphs: [
-          "In joint replacement surgery, physiotherapy is the most decisive stage of recovery. The first weeks are supported with walking aids and the range of motion is increased gradually.",
-          "Your exercise programme is shared with you after you return home and progress is monitored through online follow-ups.",
+          "Sensitivity to hot and cold can occur in the first days and usually passes quickly. Avoiding biting hard foods and wearing a night guard if you grind your teeth protects the result.",
+          "Regular brushing, interdental cleaning and six-monthly check-ups are decisive for how long the restorations last.",
         ],
       },
     ],
     faq: [
       {
-        question: "When can I walk after surgery?",
+        question: "Will the result look artificial?",
         answer:
-          "In joint replacement, most patients are helped to their feet with support within the first 24–48 hours. The time to independent walking varies by person and procedure.",
+          "A natural result comes from planning the shade and form around your own facial features. At the mock-up stage you can see the result in advance and adjust it together with your dentist.",
       },
       {
-        question: "How long before I can fly?",
+        question: "How many teeth are treated?",
         answer:
-          "Clearance to fly is given by your surgeon. After joint replacement a wait of 10–14 days is usually advised, which matters for clot risk.",
+          "It depends on how many teeth show when you smile; 8–10 per arch is common. The exact number is decided after an examination.",
       },
       {
-        question: "How long does a joint replacement last?",
+        question: "Will a lot of my tooth be removed?",
         answer:
-          "Material, age and activity level all affect longevity. Your surgeon will assess the expected lifespan for your own case.",
+          "The amount of reduction depends on the technique chosen. Laminates involve the least loss of structure; zirconium requires more. Your dentist assesses which is suitable.",
+      },
+    ],
+  },
+  zirconium: {
+    title: "Zirconium Crowns",
+    tagline: "Metal-free, natural-looking and durable crowns",
+    metaDescription:
+      "Zirconium crowns: when they are used, the process, durability and frequently asked questions. Zirconium crown planning at accredited clinics.",
+    intro: [
+      "A zirconium crown uses white zirconia instead of metal as its substructure. Because it transmits light in a way close to a natural tooth, it leaves no grey shadow at the gum line, which is why it is preferred in the aesthetic zone.",
+      "Which teeth are crowned and how many is determined by the degree of structural loss and an intraoral examination.",
+    ],
+    highlights: [
+      { label: "Treatment time", value: "4–6 days" },
+      { label: "Anaesthesia", value: "Local" },
+      { label: "Recommended stay", value: "5–7 days" },
+      { label: "Substructure", value: "Metal-free" },
+    ],
+    sections: [
+      {
+        heading: "When are they preferred?",
+        list: [
+          "Restoring discoloured, misshapen or fractured teeth",
+          "Root-treated teeth with significant loss of structure",
+          "Bridgework — as an aesthetic alternative to metal-supported bridges",
+          "As a crown on top of an implant",
+        ],
+      },
+      {
+        heading: "How the process works",
+        paragraphs: [
+          "After the examination and X-ray, the teeth to be crowned are prepared and an impression is taken digitally or conventionally. The shade is chosen together with you.",
+          "The crowns produced in the laboratory are tried in first; once fit and colour are approved they are bonded permanently.",
+        ],
+      },
+      {
+        heading: "Afterwards and care",
+        paragraphs: [
+          "Mild sensitivity is possible in the first days. Crowns themselves do not decay, but the natural tooth and gum beneath them can, so brushing and interdental cleaning remain just as important.",
+          "Not biting on hard objects and wearing a night guard if you grind your teeth reduce the risk of fracture.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the difference between zirconium and porcelain?",
+        answer:
+          "Conventional porcelain crowns have a metal substructure, and a grey line can appear at the gum margin over time. Zirconium has a white substructure, so that shadow does not form.",
+      },
+      {
+        question: "How durable are they?",
+        answer:
+          "Zirconium has high fracture resistance. Its lifespan depends on oral hygiene, any grinding habit and regular check-ups; the exact duration varies from person to person.",
+      },
+      {
+        question: "Is there a warranty?",
+        answer:
+          "The warranty period depends on the material used and the clinic. The conditions are given to you in writing before treatment.",
+      },
+    ],
+  },
+  allonfour: {
+    title: "All On Four",
+    tagline: "Full-arch restoration with a fixed prosthesis on four implants",
+    metaDescription:
+      "All on Four treatment: who it suits, the process, recovery and frequently asked questions. Full-arch implant planning at accredited clinics.",
+    intro: [
+      "All on Four restores an edentulous jaw with a single fixed prosthesis anchored on four implants. Because the rear implants are placed at an angle, the existing bone can often be used without additional grafting.",
+      "Whether the method suits you is determined by your bone density and general oral health; the decision is made by the dentist examining you.",
+    ],
+    highlights: [
+      { label: "Procedure time", value: "2–4 hours" },
+      { label: "Anaesthesia", value: "Local or sedation" },
+      { label: "Temporary prosthesis", value: "Usually same day" },
+      { label: "Permanent prosthesis", value: "After 3–6 months" },
+    ],
+    sections: [
+      {
+        heading: "Who is it for?",
+        list: [
+          "People with no remaining teeth in a jaw, or whose teeth all need extracting",
+          "Those using a removable full denture who struggle with movement and eating",
+          "Those with limited bone volume for conventional implants who wish to avoid grafting",
+        ],
+      },
+      {
+        heading: "How the process works",
+        paragraphs: [
+          "Bone structure is assessed from a panoramic X-ray and CT scan, and the plan is shared with you in advance. Where needed, extraction and implant placement are carried out in the same session.",
+          "In most cases a temporary fixed prosthesis is fitted the same day; once integration with the bone is complete, the permanent prosthesis is made at a second visit.",
+        ],
+      },
+      {
+        heading: "Recovery and adapting",
+        paragraphs: [
+          "A soft diet is advised for the first weeks; swelling and bruising can last a few days. How long it takes to adapt to speaking and chewing varies from person to person.",
+          "The interdental brush and water flosser your dentist recommends should be used regularly to clean beneath the prosthesis.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Can I leave with teeth the same day?",
+        answer:
+          "Where the bone allows, a temporary fixed prosthesis can usually be fitted the same day. That assessment is made after a CT scan and examination.",
+      },
+      {
+        question: "Can the prosthesis come out?",
+        answer:
+          "No. It is screwed onto the implants and fixed in place; only your dentist can remove it for a check-up or cleaning.",
+      },
+      {
+        question: "How many days should I stay?",
+        answer:
+          "5–7 days is usually recommended for the first visit. A second, shorter visit is planned for the permanent prosthesis; the exact duration is shared with your treatment plan.",
       },
     ],
   },

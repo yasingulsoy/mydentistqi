@@ -125,7 +125,11 @@ export function Partners({ dict }: { dict: Dict }) {
         </div>
 
         {/* Karusel noktaları — 16 klinik, sayfa başına 6 = 3 sayfa */}
-        <div className="mt-10 flex items-center justify-center gap-2">
+        {/* Noktanin GORUNUMU 6px kaliyor ama dokunma alani sozde-elemanla
+            44px yuksekliye cikariliyor: telefonda 6x6 piksellik bir hedefe
+            basmak mumkun degil. Mobilde aradaki bosluk da biraz aciliyor ki
+            komsu hedefler ust uste binmesin. */}
+        <div className="mt-10 flex items-center justify-center gap-3 sm:gap-2">
           {pages.map((_, i) => (
             <button
               key={i}
@@ -133,7 +137,7 @@ export function Partners({ dict }: { dict: Dict }) {
               onClick={() => setPage(i)}
               aria-label={`${t.goToPage} ${i + 1}`}
               aria-current={i === page}
-              className={`h-1.5 rounded-full transition-all ${
+              className={`relative h-1.5 rounded-full transition-all before:absolute before:-inset-x-1.5 before:-inset-y-[19px] before:content-[''] ${
                 i === page ? "w-6 bg-brand-500" : "w-1.5 bg-dot hover:bg-brand-500/50"
               }`}
             />

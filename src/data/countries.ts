@@ -68,6 +68,31 @@ export const defaultCountry =
   countries.find((c) => c.iso2 === "TR") ?? countries[0];
 
 /**
+ * Sayfanın dili -> telefon alanının açılışta seçili ülkesi.
+ *
+ * Almanca sayfayı açan biri +90 ile karşılaşmamalı; numarasını yazmadan
+ * önce listeden ülkesini bulmak zorunda kalıyordu.
+ *
+ * Arapça tek bir ülkeye bağlı değil; sağlık turizminde en yoğun kaynak
+ * pazar olduğu için Suudi Arabistan seçildi — kullanıcı listeden
+ * değiştirebiliyor.
+ */
+const LOCALE_COUNTRY: Record<Locale, string> = {
+  tr: "TR",
+  en: "GB",
+  de: "DE",
+  bg: "BG",
+  ar: "SA",
+  fr: "FR",
+  es: "ES",
+};
+
+export function defaultCountryFor(locale: Locale): Country {
+  const iso2 = LOCALE_COUNTRY[locale];
+  return countries.find((c) => c.iso2 === iso2) ?? defaultCountry;
+}
+
+/**
  * Ülke adları ELLE ÇEVRİLMİYOR — `Intl.DisplayNames` her dilde doğrusunu
  * veriyor (44 ülke x 7 dil = 308 dizgiyi elle yazmak hem hataya açık hem
  * bakımı imkânsız). Node 20+ ve tüm güncel tarayıcılarda tam ICU var;

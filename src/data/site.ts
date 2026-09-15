@@ -9,12 +9,31 @@ export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://mydentist.example.com"
 ).replace(/\/$/, "");
 
+/** Telefon numaraları ülkesiyle birlikte; arayüzde bayrakla gösteriliyor. */
+export type BrandPhone = { countryCode: string; number: string };
+
 export const brand = {
   name: "MyDentist",
   email: "info@mydentist.com",
-  phones: ["+00 000 000 00 00", "+00 000 000 00 00"],
+  phones: [
+    { countryCode: "TR", number: "+90 216 900 17 69" },
+    { countryCode: "GB", number: "+44 20 3519 3455" },
+  ] as BrandPhone[],
   /** Sosyal medya profilleri (JSON-LD sameAs). Gerçek adresler gelince doldur. */
   social: [] as string[],
+};
+
+/**
+ * Kayıtlı adres (Birleşik Krallık). Adres çevrilmez — her dilde aynı yazılır,
+ * bu yüzden sözlükte değil burada.
+ */
+export const brandAddress = {
+  street: "Lister House, 11-12 Wimpole St",
+  locality: "London",
+  postalCode: "W1G 9ST",
+  country: "United Kingdom",
+  countryCode: "GB",
+  lines: ["Lister House, 11-12 Wimpole St", "London W1G 9ST", "United Kingdom"],
 };
 
 /** Tasarımdan gelen yer tutucu değerler yapısal veriye yazılmamalı. */

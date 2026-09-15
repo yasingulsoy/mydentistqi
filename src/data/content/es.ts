@@ -6,25 +6,26 @@ export const es: Dict = {
   locale: "es",
   htmlLang: "es",
   meta: {
-    title: "MyDentist | Turismo de salud internacional",
+    title: "MyDentist | Turismo dental internacional",
     description:
-      "Su socio de confianza en turismo de salud internacional. Clínicas acreditadas y médicos expertos en injerto capilar, tratamiento dental, estética facial y ortopedia.",
+      "Su socio de confianza en turismo dental internacional. Clínicas acreditadas y dentistas expertos en implantes dentales, Hollywood Smile, coronas de circonio y All on Four.",
     keywords: [
-      "turismo de salud",
+      "turismo dental",
       "turismo médico Turquía",
-      "injerto capilar",
-      "tratamiento dental",
       "implantes dentales",
+      "Hollywood Smile",
+      "coronas de circonio",
+      "All on Four",
       "diseño de sonrisa",
-      "estética facial",
-      "ortopedia",
-      "tratamiento en Turquía",
+      "tratamiento dental",
+      "tratamiento dental en Turquía",
     ],
-    ogAlt: "MyDentist — turismo de salud internacional",
+    ogAlt: "MyDentist — turismo dental internacional",
   },
-  h1: "Su socio de confianza en turismo de salud internacional",
+  h1:
+    "Planifiquemos juntos el tratamiento adecuado para su sonrisa",
   heroLead:
-    "Clínicas acreditadas y médicos expertos en injerto capilar, tratamiento dental, estética facial y ortopedia. Rellene el formulario para una evaluación previa gratuita.",
+    "Descubra las opciones de tratamiento que se ajustan a sus necesidades dentales, planifique su proceso con confianza y llegue con facilidad a la solución más adecuada.",
   skipToContent: "Ir al contenido",
   nav: {
     links: [
@@ -41,19 +42,22 @@ export const es: Dict = {
   },
   hero: {
     imageAlt:
-      "Una paciente satisfecha tratada en Turquía a través del turismo de salud",
+      "Una paciente satisfecha que viajó a Turquía para su tratamiento dental",
     pills: [
-      "Injerto capilar",
-      "Diseño de sonrisa y salud dental",
-      "Estética facial",
-      "Ortopedia",
+      "Implante dental",
+      "Hollywood Smile",
+      "Coronas de circonio",
+      "All On Four",
     ],
     form: {
       name: "Nombre y apellidos",
       phone: "Número de teléfono",
       email: "Correo electrónico",
       submit: "Enviar",
+      sending: "Enviando…",
       sent: "Hemos recibido su solicitud. Nos pondremos en contacto con usted en breve.",
+      error:
+        "No se ha podido enviar su solicitud. Inténtelo de nuevo o escriba a info@mydentist.com.",
       countryLabel: "Prefijo del país",
       searchCountry: "Buscar país",
       noResults: "No se han encontrado resultados",
@@ -61,32 +65,41 @@ export const es: Dict = {
         "Introduzca un número de teléfono válido para el país seleccionado.",
     },
   },
+  about: {
+    eyebrow: "SOBRE NOSOTROS",
+    title: "Desde hace 16 años le ayudamos a llegar con confianza al tratamiento adecuado",
+    paragraphs: [
+      "Con más de 16 años de experiencia y una red de clínicas repartida en más de 7 países, hemos acompañado hasta hoy a más de 25.000 pacientes en su proceso de tratamiento dental. Nuestro objetivo es unir unos estándares de calidad elevados con opciones de tratamiento accesibles y asequibles, para que nuestros pacientes lleguen con confianza al tratamiento adecuado. Desde la primera valoración hasta la planificación del tratamiento, y desde la cita hasta el seguimiento posterior, ofrecemos un servicio transparente, ágil y profesional en cada etapa.",
+      "Durante el tratamiento aprovechamos las tecnologías digitales modernas para ofrecer una planificación más rápida, precisa y eficiente. Al permitir una valoración previa a partir de fotografías intraorales, radiografías panorámicas y cualquier otra prueba de imagen digital necesaria, ayudamos a nuestros pacientes a acceder sin pérdida de tiempo a las opciones de tratamiento adecuadas. Una comunicación rápida, una orientación acertada y una coordinación eficaz hacen que cada paso sea lo más sencillo y cómodo posible.",
+      "Nuestro compromiso no termina cuando finaliza el tratamiento. Seguimos junto a nuestros pacientes en el seguimiento, las revisiones y, si es necesario, una nueva valoración. Al exponer con transparencia las condiciones de seguimiento y garantía que ofrecen nuestras clínicas asociadas, procuramos que nuestros pacientes se sientan seguros no solo durante el tratamiento, sino también después.",
+    ],
+  },
   treatments: {
     eyebrow: "TRATAMIENTOS",
     title: "Tratamientos destacados",
     description:
-      "Las áreas de tratamiento más solicitadas a nuestros médicos expertos y clínicas acreditadas.",
+      "Las áreas de tratamiento más solicitadas a nuestros dentistas expertos y clínicas acreditadas.",
     link: "Más información",
     items: [
       {
-        title: "Injerto capilar",
+        title: "Implante dental",
         description:
-          "Resultados permanentes y estéticos con técnicas de injerto de aspecto natural.",
+          "Una solución permanente para los dientes ausentes: aspecto natural y masticación cómoda.",
       },
       {
-        title: "Tratamiento dental",
+        title: "Coronas de circonio",
         description:
-          "Diseño de sonrisa estético, implantes y todos los servicios de salud dental.",
+          "Coronas resistentes y sin metal, muy próximas al aspecto de los dientes naturales.",
       },
       {
-        title: "Estética facial",
+        title: "Hollywood Smile",
         description:
-          "Bótox, rellenos, lifting facial y mucho más para un aspecto joven y dinámico.",
+          "Un diseño de sonrisa estético, planificado de forma integral según sus rasgos faciales.",
       },
       {
-        title: "Ortopedia",
+        title: "All On Four",
         description:
-          "Soluciones quirúrgicas modernas para tratamientos de rodilla, cadera y articulaciones.",
+          "Rehabilitación completa de la arcada con prótesis fija sobre cuatro implantes.",
       },
     ],
   },
@@ -99,7 +112,7 @@ export const es: Dict = {
     eyebrow: "NUESTRO PROCESO",
     title: "¿Cómo funciona?",
     description:
-      "Nuestros médicos expertos le acompañan en un proceso acreditado y transparente.",
+      "Puede reservar una cita gratuita o simplemente enviarnos sus fotografías intraorales y sus radiografías. Nuestros dentistas expertos las valoran, de modo que pueda conocer con facilidad su plan de tratamiento personalizado.",
     steps: [
       {
         no: "01",
@@ -151,7 +164,7 @@ export const es: Dict = {
   },
   stats: [
     {
-      value: "5+",
+      value: "7+",
       label: "Países",
       description:
         "Atendemos a pacientes satisfechos procedentes de todo el mundo.",
@@ -185,39 +198,39 @@ export const es: Dict = {
     // emiten deliberadamente como datos schema.org Review/AggregateRating.
     items: [
       {
+        name: "Elif K.",
+        country: "Turquía",
+        rating: 5,
+        quote:
+          "Me pusieron coronas de circonio. Desde la elección del color hasta la prueba, me explicaron de antemano lo que iba a ocurrir en cada paso. El resultado se ve realmente natural: nadie nota que son coronas.",
+      },
+      {
+        name: "Murat S.",
+        country: "Turquía",
+        rating: 5,
+        quote:
+          "Fui por dos implantes. Después de enviar mis fotografías intraorales hablamos el plan con antelación, así que al llegar a Estambul no hubo ninguna sorpresa. Mis revisiones también fueron periódicas.",
+      },
+      {
         name: "Anna L.",
         country: "Francia",
         rating: 5,
         quote:
-          "Vine a Estambul para ponerme implantes. El equipo me apoyó muchísimo durante todo el proceso. La clínica, el hotel y los traslados fueron perfectos. Estoy muy contenta con el resultado y con el servicio.",
+          "Vine a Estambul para un diseño de sonrisa. El equipo me apoyó muchísimo durante todo el proceso. La clínica, el hotel y los traslados fueron perfectos. Estoy muy contenta con el resultado y con el servicio.",
       },
       {
         name: "Michael B.",
         country: "Alemania",
         rating: 5,
         quote:
-          "Vine para un injerto capilar. Cada paso, desde la consulta hasta la operación, estaba planificado de antemano. Gracias al apoyo del intérprete no tuve ninguna dificultad en ningún momento.",
+          "Me hicieron el tratamiento All on Four. Cada paso, desde la consulta hasta la operación, estaba planificado de antemano. Gracias al apoyo del intérprete no tuve ninguna dificultad en ningún momento.",
       },
       {
         name: "Sofia R.",
         country: "Portugal",
         rating: 5,
         quote:
-          "Estuve en Esmirna para mi diseño de sonrisa. La clínica era muy moderna y el equipo sumamente atento. Mis revisiones continuaron en línea tras volver a casa.",
-      },
-      {
-        name: "James W.",
-        country: "Reino Unido",
-        rating: 5,
-        quote:
-          "Me operaron para ponerme una prótesis de rodilla. Recogida en el aeropuerto, hotel, traslados… no tuve que organizar absolutamente nada por mi cuenta. Todo el proceso fue transparente.",
-      },
-      {
-        name: "Lena K.",
-        country: "Países Bajos",
-        rating: 5,
-        quote:
-          "Había muchísimas opciones cuando estaba informándome sobre estética facial. Me orientaron de verdad hacia la clínica y el médico que mejor encajaban conmigo.",
+          "Estuve en Esmirna para mis coronas de circonio. La clínica era muy moderna y el equipo sumamente atento. Mis revisiones continuaron en línea tras volver a casa.",
       },
     ],
   },
@@ -309,7 +322,6 @@ export const es: Dict = {
       },
     ],
     contactTitle: "CONTACTO",
-    address: ["...Mah. ...Cad.", "No: 123 .... / Istanbul"],
     legal: "Todos los derechos reservados.",
     privacy: "Política de privacidad",
     terms: "Condiciones de uso",

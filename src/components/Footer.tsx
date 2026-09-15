@@ -1,4 +1,5 @@
 import { Logo } from "./Logo";
+import { CountryFlag } from "./CountryFlag";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -6,7 +7,7 @@ import {
   YoutubeIcon,
 } from "./icons";
 import Link from "next/link";
-import { brand, sectionHref, type Dict } from "@/data/content";
+import { brand, brandAddress, sectionHref, type Dict } from "@/data/content";
 import { legalPath } from "@/data/legal";
 
 const socials = [
@@ -70,9 +71,15 @@ export function Footer({ dict }: { dict: Dict }) {
           <div>
             <h2 className={headingClass}>{t.contactTitle}</h2>
             <ul className="mt-5 flex flex-col gap-3.5">
-              {brand.phones.map((phone, i) => (
-                <li key={`${phone}-${i}`}>
-                  <a href={`tel:${phone.replace(/\s/g, "")}`} className={linkClass}>{phone}</a>
+              {brand.phones.map((phone) => (
+                <li key={phone.number}>
+                  <a
+                    href={`tel:${phone.number.replace(/\s/g, "")}`}
+                    className={`${linkClass} flex items-center gap-2`}
+                  >
+                    <CountryFlag iso2={phone.countryCode} />
+                    <span dir="ltr">{phone.number}</span>
+                  </a>
                 </li>
               ))}
               <li>
@@ -80,7 +87,7 @@ export function Footer({ dict }: { dict: Dict }) {
               </li>
               <li className="text-[14px] leading-[1.5] text-white/60">
                 <address className="not-italic">
-                  {t.address.map((line) => (
+                  {brandAddress.lines.map((line) => (
                     <span key={line} className="block">{line}</span>
                   ))}
                 </address>

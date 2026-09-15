@@ -14,25 +14,26 @@ export const tr: Dict = {
   locale: "tr",
   htmlLang: "tr",
   meta: {
-    title: "MyDentist | Uluslararası Sağlık Turizmi",
+    title: "MyDentist | Uluslararası Diş Sağlığı Turizmi",
     description:
-      "Uluslararası sağlık turizmi alanında güvenilir çözüm ortağınız. Saç ekimi, diş tedavisi, yüz estetiği ve ortopedi alanlarında akredite klinikler ve uzman doktorlar.",
+      "Uluslararası diş sağlığı turizminde güvenilir çözüm ortağınız. Dental implant, Hollywood Smile, zirkonyum kaplama ve All on Four tedavilerinde akredite klinikler ve uzman diş hekimleri.",
     keywords: [
-      "sağlık turizmi",
+      "diş sağlığı turizmi",
       "medikal turizm",
-      "saç ekimi",
-      "diş tedavisi",
-      "implant",
+      "dental implant",
+      "Hollywood Smile",
+      "zirkonyum kaplama",
+      "All on Four",
       "gülüş tasarımı",
-      "yüz estetiği",
-      "ortopedi",
-      "Türkiye'de tedavi",
+      "diş tedavisi",
+      "Türkiye'de diş tedavisi",
     ],
-    ogAlt: "MyDentist — uluslararası sağlık turizmi",
+    ogAlt: "MyDentist — uluslararası diş sağlığı turizmi",
   },
-  h1: "Uluslararası sağlık turizminde güvenilir çözüm ortağınız",
+  h1:
+    "Gülüşünüz için doğru tedaviyi birlikte planlayalım",
   heroLead:
-    "Saç ekimi, diş tedavisi, yüz estetiği ve ortopedide akredite klinikler ve uzman doktorlar. Ücretsiz ön değerlendirme için formu doldurun.",
+    "Diş sağlığınız için ihtiyaçlarınıza uygun tedavi seçeneklerini öğrenin, sürecinizi güvenle planlayın ve size en uygun çözüme kolayca ulaşın.",
   skipToContent: "İçeriğe geç",
   nav: {
     links: [
@@ -49,44 +50,63 @@ export const tr: Dict = {
     themeToggle: "Koyu / açık temayı değiştir",
   },
   hero: {
-    imageAlt: "Sağlık turizmi ile Türkiye'de tedavi olan mutlu bir hasta",
-    pills: ["Saç Ekimi", "Diş Tasarımı & Diş Sağlığı", "Yüz Estetiği", "Ortopedi"],
+    imageAlt: "Diş tedavisi için Türkiye'ye gelen mutlu bir hasta",
+    pills: [
+      "Dental İmplant",
+      "Hollywood Smile",
+      "Zirkonyum Kaplama",
+      "All On Four",
+    ],
     form: {
       name: "Ad Soyad",
       phone: "Telefon Numarası",
       email: "Mail Adresi",
       submit: "Gönder",
+      sending: "Gönderiliyor…",
       sent: "Talebiniz alındı. En kısa sürede sizinle iletişime geçeceğiz.",
+      error:
+        "Talebiniz iletilemedi. Lütfen tekrar deneyin veya info@mydentist.com adresine yazın.",
       countryLabel: "Ülke kodu",
       searchCountry: "Ülke ara",
       noResults: "Sonuç bulunamadı",
       invalidPhone: "Seçtiğiniz ülke için geçerli bir telefon numarası girin.",
     },
   },
+  about: {
+    eyebrow: "HAKKIMIZDA",
+    title: "16 yıldır doğru tedaviye güvenle ulaşmanız için buradayız",
+    paragraphs: [
+      "16 yılı aşkın deneyimimizle, 7'den fazla ülkede oluşturduğumuz klinik ağımız üzerinden bugüne kadar 25.000'den fazla hastanın diş tedavisi sürecine destek olduk. Amacımız; yüksek kalite standartlarını, ulaşılabilir ve ekonomik tedavi seçenekleriyle bir araya getirerek hastalarımızın doğru tedaviye güvenle ulaşmasını sağlamak. İlk değerlendirmeden tedavi planlamasına, randevu sürecinden tedavi sonrasına kadar her aşamada şeffaf, hızlı ve profesyonel bir hizmet sunuyoruz.",
+      "Tedavi süreçlerinde modern dijital teknolojilerden yararlanarak daha hızlı, doğru ve verimli bir planlama deneyimi sunuyoruz. Ağız içi fotoğraflar, panoramik röntgenler ve gerekli dijital görüntülemeler üzerinden ön değerlendirme yapılmasını sağlayarak, hastalarımızın zaman kaybetmeden uygun tedavi seçeneklerine ulaşmasına yardımcı oluyoruz. Hızlı iletişim, doğru yönlendirme ve etkin koordinasyon sayesinde sürecin her adımını mümkün olduğunca kolay ve konforlu hale getiriyoruz.",
+      "Hizmet anlayışımız tedavinin tamamlanmasıyla sona ermiyor. Tedavi sonrası takip, kontrol süreçleri ve ihtiyaç halinde yeniden değerlendirme konusunda hastalarımızın yanında olmaya devam ediyoruz. Anlaşmalı kliniklerimizin sunduğu tedavi sonrası destek ve garanti koşullarını şeffaf şekilde aktararak, hastalarımızın yalnızca tedavi sırasında değil, sonrasında da kendilerini güvende hissetmelerini önemsiyoruz.",
+    ],
+  },
   treatments: {
     eyebrow: "TEDAVİLER",
     title: "Öne Çıkan Tedaviler",
     description:
-      "Uzman doktorlarımız ve akredite kliniklerimizle en çok tercih edilen tedavi alanlarımız.",
+      "Uzman diş hekimlerimiz ve akredite kliniklerimizle en çok tercih edilen tedavi alanlarımız.",
     link: "Detaylı Bilgi",
     items: [
       {
-        title: "Saç Ekimi",
+        title: "Dental İmplant",
         description:
-          "Doğal görünümlü saç ekimi yöntemleri ile kalıcı ve estetik sonuçlar.",
+          "Eksik dişlerin yerine kalıcı çözüm; doğal görünüm ve rahat çiğneme.",
       },
       {
-        title: "Diş Tedavisi",
-        description: "Estetik gülüş tasarımı, implant ve tüm diş sağlığı hizmetleri.",
-      },
-      {
-        title: "Yüz Estetiği",
+        title: "Zirkonyum Kaplama",
         description:
-          "Botoks, dolgu, yüz germe ve daha fazlası ile genç ve dinamik görünüm.",
+          "Doğal diş görünümüne yakın, metal içermeyen dayanıklı kaplama.",
       },
       {
-        title: "Ortopedi",
-        description: "Diz, kalça ve eklem tedavilerinde modern cerrahi çözümler.",
+        title: "Hollywood Smile",
+        description:
+          "Yüz hatlarınıza uygun, bütüncül planlanan estetik gülüş tasarımı.",
+      },
+      {
+        title: "All On Four",
+        description:
+          "Dört implant üzerine sabit protezle tam çene restorasyonu.",
       },
     ],
   },
@@ -99,7 +119,7 @@ export const tr: Dict = {
     eyebrow: "POPÜLER SÜRECİ",
     title: "Nasıl İşliyor?",
     // Tasarımda "Uzman doktorlarımız, pkred ve şeffaf bir süreçle yönetiliz." yazıyordu
-    description: "Uzman doktorlarımız, akredite ve şeffaf bir süreçle yönetiyoruz.",
+    description: "Ücretsiz randevunuzu oluşturabilir veya ağız içi fotoğraf ve röntgenlerinizi bizimle paylaşabilirsiniz. Uzman diş hekimlerimizin değerlendirmesiyle size özel tedavi planınızı kolayca öğrenebilirsiniz.",
     steps: [
       {
         no: "01",
@@ -150,7 +170,7 @@ export const tr: Dict = {
   },
   stats: [
     {
-      value: "5+",
+      value: "7+",
       label: "Ülke",
       description: "Dünyanın dört bir yanından mutlu hastalarımıza hizmet veriyoruz.",
     },
@@ -180,39 +200,39 @@ export const tr: Dict = {
     // Review/AggregateRating) bilerek yazılmıyor.
     items: [
       {
+        name: "Elif K.",
+        country: "Türkiye",
+        rating: 5,
+        quote:
+          "Zirkonyum kaplama yaptırdım. Renk seçiminden provaya kadar her adımda ne olacağını önceden anlattılar. Sonuç gerçekten doğal görünüyor, kaplama olduğunu kimse anlamıyor.",
+      },
+      {
+        name: "Murat S.",
+        country: "Türkiye",
+        rating: 5,
+        quote:
+          "İki implant için başvurdum. Ağız içi fotoğraflarımı gönderdikten sonra planı önceden konuştuk, İstanbul'a gittiğimde hiçbir sürpriz olmadı. Kontrollerim de düzenli yapıldı.",
+      },
+      {
         name: "Anna L.",
         country: "Fransa",
         rating: 5,
         quote:
-          "İmplantlar için İstanbul'a geldim. Tüm süreç boyunca ekip inanılmaz destek oldu. Klinik, otel, transfer her şey mükemmeldi. Sonuçtan ve hizmetten çok memnunum.",
+          "Gülüş tasarımı için İstanbul'a geldim. Ekip süreç boyunca inanılmaz destek oldu. Klinik, otel ve transferler kusursuzdu. Sonuçtan da hizmetten de çok memnunum.",
       },
       {
         name: "Michael B.",
         country: "Almanya",
         rating: 5,
         quote:
-          "Saç ekimi için geldim. Konsültasyondan operasyona kadar her adım önceden planlanmıştı. Tercüman desteği sayesinde hiçbir aşamada zorlanmadım.",
+          "All on Four tedavisi oldum. Danışmadan operasyona kadar her adım önceden planlanmıştı. Tercüman desteği sayesinde hiçbir aşamada zorlanmadım.",
       },
       {
         name: "Sofia R.",
         country: "Portekiz",
         rating: 5,
         quote:
-          "Gülüş tasarımım için İzmir'deydim. Klinik çok modern, ekip çok ilgiliydi. Ülkeme döndükten sonra kontroller online devam etti.",
-      },
-      {
-        name: "James W.",
-        country: "İngiltere",
-        rating: 5,
-        quote:
-          "Diz protezi ameliyatı oldum. Havalimanı karşılama, otel, transfer... hiçbir şeyi tek başıma düşünmek zorunda kalmadım. Süreç baştan sona şeffaftı.",
-      },
-      {
-        name: "Lena K.",
-        country: "Hollanda",
-        rating: 5,
-        quote:
-          "Yüz estetiği için araştırma yaparken çok fazla seçenek vardı. Bana en uygun kliniği ve doktoru bulmamda gerçekten yol gösterdiler.",
+          "Zirkonyum kaplamalarım için İzmir'deydim. Klinik çok modern, ekip son derece ilgiliydi. Ülkeme döndükten sonra kontrollerim online devam etti.",
       },
     ],
   },
@@ -305,7 +325,6 @@ export const tr: Dict = {
       },
     ],
     contactTitle: "İLETİŞİM",
-    address: ["...Mah. ...Cad.", "No: 123 .... / İstanbul"],
     legal: "Tüm hakları saklıdır.",
     privacy: "Gizlilik Politikası",
     terms: "Kullanım Şartları",

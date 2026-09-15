@@ -3,237 +3,234 @@
 import type { DetailContent } from "../detail-pages";
 
 export const es: Record<string, DetailContent> = {
-  hair: {
-    title: "Injerto capilar",
-    tagline: "Resultados permanentes y de aspecto natural con las técnicas FUE y DHI",
+  implant: {
+    title: "Implante dental",
+    tagline: "Una solución permanente y de aspecto natural para los dientes ausentes",
     metaDescription:
-      "Técnicas de injerto capilar, proceso, recuperación y preguntas frecuentes. Planifique su tratamiento con MyDentist en clínicas acreditadas.",
+      "Tratamiento con implantes dentales: técnicas, proceso, recuperación y preguntas frecuentes. Planifique su implante con MyDentist en clínicas acreditadas.",
     intro: [
-      "El injerto capilar es una intervención microquirúrgica en la que sus propios folículos pilosos se trasladan a la zona afectada por la caída. Como los folículos proceden de una zona donante genéticamente resistente, el resultado es permanente.",
-      "La idoneidad depende del grado de la caída y de la densidad de su zona donante. Solo el médico que le examine puede realizar esa valoración; la información siguiente tiene carácter orientativo general.",
+      "Un implante dental es un tornillo de titanio que se coloca en el hueso maxilar en lugar de la raíz de un diente ausente. La corona que se coloca encima devuelve tanto el aspecto como la función masticatoria de forma muy próxima a la de un diente natural.",
+      "La idoneidad depende de la densidad de su hueso maxilar y de la salud de sus encías. Solo el dentista que le examine puede realizar esa valoración; la información siguiente tiene carácter orientativo general.",
     ],
     highlights: [
-      { label: "Duración de la intervención", value: "6–8 horas" },
+      { label: "Duración de la intervención", value: "30–90 minutos" },
       { label: "Anestesia", value: "Local" },
-      { label: "Vuelta a la vida diaria", value: "2–3 días" },
-      { label: "Resultado definitivo", value: "12–18 meses" },
+      { label: "Integración con el hueso", value: "3–6 meses" },
+      { label: "Estancia recomendada", value: "3–5 días" },
     ],
     sections: [
       {
         heading: "Técnicas que aplicamos",
         list: [
-          "FUE (Follicular Unit Extraction) — los folículos se extraen uno a uno; el método sin cicatriz más habitual",
-          "DHI (Direct Hair Implantation) — la apertura del canal y la implantación se realizan en un solo paso, lo que permite una colocación densa",
-          "FUE zafiro — con instrumentos de punta de zafiro se abren canales más pequeños, lo que puede acortar la recuperación",
+          "Implante clásico — se coloca el implante, se espera la integración y después se realiza la corona",
+          "Carga inmediata — si el hueso lo permite, puede colocarse una prótesis provisional en la misma sesión",
+          "Injerto óseo — se refuerza el hueso antes del implante cuando el volumen es insuficiente",
+          "Elevación de seno — se aplica cuando la altura ósea es insuficiente en el maxilar posterior",
         ],
       },
       {
         heading: "Cómo se desarrolla el proceso",
         paragraphs: [
-          "Se realiza una evaluación previa a partir de sus fotografías y de su historial de caída, y se le presentan clínicas y médicos adecuados. A su llegada se efectúa la exploración médica y se diseña su línea capilar.",
-          "La intervención se realiza el mismo día o al día siguiente. Al día siguiente se hacen el primer lavado y la revisión, junto con las indicaciones de cuidado.",
+          "Se realiza una evaluación previa a partir de sus fotografías intraorales y su radiografía panorámica, y se le presentan clínicas y dentistas adecuados. A su llegada a Turquía el plan se confirma con una exploración y, si es necesario, un escáner.",
+          "El implante se coloca con anestesia local. Una vez completada la integración con el hueso, en la segunda fase se toma una impresión y se coloca la corona definitiva.",
         ],
       },
       {
         heading: "Recuperación y cuidados",
         paragraphs: [
-          "Las costras y un ligero enrojecimiento en la zona receptora son normales los primeros días. La caída del pelo trasplantado en las primeras 2–4 semanas (caída de choque) es una fase esperada: los folículos permanecen en su sitio y comienza a crecer pelo nuevo.",
-          "Las consultas de seguimiento continúan en línea tras su regreso a casa.",
+          "Una ligera inflamación y sensibilidad son normales los primeros días. Seguir las indicaciones dietéticas y de higiene de su dentista acelera la cicatrización.",
+          "Las revisiones continúan en línea tras su regreso y, si es necesario, se le deriva a nuestras clínicas asociadas.",
         ],
       },
     ],
     faq: [
       {
-        question: "¿Duele el injerto capilar?",
+        question: "¿Cuántos viajes necesito para un implante?",
         answer:
-          "La intervención se realiza con anestesia local, de modo que no siente dolor durante la misma. La leve sensibilidad posterior se controla con los analgésicos que le recomiende su médico.",
+          "La mayoría de los casos requiere dos viajes: en el primero se coloca el implante, se dejan de 3 a 6 meses para la integración y en el segundo se completa la corona. Si su estructura ósea lo permite, pueden plantearse protocolos que se terminan en un solo viaje.",
       },
       {
-        question: "¿Cuántos injertos voy a necesitar?",
+        question: "¿La intervención es dolorosa?",
         answer:
-          "El número de injertos depende del grado de la caída y de la densidad que se busque. La cifra exacta solo puede fijarla el médico tras una exploración.",
+          "Se realiza con anestesia local, de modo que no siente dolor durante la misma. La sensibilidad posterior se controla con los analgésicos que le recomiende su dentista.",
       },
       {
-        question: "¿Cuándo veré resultados?",
+        question: "¿Cuánto dura un implante?",
         answer:
-          "El pelo nuevo suele empezar a aparecer a partir del tercer o cuarto mes. El aspecto definitivo se asienta en un plazo de 12 a 18 meses.",
+          "La higiene bucal, la salud de las encías y las revisiones periódicas influyen directamente en su duración. Su dentista valorará el tiempo esperable en su caso.",
       },
     ],
   },
-  dental: {
-    title: "Tratamiento dental",
-    tagline: "Implantes, diseño de sonrisa y odontología estética",
+  hollywood: {
+    title: "Hollywood Smile",
+    tagline: "Una sonrisa estética planificada de forma integral según sus rasgos faciales",
     metaDescription:
-      "Implantes dentales, coronas de circonio, carillas y diseño de sonrisa. Planificación del tratamiento y proceso en clínicas acreditadas.",
+      "Hollywood Smile (diseño de sonrisa): qué incluye, proceso, materiales y preguntas frecuentes. Planificación dental estética en clínicas acreditadas.",
     intro: [
-      "El tratamiento dental abarca una amplia gama de servicios, desde los implantes hasta el diseño estético de la sonrisa. Qué tratamiento le conviene se determina tras una exploración bucal y una prueba radiológica.",
-      "Cada plan de tratamiento es individual; el número de dientes, la estructura ósea y el estado general de salud influyen directamente en él.",
+      "El Hollywood Smile no es un procedimiento aislado, sino un diseño de sonrisa integral que aborda a la vez el color, el tamaño y la alineación de los dientes junto con la línea de las encías. Suele combinar carillas o coronas de circonio con blanqueamiento y, si es necesario, remodelado gingival.",
+      "El diseño es individual: se valoran conjuntamente las proporciones faciales, el movimiento de los labios y sus expectativas. La decisión final se toma con el dentista que le examina.",
     ],
     highlights: [
-      { label: "Duración del tratamiento", value: "3–7 días" },
+      { label: "Duración del tratamiento", value: "5–7 días" },
       { label: "Anestesia", value: "Local" },
-      { label: "Estancia recomendada", value: "5–7 días" },
-      { label: "Integración del implante", value: "3–6 meses" },
+      { label: "Estancia recomendada", value: "6–8 días" },
+      { label: "Prueba", value: "Vista previa con mock-up" },
     ],
     sections: [
       {
-        heading: "Nuestros tratamientos",
+        heading: "Qué puede incluir",
         list: [
-          "Implantes dentales — una solución permanente para los dientes ausentes",
-          "Coronas de circonio y porcelana — corrección de color y forma",
-          "Carillas — superficies frontales estéticas con un tallado mínimo",
-          "Diseño de sonrisa — planificación integral adaptada a sus rasgos faciales",
-          "Blanqueamiento dental y servicios generales de salud bucodental",
-        ],
-      },
-      {
-        heading: "¿Cuántos viajes hacen falta?",
-        paragraphs: [
-          "Las coronas y las carillas suelen completarse en un único viaje, dentro de un programa de 5 a 7 días.",
-          "El tratamiento con implantes tiene dos fases: en el primer viaje se coloca el implante, se dejan de 3 a 6 meses para la integración ósea y en el segundo viaje se completa la restauración. En algunos casos puede colocarse una prótesis provisional ya en el primer viaje.",
-        ],
-      },
-      {
-        heading: "Después del tratamiento",
-        paragraphs: [
-          "Los primeros días es posible notar sensibilidad y una ligera inflamación. Seguir las indicaciones dietéticas y de higiene de su médico acelera la recuperación.",
-          "Las revisiones continúan en línea tras su regreso y, cuando es necesario, se le deriva a nuestras clínicas asociadas.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "¿Basta un solo viaje para los implantes?",
-        answer:
-          "La mayoría de los casos requiere dos viajes. Si su estructura ósea lo permite, pueden plantearse protocolos que se completan en un único viaje; su médico lo valorará.",
-      },
-      {
-        question: "¿El tratamiento tiene garantía?",
-        answer:
-          "El periodo de garantía depende de los materiales empleados y de la clínica. Las condiciones se le comunican por escrito antes del tratamiento.",
-      },
-      {
-        question: "¿El tratamiento es doloroso?",
-        answer:
-          "Las intervenciones se realizan con anestesia local. Cualquier sensibilidad posterior se controla con la medicación que se le recomiende.",
-      },
-    ],
-  },
-  face: {
-    title: "Estética facial",
-    tagline: "Rejuvenecimiento facial quirúrgico y no quirúrgico",
-    metaDescription:
-      "Bótox, rellenos, lifting facial y rinoplastia. Procedimientos de estética facial, recuperación y preguntas frecuentes.",
-    intro: [
-      "La estética facial comprende métodos tanto quirúrgicos como no quirúrgicos. El objetivo es un aspecto más descansado y joven, preservando el equilibrio natural de sus rasgos.",
-      "Qué procedimiento le conviene depende de su piel, su edad y sus expectativas. La decisión final se toma junto al médico que le examina.",
-    ],
-    highlights: [
-      { label: "Duración del procedimiento", value: "30 min – 4 horas" },
-      { label: "Anestesia", value: "Local o general" },
-      { label: "Recuperación social", value: "3–14 días" },
-      { label: "Duración del efecto", value: "Según el procedimiento" },
-    ],
-    sections: [
-      {
-        heading: "Procedimientos",
-        list: [
-          "Bótox — suavizado de las líneas de expresión",
-          "Rellenos — recuperación del volumen perdido y definición del contorno",
-          "Lifting facial — corrección quirúrgica de la flacidez",
-          "Rinoplastia — ajuste tanto de la forma como de la función",
-          "Hilos tensores y tratamientos de rejuvenecimiento cutáneo",
-        ],
-      },
-      {
-        heading: "¿Quirúrgico o no quirúrgico?",
-        paragraphs: [
-          "Tratamientos como el bótox y los rellenos son rápidos, se aplican mediante inyección y por lo general permiten volver a la vida diaria el mismo día. Sus efectos son temporales y deben repetirse cada cierto tiempo.",
-          "Las intervenciones quirúrgicas como el lifting y la rinoplastia requieren más tiempo, quirófano y una recuperación más larga, pero sus resultados son duraderos.",
-        ],
-      },
-      {
-        heading: "Recuperación",
-        paragraphs: [
-          "Tras los tratamientos no quirúrgicos, el ligero enrojecimiento y los hematomas desaparecen en pocos días. Tras la cirugía, la inflamación y los hematomas pueden durar una o dos semanas.",
-          "La protección solar, el uso de los productos que recomiende su médico y la asistencia a las revisiones influyen directamente en el resultado.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "¿El resultado tendrá un aspecto natural?",
-        answer:
-          "Un resultado natural surge de planificar la dosis y la técnica en torno a su propia estructura facial. Trabajar con un médico experimentado es aquí determinante.",
-      },
-      {
-        question: "¿Cuántos días debo quedarme?",
-        answer:
-          "Uno o dos días bastan para los tratamientos no quirúrgicos. Para la cirugía se recomienda una estancia de 7 a 10 días para poder realizar las revisiones.",
-      },
-      {
-        question: "¿Se pueden combinar varios procedimientos?",
-        answer:
-          "Algunos procedimientos pueden combinarse. Su médico lo decide valorando su estado general de salud y la duración total de las intervenciones.",
-      },
-    ],
-  },
-  ortho: {
-    title: "Ortopedia",
-    tagline: "Prótesis de rodilla y cadera, cirugía articular y de lesiones deportivas",
-    metaDescription:
-      "Prótesis de rodilla, prótesis de cadera y cirugía articular artroscópica. Proceso del tratamiento, ingreso hospitalario y rehabilitación.",
-    intro: [
-      "El tratamiento ortopédico entra en juego cuando el dolor articular y la limitación del movimiento reducen la calidad de vida. La cirugía suele plantearse cuando opciones como la medicación y la fisioterapia ya no bastan.",
-      "La decisión terapéutica se toma valorando de forma conjunta las radiografías y resonancias, el nivel de dolor y el estado general de salud.",
-    ],
-    highlights: [
-      { label: "Ingreso hospitalario", value: "3–5 días" },
-      { label: "Anestesia", value: "General o raquídea" },
-      { label: "Estancia total", value: "10–14 días" },
-      { label: "Fisioterapia", value: "4–6 semanas" },
-    ],
-    sections: [
-      {
-        heading: "Áreas que cubrimos",
-        list: [
-          "Prótesis total de rodilla — sustitución de las superficies articulares en artrosis avanzada",
-          "Prótesis total de cadera — renovación de la articulación de la cadera",
-          "Artroscopia — reparación mínimamente invasiva de menisco y ligamentos",
-          "Cirugía de hombro y codo",
-          "Lesiones deportivas y reconstrucción ligamentosa",
+          "Carillas de porcelana — estética de la cara anterior con un tallado mínimo",
+          "Coronas de circonio — solución resistente para dientes con mayor pérdida de estructura",
+          "Remodelado gingival — ajuste de la cantidad de encía visible al sonreír",
+          "Blanqueamiento dental — para igualar el tono de los dientes que no se coronan",
         ],
       },
       {
         heading: "Cómo se desarrolla el proceso",
         paragraphs: [
-          "La evaluación previa comienza cuando nos envía sus pruebas de imagen e informes. A continuación se le presentan hospitales y cirujanos adecuados.",
-          "A su llegada se realizan las pruebas preoperatorias y se planifican la intervención y el ingreso. La fisioterapia comienza pronto tras el alta.",
+          "Se realiza una evaluación previa a partir de sus fotografías y su radiografía. En la clínica se prepara un diseño digital de sonrisa y un mock-up le permite ver el resultado por anticipado en su propia boca.",
+          "Tras su aprobación se preparan los dientes, se toman impresiones y se colocan provisionales. En la última sesión se cementan las restauraciones definitivas y se hacen los ajustes finos necesarios.",
         ],
       },
       {
-        heading: "Rehabilitación",
+        heading: "Después y cuidados",
         paragraphs: [
-          "En la cirugía protésica, la fisioterapia es la fase más determinante de la recuperación. Las primeras semanas se apoyan con ayudas para caminar y el rango de movimiento se amplía de forma gradual.",
-          "Su programa de ejercicios se le entrega tras el regreso a casa y la evolución se sigue mediante consultas en línea.",
+          "Los primeros días puede aparecer sensibilidad al frío y al calor, que suele pasar pronto. Evitar morder alimentos duros y usar una férula nocturna si aprieta los dientes protege el resultado.",
+          "El cepillado regular, la higiene interdental y las revisiones semestrales son determinantes para la durabilidad de las restauraciones.",
         ],
       },
     ],
     faq: [
       {
-        question: "¿Cuándo podré caminar tras la operación?",
+        question: "¿El resultado se verá artificial?",
         answer:
-          "En la cirugía protésica, la mayoría de los pacientes se ponen en pie con ayuda en las primeras 24–48 horas. El tiempo hasta caminar de forma autónoma varía según la persona y la intervención.",
+          "Un resultado natural surge de planificar el color y la forma en torno a sus propios rasgos faciales. En la fase de mock-up puede ver el resultado por adelantado y ajustarlo junto a su dentista.",
       },
       {
-        question: "¿Cuánto tiempo debo esperar para volar?",
+        question: "¿Cuántos dientes se tratan?",
         answer:
-          "El permiso para volar lo da su cirujano. Tras una prótesis suele recomendarse esperar de 10 a 14 días, algo relevante por el riesgo de trombosis.",
+          "Depende de cuántos dientes se ven al sonreír; lo habitual son de 8 a 10 por arcada. El número exacto se decide tras una exploración.",
       },
       {
-        question: "¿Cuánto dura una prótesis articular?",
+        question: "¿Se tallará mucho mi diente?",
         answer:
-          "El material, la edad y el nivel de actividad influyen en su duración. Su cirujano valorará la vida útil esperable en su caso concreto.",
+          "La cantidad de tallado depende de la técnica elegida. Las carillas implican la menor pérdida de estructura; el circonio requiere algo más. Su dentista valora cuál es adecuada.",
+      },
+    ],
+  },
+  zirconium: {
+    title: "Coronas de circonio",
+    tagline: "Coronas sin metal, de aspecto natural y resistentes",
+    metaDescription:
+      "Coronas de circonio: cuándo se utilizan, proceso, durabilidad y preguntas frecuentes. Planificación de coronas de circonio en clínicas acreditadas.",
+    intro: [
+      "Una corona de circonio utiliza circonio blanco en lugar de metal como estructura interna. Como transmite la luz de una forma próxima a la de un diente natural, no deja sombra gris en el margen de la encía, por lo que se prefiere en la zona estética.",
+      "Qué dientes se coronan y cuántos se determina según el grado de pérdida de estructura y la exploración bucal.",
+    ],
+    highlights: [
+      { label: "Duración del tratamiento", value: "4–6 días" },
+      { label: "Anestesia", value: "Local" },
+      { label: "Estancia recomendada", value: "5–7 días" },
+      { label: "Estructura", value: "Sin metal" },
+    ],
+    sections: [
+      {
+        heading: "¿Cuándo se prefieren?",
+        list: [
+          "Para restaurar dientes con cambios de color, deformados o fracturados",
+          "En dientes endodonciados con una pérdida de estructura importante",
+          "En puentes — como alternativa estética a los puentes con estructura metálica",
+          "Como corona sobre un implante",
+        ],
+      },
+      {
+        heading: "Cómo se desarrolla el proceso",
+        paragraphs: [
+          "Tras la exploración y la radiografía se preparan los dientes que se van a coronar y se toma una impresión digital o convencional. El color se elige junto a usted.",
+          "Las coronas fabricadas en el laboratorio se prueban primero; una vez aprobados el ajuste y el color, se cementan de forma definitiva.",
+        ],
+      },
+      {
+        heading: "Después y cuidados",
+        paragraphs: [
+          "Los primeros días es posible una ligera sensibilidad. Las coronas no se carían, pero el diente natural y la encía que hay debajo sí pueden hacerlo, de modo que el cepillado y la higiene interdental siguen siendo igual de importantes.",
+          "No morder objetos duros y usar una férula nocturna si aprieta los dientes reduce el riesgo de fractura.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué diferencia hay con la porcelana sobre metal?",
+        answer:
+          "Las coronas de porcelana clásicas tienen una estructura metálica y con el tiempo puede aparecer una línea gris en el margen de la encía. El circonio tiene una estructura blanca, por lo que esa sombra no se forma.",
+      },
+      {
+        question: "¿Son resistentes?",
+        answer:
+          "El circonio presenta una elevada resistencia a la fractura. Su duración depende de la higiene bucal, de un posible hábito de apretar los dientes y de las revisiones periódicas; el tiempo exacto varía de una persona a otra.",
+      },
+      {
+        question: "¿Tienen garantía?",
+        answer:
+          "El periodo de garantía depende del material empleado y de la clínica. Las condiciones se le entregan por escrito antes del tratamiento.",
+      },
+    ],
+  },
+  allonfour: {
+    title: "All On Four",
+    tagline: "Rehabilitación completa de la arcada con prótesis fija sobre cuatro implantes",
+    metaDescription:
+      "Tratamiento All on Four: a quién se dirige, proceso, recuperación y preguntas frecuentes. Planificación implantológica de arcada completa en clínicas acreditadas.",
+    intro: [
+      "El All on Four rehabilita una arcada sin dientes con una prótesis fija de una sola pieza anclada sobre cuatro implantes. Como los implantes posteriores se colocan inclinados, en la mayoría de los casos puede aprovecharse el hueso existente sin necesidad de injerto adicional.",
+      "Que el método sea adecuado para usted depende de su densidad ósea y de su salud bucal general; la decisión la toma el dentista que le examina.",
+    ],
+    highlights: [
+      { label: "Duración de la intervención", value: "2–4 horas" },
+      { label: "Anestesia", value: "Local o sedación" },
+      { label: "Prótesis provisional", value: "Normalmente el mismo día" },
+      { label: "Prótesis definitiva", value: "A los 3–6 meses" },
+    ],
+    sections: [
+      {
+        heading: "¿A quién se dirige?",
+        list: [
+          "A personas sin dientes en una arcada o a las que hay que extraer todas las piezas",
+          "A quienes usan una prótesis completa removible y tienen dificultades de sujeción y masticación",
+          "A quienes tienen un volumen óseo limitado y desean evitar un injerto",
+        ],
+      },
+      {
+        heading: "Cómo se desarrolla el proceso",
+        paragraphs: [
+          "La estructura ósea se valora mediante radiografía panorámica y escáner, y el plan se le comunica de antemano. Si es necesario, las extracciones y la colocación de los implantes se realizan en la misma sesión.",
+          "En la mayoría de los casos se coloca una prótesis fija provisional el mismo día; una vez completada la integración con el hueso, la prótesis definitiva se realiza en un segundo viaje.",
+        ],
+      },
+      {
+        heading: "Recuperación y adaptación",
+        paragraphs: [
+          "Se aconseja una dieta blanda las primeras semanas; la inflamación y los hematomas pueden durar unos días. El tiempo de adaptación al habla y a la masticación varía según la persona.",
+          "Para limpiar bajo la prótesis deben usarse con regularidad el cepillo interdental y el irrigador que le recomiende su dentista.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "¿Puedo salir con dientes el mismo día?",
+        answer:
+          "Cuando el hueso lo permite, normalmente puede colocarse una prótesis fija provisional el mismo día. Esa valoración se realiza tras el escáner y la exploración.",
+      },
+      {
+        question: "¿La prótesis se puede salir?",
+        answer:
+          "No. Va atornillada a los implantes y queda fija; solo su dentista puede retirarla para una revisión o una limpieza.",
+      },
+      {
+        question: "¿Cuántos días debo quedarme?",
+        answer:
+          "Para el primer viaje se recomiendan normalmente de 5 a 7 días. Para la prótesis definitiva se planifica un segundo viaje más corto; la duración exacta se le comunica junto con su plan de tratamiento.",
       },
     ],
   },

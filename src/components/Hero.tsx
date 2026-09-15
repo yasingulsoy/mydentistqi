@@ -10,10 +10,28 @@ export function Hero({ dict }: { dict: Dict }) {
       id="ana-sayfa"
       className="bg-navy-800 bg-[image:var(--gradient-hero)]"
     >
-      <div className="mx-auto w-full max-w-[1240px] lg:grid lg:h-[870px] lg:grid-cols-[568px_568px] lg:justify-between lg:px-5">
+      {/*
+        Telefonda sıra: başlık -> görsel -> form.
+        Önceden görsel en üstteydi; 375px'te ~600px yer kapladığı için
+        sayfanın tek H1'i ilk ekranın tamamen dışında kalıyordu.
+        Masaüstünde ızgara yerleşimi kullanılıyor: sol sütunda başlık (1.
+        satır) ve form (2. satır), sağ sütunda iki satırı kaplayan görsel.
+      */}
+      <div className="mx-auto flex w-full max-w-[1240px] flex-col lg:grid lg:h-[870px] lg:grid-cols-[568px_568px] lg:grid-rows-[auto_1fr] lg:justify-between lg:px-5">
+        {/* Sayfanın tek H1'i. Tasarımda hero metni yoktu; sol sütun boş
+            kaldığı için form sarkmış görünüyordu. */}
+        <div className="order-1 px-5 pt-12 sm:pt-16 lg:order-none lg:col-start-1 lg:row-start-1 lg:px-0 lg:pt-24">
+          <h1 className="max-w-[520px] font-serif text-[30px] leading-[1.2] text-white sm:text-[38px]">
+            {dict.h1}
+          </h1>
+          <p className="mt-4 max-w-[500px] text-[15px] leading-[1.65] text-white/70">
+            {dict.heroLead}
+          </p>
+        </div>
+
         {/* Görsel: mobil ve masaüstü farklı kırpımlar, <picture> ile sadece
             eşleşen dosya indiriliyor (iki ayrı <Image> ikisini de indiriyordu). */}
-        <div className="relative lg:order-2 lg:pt-24">
+        <div className="relative order-2 mt-10 lg:order-none lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:pt-24">
           <picture>
             <source
               media="(min-width: 1024px)"
@@ -61,24 +79,9 @@ export function Hero({ dict }: { dict: Dict }) {
           </ul>
         </div>
 
-        {/* Form */}
-        {/* Form, görselle AYNI üst hizada başlıyor (ikisi de pt-24).
-            Önceden dikey ortalıydı; 870px kapsayıcıda 416px kart
-            üstünde 227px boşluk bırakıyor, görselin 96px'iyle
-            uyuşmadığı için sarkmış gibi duruyordu. */}
-        <div className="px-5 py-14 sm:py-20 lg:order-1 lg:px-0 lg:py-0 lg:pt-24">
-          {/* Sayfanın tek H1'i. Tasarımda hero metni yoktu; sol sütun boş
-              kaldığı için form sarkmış görünüyordu. */}
-          <h1 className="max-w-[520px] font-serif text-[30px] leading-[1.2] text-white sm:text-[38px]">
-            {dict.h1}
-          </h1>
-          <p className="mt-4 max-w-[500px] text-[15px] leading-[1.65] text-white/70">
-            {dict.heroLead}
-          </p>
-
-          <div className="mt-8 lg:mt-10">
-            <ContactForm t={hero.form} locale={dict.locale} />
-          </div>
+        {/* Form — masaüstünde başlığın hemen altında, sol sütunun 2. satırı */}
+        <div className="order-3 px-5 pb-14 pt-10 sm:pb-20 lg:order-none lg:col-start-1 lg:row-start-2 lg:px-0 lg:pb-0 lg:pt-10">
+          <ContactForm t={hero.form} locale={dict.locale} />
         </div>
       </div>
     </section>

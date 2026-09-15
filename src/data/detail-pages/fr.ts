@@ -3,237 +3,234 @@
 import type { DetailContent } from "../detail-pages";
 
 export const fr: Record<string, DetailContent> = {
-  hair: {
-    title: "Greffe de cheveux",
-    tagline: "Des résultats durables et naturels avec les techniques FUE et DHI",
+  implant: {
+    title: "Implant dentaire",
+    tagline: "Une solution durable et d'aspect naturel pour les dents manquantes",
     metaDescription:
-      "Techniques de greffe de cheveux, déroulement, cicatrisation et questions fréquentes. Planifiez votre traitement avec MyDentist dans des cliniques accréditées.",
+      "Traitement par implant dentaire : techniques, déroulement, cicatrisation et questions fréquentes. Planifiez votre implant avec MyDentist dans des cliniques accréditées.",
     intro: [
-      "La greffe de cheveux est une intervention microchirurgicale au cours de laquelle vos propres follicules pileux sont déplacés vers la zone touchée par la chute. Comme les follicules proviennent d'une zone donneuse génétiquement résistante, le résultat est définitif.",
-      "L'éligibilité dépend du degré de la chute et de la densité de votre zone donneuse. Seul le médecin qui vous examine peut établir cette évaluation ; les informations ci-dessous sont d'ordre général.",
+      "Un implant dentaire est une vis en titane placée dans l'os de la mâchoire pour remplacer la racine d'une dent absente. La couronne posée dessus restitue l'aspect et la fonction de mastication au plus près d'une dent naturelle.",
+      "L'éligibilité dépend de la densité de votre os maxillaire et de la santé de vos gencives. Seul le dentiste qui vous examine peut établir cette évaluation ; les informations ci-dessous sont d'ordre général.",
     ],
     highlights: [
-      { label: "Durée de l'intervention", value: "6–8 heures" },
+      { label: "Durée de l'intervention", value: "30–90 minutes" },
       { label: "Anesthésie", value: "Locale" },
-      { label: "Retour à la vie quotidienne", value: "2–3 jours" },
-      { label: "Résultat définitif", value: "12–18 mois" },
+      { label: "Intégration osseuse", value: "3–6 mois" },
+      { label: "Séjour recommandé", value: "3–5 jours" },
     ],
     sections: [
       {
         heading: "Techniques pratiquées",
         list: [
-          "FUE (Follicular Unit Extraction) — les follicules sont prélevés un par un ; la méthode sans cicatrice la plus répandue",
-          "DHI (Direct Hair Implantation) — l'ouverture du canal et l'implantation se font en une seule étape, ce qui permet une forte densité",
-          "FUE saphir — des instruments à pointe de saphir ouvrent des canaux plus fins, ce qui peut raccourcir la cicatrisation",
+          "Implant classique — l'implant est posé, on attend l'intégration, puis la couronne est réalisée",
+          "Mise en charge immédiate — si l'os le permet, une prothèse provisoire peut être posée dans la même séance",
+          "Greffe osseuse — l'os est renforcé avant l'implant lorsque le volume est insuffisant",
+          "Comblement sinusien — utilisé quand la hauteur d'os est insuffisante au maxillaire postérieur",
         ],
       },
       {
         heading: "Comment se déroule le processus",
         paragraphs: [
-          "Une pré-évaluation est réalisée à partir de vos photos et de l'historique de votre chute de cheveux, puis des cliniques et des médecins adaptés vous sont proposés. À votre arrivée, vous passez un examen médical et votre ligne frontale est dessinée.",
-          "L'intervention a lieu le jour même ou le lendemain. Le premier lavage et le contrôle sont effectués le lendemain, avec les consignes de soin.",
+          "Une pré-évaluation est réalisée à partir de vos photographies intrabuccales et de votre panoramique, puis des cliniques et des dentistes adaptés vous sont proposés. À votre arrivée en Turquie, le plan est confirmé par un examen et, si nécessaire, un cone beam.",
+          "L'implant est posé sous anesthésie locale. Une fois l'intégration osseuse achevée, une empreinte est prise lors de la seconde étape et la couronne définitive est mise en place.",
         ],
       },
       {
         heading: "Cicatrisation et suites",
         paragraphs: [
-          "Des croûtes et de légères rougeurs dans la zone receveuse sont normales les premiers jours. La chute des cheveux greffés dans les 2 à 4 premières semaines (chute de choc) est une étape attendue : les follicules restent en place et de nouveaux cheveux commencent à pousser.",
-          "Les consultations de suivi se poursuivent en ligne après votre retour.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "La greffe de cheveux est-elle douloureuse ?",
-        answer:
-          "L'intervention est réalisée sous anesthésie locale : vous ne ressentez donc pas de douleur pendant celle-ci. Une légère sensibilité ensuite se gère avec les antalgiques recommandés par votre médecin.",
-      },
-      {
-        question: "De combien de greffons vais-je avoir besoin ?",
-        answer:
-          "Le nombre de greffons dépend du degré de la chute et de la densité recherchée. Un chiffre précis ne peut être fixé que par le médecin après un examen.",
-      },
-      {
-        question: "Quand verrai-je les résultats ?",
-        answer:
-          "Les nouveaux cheveux apparaissent généralement à partir du troisième ou quatrième mois. L'aspect définitif se stabilise en 12 à 18 mois.",
-      },
-    ],
-  },
-  dental: {
-    title: "Soins dentaires",
-    tagline: "Implants, design du sourire et dentisterie esthétique",
-    metaDescription:
-      "Implants dentaires, couronnes en zircone, facettes et design du sourire. Planification du traitement et déroulement dans des cliniques accréditées.",
-    intro: [
-      "Les soins dentaires couvrent un large éventail de prestations, des implants au design esthétique du sourire. Le traitement qui vous convient est déterminé après un examen buccal et une imagerie radiologique.",
-      "Chaque plan de traitement est individuel ; le nombre de dents, la structure osseuse et l'état de santé général l'influencent directement.",
-    ],
-    highlights: [
-      { label: "Durée du traitement", value: "3–7 jours" },
-      { label: "Anesthésie", value: "Locale" },
-      { label: "Séjour recommandé", value: "5–7 jours" },
-      { label: "Intégration de l'implant", value: "3–6 mois" },
-    ],
-    sections: [
-      {
-        heading: "Nos traitements",
-        list: [
-          "Implants dentaires — une solution permanente aux dents manquantes",
-          "Couronnes en zircone et en céramique — correction de la couleur et de la forme",
-          "Facettes — surfaces antérieures esthétiques avec une préparation minimale",
-          "Design du sourire — une planification globale adaptée à vos traits",
-          "Blanchiment des dents et soins généraux de santé dentaire",
-        ],
-      },
-      {
-        heading: "Combien de séjours faut-il ?",
-        paragraphs: [
-          "Les couronnes et les facettes sont généralement réalisées en un seul séjour, dans un programme de 5 à 7 jours.",
-          "Le traitement implantaire comporte deux étapes : l'implant est posé lors du premier séjour, 3 à 6 mois sont nécessaires à l'intégration osseuse, puis la restauration est achevée lors du second séjour. Dans certains cas, une prothèse provisoire peut être posée dès le premier séjour.",
-        ],
-      },
-      {
-        heading: "Après le traitement",
-        paragraphs: [
-          "Une sensibilité et un léger gonflement sont possibles les premiers jours. Suivre les consignes alimentaires et d'hygiène de votre médecin accélère la cicatrisation.",
+          "Un léger gonflement et une sensibilité sont normaux les premiers jours. Suivre les consignes alimentaires et d'hygiène de votre dentiste accélère la cicatrisation.",
           "Les contrôles se poursuivent en ligne après votre retour, avec orientation vers nos cliniques partenaires si nécessaire.",
         ],
       },
     ],
     faq: [
       {
-        question: "Un seul voyage suffit-il pour les implants ?",
+        question: "Combien de séjours faut-il pour un implant ?",
         answer:
-          "La plupart des cas nécessitent deux séjours. Si votre structure osseuse le permet, des protocoles réalisables en un seul voyage peuvent être envisagés — c'est votre médecin qui en juge.",
+          "La plupart des cas demandent deux séjours : l'implant est posé au premier, 3 à 6 mois sont laissés pour l'intégration, et la couronne est achevée au second. Si votre structure osseuse le permet, des protocoles réalisables en un seul voyage peuvent être envisagés.",
       },
       {
-        question: "Le traitement est-il garanti ?",
+        question: "L'intervention est-elle douloureuse ?",
         answer:
-          "La durée de garantie dépend des matériaux utilisés et de la clinique. Les conditions vous sont communiquées par écrit avant le traitement.",
+          "Elle est réalisée sous anesthésie locale : vous ne ressentez pas de douleur pendant. La sensibilité ensuite se gère avec les antalgiques recommandés par votre dentiste.",
       },
       {
-        question: "Le traitement fait-il mal ?",
+        question: "Combien de temps dure un implant ?",
         answer:
-          "Les interventions sont réalisées sous anesthésie locale. Toute sensibilité ultérieure se gère avec les médicaments qui vous sont recommandés.",
+          "L'hygiène bucco-dentaire, la santé des gencives et des contrôles réguliers influent directement sur sa durée de vie. Votre dentiste évaluera la durée attendue dans votre cas.",
       },
     ],
   },
-  face: {
-    title: "Esthétique du visage",
-    tagline: "Rajeunissement du visage, chirurgical et non chirurgical",
+  hollywood: {
+    title: "Hollywood Smile",
+    tagline: "Un sourire esthétique pensé dans son ensemble selon vos traits du visage",
     metaDescription:
-      "Botox, injections, lifting et rhinoplastie. Interventions d'esthétique du visage, cicatrisation et questions fréquentes.",
+      "Hollywood Smile (design du sourire) : ce qu'il comprend, le déroulement, les matériaux et les questions fréquentes. Planification dentaire esthétique en cliniques accréditées.",
     intro: [
-      "L'esthétique du visage regroupe des méthodes chirurgicales et non chirurgicales. L'objectif est un aspect plus reposé et plus jeune, tout en préservant l'équilibre naturel de vos traits.",
-      "L'intervention qui vous convient dépend de votre peau, de votre âge et de vos attentes. La décision finale se prend avec le médecin qui vous examine.",
+      "Le Hollywood Smile n'est pas un acte isolé mais un design du sourire global, qui traite ensemble la couleur, la taille et l'alignement des dents ainsi que la ligne gingivale. Il associe généralement des facettes ou des couronnes en zircone à un blanchiment et, si besoin, à un remodelage gingival.",
+      "La conception est individuelle : proportions du visage, mouvement des lèvres et vos attentes sont évalués ensemble. La décision finale se prend avec le dentiste qui vous examine.",
     ],
     highlights: [
-      { label: "Durée de l'intervention", value: "30 min – 4 heures" },
-      { label: "Anesthésie", value: "Locale ou générale" },
-      { label: "Récupération sociale", value: "3–14 jours" },
-      { label: "Durabilité", value: "Selon l'intervention" },
+      { label: "Durée du traitement", value: "5–7 jours" },
+      { label: "Anesthésie", value: "Locale" },
+      { label: "Séjour recommandé", value: "6–8 jours" },
+      { label: "Essayage", value: "Aperçu par mock-up" },
     ],
     sections: [
       {
-        heading: "Interventions",
+        heading: "Ce qu'il peut comprendre",
         list: [
-          "Botox — atténuation des rides d'expression",
-          "Injections — restauration du volume perdu et affinement des contours",
-          "Lifting du visage — correction chirurgicale du relâchement",
-          "Rhinoplastie — ajustement de la forme et de la fonction",
-          "Fils tenseurs et traitements de rajeunissement cutané",
-        ],
-      },
-      {
-        heading: "Chirurgical ou non chirurgical ?",
-        paragraphs: [
-          "Les traitements comme le Botox et les injections sont rapides, par voie injectable, et vous permettent généralement de reprendre vos activités le jour même. Leurs effets sont temporaires et doivent être renouvelés à intervalles réguliers.",
-          "Les interventions chirurgicales comme le lifting et la rhinoplastie sont plus longues, exigent un bloc opératoire et une convalescence plus étendue — mais leurs résultats durent longtemps.",
-        ],
-      },
-      {
-        heading: "Convalescence",
-        paragraphs: [
-          "Après les traitements non chirurgicaux, les rougeurs et les bleus légers disparaissent en quelques jours. Après une opération, gonflements et ecchymoses peuvent durer une à deux semaines.",
-          "La protection solaire, l'utilisation des produits recommandés par votre médecin et le respect des rendez-vous de suivi influent directement sur le résultat.",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Le résultat aura-t-il l'air naturel ?",
-        answer:
-          "Un résultat naturel vient d'une planification de la dose et de la technique autour de votre propre structure faciale. Travailler avec un médecin expérimenté est ici déterminant.",
-      },
-      {
-        question: "Combien de jours dois-je rester ?",
-        answer:
-          "Un à deux jours suffisent pour les traitements non chirurgicaux. Pour la chirurgie, un séjour de 7 à 10 jours est recommandé afin de permettre les contrôles.",
-      },
-      {
-        question: "Peut-on combiner plusieurs interventions ?",
-        answer:
-          "Certaines interventions peuvent être combinées. Votre médecin en décide en évaluant votre état de santé général et la durée totale des actes.",
-      },
-    ],
-  },
-  ortho: {
-    title: "Orthopédie",
-    tagline: "Prothèses de genou et de hanche, chirurgie articulaire et du sport",
-    metaDescription:
-      "Prothèse de genou, prothèse de hanche et chirurgie articulaire arthroscopique. Déroulement du traitement, hospitalisation et rééducation.",
-    intro: [
-      "Le traitement orthopédique intervient lorsque les douleurs articulaires et la limitation des mouvements réduisent la qualité de vie. La chirurgie est généralement envisagée quand les médicaments et la kinésithérapie ne suffisent plus.",
-      "La décision thérapeutique se prend en évaluant ensemble les radiographies et IRM, le niveau de douleur et l'état de santé général.",
-    ],
-    highlights: [
-      { label: "Hospitalisation", value: "3–5 jours" },
-      { label: "Anesthésie", value: "Générale ou rachidienne" },
-      { label: "Séjour total", value: "10–14 jours" },
-      { label: "Kinésithérapie", value: "4–6 semaines" },
-    ],
-    sections: [
-      {
-        heading: "Nos domaines",
-        list: [
-          "Prothèse totale de genou — remplacement des surfaces articulaires en cas d'arthrose avancée",
-          "Prothèse totale de hanche — renouvellement de l'articulation de la hanche",
-          "Arthroscopie — réparation du ménisque et des ligaments par voie mini-invasive",
-          "Chirurgie de l'épaule et du coude",
-          "Blessures sportives et reconstruction ligamentaire",
+          "Facettes en céramique — esthétique de la face antérieure avec une préparation minimale",
+          "Couronnes en zircone — solution solide pour les dents ayant perdu plus de substance",
+          "Remodelage gingival — ajustement de la gencive visible lorsque vous souriez",
+          "Blanchiment — pour harmoniser la teinte des dents non couronnées",
         ],
       },
       {
         heading: "Comment se déroule le processus",
         paragraphs: [
-          "La pré-évaluation commence dès que vous transmettez vos examens d'imagerie et vos comptes rendus. Des hôpitaux et des chirurgiens adaptés vous sont ensuite présentés.",
-          "À votre arrivée, les examens préopératoires sont réalisés et l'opération ainsi que l'hospitalisation sont planifiées. La kinésithérapie commence tôt après la sortie.",
+          "Une pré-évaluation est réalisée à partir de vos photographies et de votre radiographie. À la clinique, un design numérique du sourire est préparé et un mock-up vous permet de prévisualiser le résultat dans votre propre bouche.",
+          "Après votre accord, les dents sont préparées, les empreintes prises et des provisoires posés. Lors de la dernière séance, les restaurations définitives sont collées et ajustées finement si besoin.",
         ],
       },
       {
-        heading: "Rééducation",
+        heading: "Après et entretien",
         paragraphs: [
-          "Dans la chirurgie prothétique, la kinésithérapie est l'étape la plus déterminante de la récupération. Les premières semaines sont accompagnées d'aides à la marche et l'amplitude des mouvements est augmentée progressivement.",
-          "Votre programme d'exercices vous est transmis après votre retour et les progrès sont suivis lors de consultations en ligne.",
+          "Une sensibilité au chaud et au froid peut apparaître les premiers jours et passe généralement vite. Éviter de mordre des aliments durs et porter une gouttière nocturne en cas de bruxisme protège le résultat.",
+          "Un brossage régulier, le nettoyage interdentaire et des contrôles semestriels sont déterminants pour la longévité des restaurations.",
         ],
       },
     ],
     faq: [
       {
-        question: "Quand pourrai-je marcher après l'opération ?",
+        question: "Le résultat aura-t-il l'air artificiel ?",
         answer:
-          "En chirurgie prothétique, la plupart des patients sont remis debout avec assistance dans les 24 à 48 premières heures. Le délai avant la marche autonome varie selon la personne et l'intervention.",
+          "Un résultat naturel vient d'une teinte et d'une forme planifiées selon vos propres traits. À l'étape du mock-up, vous voyez le résultat à l'avance et pouvez l'ajuster avec votre dentiste.",
       },
       {
-        question: "Combien de temps avant de pouvoir prendre l'avion ?",
+        question: "Combien de dents sont traitées ?",
         answer:
-          "L'autorisation de voler est donnée par votre chirurgien. Après une prothèse, une attente de 10 à 14 jours est généralement conseillée, ce qui importe pour le risque de thrombose.",
+          "Cela dépend du nombre de dents visibles quand vous souriez ; 8 à 10 par arcade est courant. Le nombre exact est fixé après un examen.",
       },
       {
-        question: "Combien de temps dure une prothèse articulaire ?",
+        question: "Va-t-on beaucoup tailler mes dents ?",
         answer:
-          "Le matériau, l'âge et le niveau d'activité influent sur la longévité. Votre chirurgien évaluera la durée de vie attendue dans votre cas.",
+          "La quantité de préparation dépend de la technique retenue. Les facettes en demandent le moins, la zircone davantage. Votre dentiste évalue ce qui convient.",
+      },
+    ],
+  },
+  zirconium: {
+    title: "Couronnes en zircone",
+    tagline: "Des couronnes sans métal, d'aspect naturel et résistantes",
+    metaDescription:
+      "Couronnes en zircone : indications, déroulement, durabilité et questions fréquentes. Planification de couronnes en zircone en cliniques accréditées.",
+    intro: [
+      "Une couronne en zircone utilise de la zircone blanche au lieu du métal comme armature. Comme elle transmet la lumière d'une façon proche d'une dent naturelle, elle ne laisse pas d'ombre grise au collet, ce qui la fait privilégier dans le secteur esthétique.",
+      "Quelles dents sont couronnées et en quel nombre dépend de l'ampleur de la perte de substance et de l'examen buccal.",
+    ],
+    highlights: [
+      { label: "Durée du traitement", value: "4–6 jours" },
+      { label: "Anesthésie", value: "Locale" },
+      { label: "Séjour recommandé", value: "5–7 jours" },
+      { label: "Armature", value: "Sans métal" },
+    ],
+    sections: [
+      {
+        heading: "Quand sont-elles privilégiées ?",
+        list: [
+          "Pour restaurer des dents colorées, déformées ou fracturées",
+          "Sur des dents dévitalisées ayant subi une perte de substance importante",
+          "En bridge — comme alternative esthétique aux bridges à armature métallique",
+          "Comme couronne sur implant",
+        ],
+      },
+      {
+        heading: "Comment se déroule le processus",
+        paragraphs: [
+          "Après l'examen et la radiographie, les dents à couronner sont préparées et une empreinte est prise, numérique ou classique. La teinte est choisie avec vous.",
+          "Les couronnes réalisées au laboratoire sont d'abord essayées ; une fois l'ajustement et la couleur validés, elles sont collées définitivement.",
+        ],
+      },
+      {
+        heading: "Après et entretien",
+        paragraphs: [
+          "Une légère sensibilité est possible les premiers jours. Les couronnes ne se carient pas, mais la dent naturelle et la gencive situées en dessous le peuvent : le brossage et le nettoyage interdentaire restent donc aussi importants.",
+          "Ne pas mordre d'objets durs et porter une gouttière nocturne en cas de bruxisme réduit le risque de fracture.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Quelle différence avec la céramo-métallique ?",
+        answer:
+          "Les couronnes céramo-métalliques ont une armature en métal, et un liseré gris peut apparaître au collet avec le temps. La zircone a une armature blanche : cette ombre ne se forme pas.",
+      },
+      {
+        question: "Sont-elles résistantes ?",
+        answer:
+          "La zircone présente une résistance élevée à la fracture. Sa longévité dépend de l'hygiène, d'un éventuel bruxisme et de contrôles réguliers ; la durée exacte varie d'une personne à l'autre.",
+      },
+      {
+        question: "Y a-t-il une garantie ?",
+        answer:
+          "La durée de garantie dépend du matériau utilisé et de la clinique. Les conditions vous sont remises par écrit avant le traitement.",
+      },
+    ],
+  },
+  allonfour: {
+    title: "All On Four",
+    tagline: "Restauration complète de l'arcade avec une prothèse fixe sur quatre implants",
+    metaDescription:
+      "Traitement All on Four : à qui il s'adresse, déroulement, cicatrisation et questions fréquentes. Planification implantaire de l'arcade complète en cliniques accréditées.",
+    intro: [
+      "L'All on Four restaure une mâchoire édentée avec une prothèse fixe d'une seule pièce ancrée sur quatre implants. Les implants postérieurs étant inclinés, l'os existant peut le plus souvent être utilisé sans greffe supplémentaire.",
+      "Savoir si la méthode vous convient dépend de votre densité osseuse et de votre santé bucco-dentaire générale ; la décision revient au dentiste qui vous examine.",
+    ],
+    highlights: [
+      { label: "Durée de l'intervention", value: "2–4 heures" },
+      { label: "Anesthésie", value: "Locale ou sédation" },
+      { label: "Prothèse provisoire", value: "Généralement le jour même" },
+      { label: "Prothèse définitive", value: "Après 3–6 mois" },
+    ],
+    sections: [
+      {
+        heading: "À qui s'adresse-t-elle ?",
+        list: [
+          "Aux personnes n'ayant plus de dents sur une arcade, ou dont toutes les dents doivent être extraites",
+          "À celles qui portent une prothèse complète amovible et rencontrent des difficultés de tenue et de mastication",
+          "À celles dont le volume osseux est limité et qui souhaitent éviter une greffe",
+        ],
+      },
+      {
+        heading: "Comment se déroule le processus",
+        paragraphs: [
+          "La structure osseuse est évaluée à partir d'une panoramique et d'un cone beam, et le plan vous est communiqué à l'avance. Si nécessaire, extractions et pose des implants ont lieu dans la même séance.",
+          "Dans la plupart des cas, une prothèse fixe provisoire est posée le jour même ; une fois l'intégration osseuse achevée, la prothèse définitive est réalisée lors d'un second séjour.",
+        ],
+      },
+      {
+        heading: "Cicatrisation et adaptation",
+        paragraphs: [
+          "Une alimentation molle est conseillée les premières semaines ; gonflement et ecchymoses peuvent durer quelques jours. Le temps d'adaptation à la parole et à la mastication varie selon les personnes.",
+          "La brossette interdentaire et l'hydropulseur recommandés par votre dentiste doivent être utilisés régulièrement pour nettoyer sous la prothèse.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Puis-je repartir avec des dents le jour même ?",
+        answer:
+          "Lorsque l'os le permet, une prothèse fixe provisoire peut généralement être posée le jour même. Cette évaluation se fait après un cone beam et un examen.",
+      },
+      {
+        question: "La prothèse peut-elle se détacher ?",
+        answer:
+          "Non. Elle est vissée sur les implants et reste fixe ; seul votre dentiste peut la retirer pour un contrôle ou un nettoyage.",
+      },
+      {
+        question: "Combien de jours dois-je rester ?",
+        answer:
+          "5 à 7 jours sont généralement recommandés pour le premier séjour. Un second séjour, plus court, est prévu pour la prothèse définitive ; la durée exacte vous est communiquée avec votre plan de traitement.",
       },
     ],
   },

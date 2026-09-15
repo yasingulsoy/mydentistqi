@@ -5,7 +5,7 @@ export function HowItWorks({ dict }: { dict: Dict }) {
   const t = dict.process;
 
   return (
-    <section id="hakkimizda" className="bg-surface py-16 sm:py-24 lg:py-[100px]">
+    <section id="surec" className="bg-surface py-16 sm:py-24 lg:py-[100px]">
       <div className="section-x lg:grid lg:grid-cols-[minmax(0,1fr)_650px] lg:items-start lg:gap-12">
         <SectionHeading
           eyebrow={t.eyebrow}

@@ -22,7 +22,8 @@ export type {
   ServiceIconKey,
 } from "./dict";
 export { heroPillIcons, serviceIcons } from "./dict";
-export { siteUrl, brand, isPlaceholder } from "./site";
+export { siteUrl, brand, brandAddress, isPlaceholder } from "./site";
+export type { BrandPhone } from "./site";
 export {
   LOCALES,
   defaultLocale,

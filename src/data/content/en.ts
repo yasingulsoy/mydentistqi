@@ -6,25 +6,26 @@ export const en: Dict = {
   locale: "en",
   htmlLang: "en",
   meta: {
-    title: "MyDentist | International Health Tourism",
+    title: "MyDentist | International Dental Health Tourism",
     description:
-      "Your trusted partner in international health tourism. Accredited clinics and expert doctors for hair transplants, dental treatment, facial aesthetics and orthopedics.",
+      "Your trusted partner in international dental health tourism. Accredited clinics and expert dentists for dental implants, Hollywood Smile, zirconium crowns and All on Four.",
     keywords: [
-      "health tourism",
+      "dental tourism",
       "medical tourism Turkey",
-      "hair transplant",
-      "dental treatment",
       "dental implants",
+      "Hollywood Smile",
+      "zirconium crowns",
+      "All on Four",
       "smile design",
-      "facial aesthetics",
-      "orthopedics",
-      "treatment in Türkiye",
+      "dental treatment",
+      "dental treatment in Türkiye",
     ],
-    ogAlt: "MyDentist — international health tourism",
+    ogAlt: "MyDentist — international dental health tourism",
   },
-  h1: "Your trusted partner in international health tourism",
+  h1:
+    "Let's plan the right treatment for your smile together",
   heroLead:
-    "Accredited clinics and expert doctors for hair transplants, dental treatment, facial aesthetics and orthopedics. Fill in the form for a free pre-assessment.",
+    "Discover the treatment options that suit your dental needs, plan your journey with confidence and reach the right solution with ease.",
   skipToContent: "Skip to content",
   nav: {
     links: [
@@ -40,51 +41,63 @@ export const en: Dict = {
     themeToggle: "Switch dark / light theme",
   },
   hero: {
-    imageAlt: "A happy patient treated in Türkiye through health tourism",
+    imageAlt: "A happy patient who travelled to Türkiye for dental treatment",
     pills: [
-      "Hair Transplant",
-      "Smile Design & Dental Health",
-      "Facial Aesthetics",
-      "Orthopedics",
+      "Dental Implant",
+      "Hollywood Smile",
+      "Zirconium Crowns",
+      "All On Four",
     ],
     form: {
       name: "Full Name",
       phone: "Phone Number",
       email: "Email Address",
       submit: "Send",
+      sending: "Sending…",
       sent: "We have received your request. We will contact you shortly.",
+      error:
+        "We could not send your request. Please try again or email info@mydentist.com.",
       countryLabel: "Country code",
       searchCountry: "Search country",
       noResults: "No results found",
       invalidPhone: "Enter a valid phone number for the selected country.",
     },
   },
+  about: {
+    eyebrow: "ABOUT US",
+    title: "For 16 years, helping you reach the right treatment with confidence",
+    paragraphs: [
+      "With over 16 years of experience and a clinic network spanning more than 7 countries, we have supported more than 25,000 patients through their dental treatment. Our aim is to bring high quality standards together with accessible, affordable treatment options so that our patients reach the right treatment with confidence. From the first assessment to treatment planning, from booking to aftercare, we provide a transparent, fast and professional service at every stage.",
+      "We use modern digital technology throughout treatment to offer a faster, more accurate and more efficient planning experience. By enabling a preliminary assessment based on intraoral photographs, panoramic X-rays and any other digital imaging required, we help our patients reach suitable treatment options without losing time. Fast communication, accurate guidance and effective coordination make every step of the process as easy and comfortable as possible.",
+      "Our service does not end when the treatment does. We continue to stand by our patients for follow-up, check-ups and re-assessment whenever needed. By setting out the aftercare and warranty terms offered by our partner clinics transparently, we make sure our patients feel secure not only during treatment but afterwards as well.",
+    ],
+  },
   treatments: {
     eyebrow: "TREATMENTS",
     title: "Featured Treatments",
     description:
-      "The treatment areas most preferred by our expert doctors and accredited clinics.",
+      "The treatment areas most preferred at our expert dentists and accredited clinics.",
     link: "Learn More",
     items: [
       {
-        title: "Hair Transplant",
+        title: "Dental Implant",
         description:
-          "Permanent and aesthetic results with natural-looking hair transplant techniques.",
+          "A permanent solution for missing teeth; a natural look and comfortable chewing.",
       },
       {
-        title: "Dental Treatment",
+        title: "Zirconium Crowns",
         description:
-          "Aesthetic smile design, implants and all dental health services.",
+          "Durable, metal-free crowns that come close to the look of natural teeth.",
       },
       {
-        title: "Facial Aesthetics",
+        title: "Hollywood Smile",
         description:
-          "Botox, fillers, face lifts and more for a young and dynamic appearance.",
+          "An aesthetic smile design planned as a whole around your facial features.",
       },
       {
-        title: "Orthopedics",
+        title: "All On Four",
         description:
-          "Modern surgical solutions for knee, hip and joint treatments.",
+          "Full-arch restoration with a fixed prosthesis on four implants.",
       },
     ],
   },
@@ -97,7 +110,7 @@ export const en: Dict = {
     eyebrow: "OUR PROCESS",
     title: "How Does It Work?",
     description:
-      "Our expert doctors guide you through an accredited and transparent process.",
+      "You can book a free appointment or simply share your intraoral photographs and X-rays with us. Our expert dentists review them, so you can easily find out your personalised treatment plan.",
     steps: [
       {
         no: "01",
@@ -148,7 +161,7 @@ export const en: Dict = {
   },
   stats: [
     {
-      value: "5+",
+      value: "7+",
       label: "Countries",
       description: "We serve happy patients from all around the world.",
     },
@@ -180,39 +193,39 @@ export const en: Dict = {
     // deliberately not emitted as schema.org Review/AggregateRating data.
     items: [
       {
+        name: "Elif K.",
+        country: "Türkiye",
+        rating: 5,
+        quote:
+          "I had zirconium crowns fitted. From choosing the shade to the try-in, they explained what would happen at every step. The result really does look natural — nobody can tell they are crowns.",
+      },
+      {
+        name: "Murat S.",
+        country: "Türkiye",
+        rating: 5,
+        quote:
+          "I came for two implants. After I sent my intraoral photographs we discussed the plan in advance, so there were no surprises when I arrived in Istanbul. My check-ups were done regularly too.",
+      },
+      {
         name: "Anna L.",
         country: "France",
         rating: 5,
         quote:
-          "I came to Istanbul for implants. The team was incredibly supportive throughout the entire process. The clinic, the hotel and the transfers were all perfect. I am very happy with the result and the service.",
+          "I came to Istanbul for a smile design. The team was incredibly supportive throughout the process. The clinic, the hotel and the transfers were all perfect. I am very happy with the result and the service.",
       },
       {
         name: "Michael B.",
         country: "Germany",
         rating: 5,
         quote:
-          "I came for a hair transplant. Every step from the consultation to the operation was planned in advance. Thanks to the interpreter support I never struggled at any stage.",
+          "I had All on Four treatment. Every step from the consultation to the operation was planned in advance. Thanks to the interpreter support I never struggled at any stage.",
       },
       {
         name: "Sofia R.",
         country: "Portugal",
         rating: 5,
         quote:
-          "I was in Izmir for my smile design. The clinic was very modern and the team was extremely attentive. My check-ups continued online after I returned home.",
-      },
-      {
-        name: "James W.",
-        country: "United Kingdom",
-        rating: 5,
-        quote:
-          "I had knee replacement surgery. Airport pick-up, hotel, transfers... I never had to arrange a single thing myself. The whole process was transparent.",
-      },
-      {
-        name: "Lena K.",
-        country: "Netherlands",
-        rating: 5,
-        quote:
-          "There were so many options when I was researching facial aesthetics. They genuinely guided me to the clinic and the doctor that suited me best.",
+          "I was in Izmir for my zirconium crowns. The clinic was very modern and the team extremely attentive. My check-ups continued online after I returned home.",
       },
     ],
   },
@@ -304,7 +317,6 @@ export const en: Dict = {
       },
     ],
     contactTitle: "CONTACT",
-    address: ["...Mah. ...Cad.", "No: 123 .... / Istanbul"],
     legal: "All rights reserved.",
     privacy: "Privacy Policy",
     terms: "Terms of Use",

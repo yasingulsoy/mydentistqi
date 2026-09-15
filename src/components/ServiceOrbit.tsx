@@ -40,8 +40,40 @@ export function ServiceOrbit({ dict }: { dict: Dict }) {
           </a>
         </div>
 
-        {/* Yörünge diyagramı */}
-        <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="mt-14 flex justify-center lg:mt-0">
+        {/*
+          Telefonda (sm altı) yörünge yerine ızgara.
+          Sebep: etiketler 150px genişlikte ve 44px'lik düğüme ortalanıyor;
+          335px'lik kutuda dış düğümlerin etiketleri kenardan taşıyor,
+          alttaki kesiliyor. Diyagram dekoratif, okunabilirlik değil.
+        */}
+        <ul
+          data-reveal
+          style={{ "--reveal-delay": "120ms" } as React.CSSProperties}
+          className="mt-12 grid grid-cols-2 gap-3 sm:hidden"
+        >
+          {t.labels.map((label, i) => {
+            const Icon = iconMap[serviceIcons[i]];
+            return (
+              <li
+                key={label}
+                className="flex min-h-[92px] flex-col items-center justify-center gap-2.5 rounded-[14px] border border-white/15 bg-white/[0.07] px-3 py-4 text-center"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10">
+                  <Icon className="h-[18px] w-[18px] text-white" />
+                </span>
+                {/* Etiketlerdeki satır sonu yörünge için; burada
+                    `white-space: normal` olduğundan kendiliğinden
+                    boşluğa dönüşüyor. */}
+                <span className="text-[12px] leading-[1.35] text-white">
+                  {label}
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Yörünge diyagramı — sm ve üstü */}
+        <div data-reveal style={{ "--reveal-delay": "120ms" } as React.CSSProperties} className="mt-14 hidden justify-center sm:flex lg:mt-0">
           <div className="relative aspect-square w-full max-w-[630px]">
             {/* Kesikli yörüngeler */}
             <span className="absolute left-1/2 top-1/2 h-[76.43%] w-[76.43%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/20" />

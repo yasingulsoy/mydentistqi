@@ -85,7 +85,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
           onClick={() => go(index - 1)}
           disabled={!many}
           aria-label={t.prev}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40"
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40 sm:h-8 sm:w-8"
         >
           <ChevronLeftIcon className="h-4 w-4" />
         </button>
@@ -94,7 +94,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
           onClick={() => go(index + 1)}
           disabled={!many}
           aria-label={t.next}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40"
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-colors enabled:hover:bg-white/10 disabled:opacity-40 sm:h-8 sm:w-8"
         >
           <ChevronRightIcon className="h-4 w-4" />
         </button>
@@ -143,9 +143,13 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
         </ul>
       </div>
 
-      {/* Nokta göstergeleri - kartın altındaki boşluğu da dolduruyor */}
+      {/* Nokta göstergeleri - kartın altındaki boşluğu da dolduruyor.
+          Noktanın GÖRÜNÜMÜ 6px kalıyor ama dokunma alanı sözde-elemanla
+          44px yüksekliğe çıkarılıyor: telefonda 6x6 piksellik bir hedefe
+          basmak mümkün değil. Mobilde aradaki boşluk da biraz açılıyor ki
+          komşu hedefler üst üste binmesin. */}
       {many && (
-        <div className="mt-8 flex items-center gap-2">
+        <div className="mt-8 flex items-center gap-3 sm:gap-2">
           {t.items.map((item, i) => (
             <button
               key={item.name}
@@ -153,7 +157,7 @@ function Testimonials({ t }: { t: Dict["testimonials"] }) {
               onClick={() => go(i)}
               aria-label={`${t.goTo} ${i + 1}`}
               aria-current={i === index}
-              className={`h-1.5 rounded-full transition-all ${
+              className={`relative h-1.5 rounded-full transition-all before:absolute before:-inset-x-1.5 before:-inset-y-[19px] before:content-[''] ${
                 i === index ? "w-6 bg-brand-500" : "w-1.5 bg-white/30 hover:bg-white/50"
               }`}
             />
@@ -203,11 +207,15 @@ function Faq({ t }: { t: Dict["faq"] }) {
 export function TestimonialsFaq({ dict }: { dict: Dict }) {
   return (
     <section className="bg-cream pb-16 sm:pb-24 lg:pb-[100px]">
+      {/* min-w-0 ŞART: bu iki div grid öğesi ve varsayılan `min-width: auto`
+          ile içeriklerinin min-content genişliğinin altına inemiyorlar.
+          Karuselin şeridi 5 x %100 olduğu için min-content 1256px çıkıyor,
+          sütun o kadar şişiyor ve TÜM SAYFA telefonda yatay kayıyordu. */}
       <div className="section-x grid gap-6 sm:grid-cols-2 lg:gap-12">
-        <div data-reveal className="h-full">
+        <div data-reveal className="h-full min-w-0">
           <Testimonials t={dict.testimonials} />
         </div>
-        <div data-reveal className="h-full" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
+        <div data-reveal className="h-full min-w-0" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
           <Faq t={dict.faq} />
         </div>
       </div>

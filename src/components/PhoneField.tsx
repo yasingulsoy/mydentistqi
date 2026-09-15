@@ -6,7 +6,7 @@ import { ChevronDownIcon } from "./icons";
 import {
   countries,
   countryName,
-  defaultCountry,
+  defaultCountryFor,
   isValidNumber,
   toE164,
   toNationalDigits,
@@ -36,7 +36,7 @@ export function PhoneField({
 }) {
   const fieldId = `${idPrefix}-tel`;
   const errorId = `${idPrefix}-tel-hata`;
-  const [country, setCountry] = useState<Country>(defaultCountry);
+  const [country, setCountry] = useState<Country>(() => defaultCountryFor(locale));
   const [national, setNational] = useState("");
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");

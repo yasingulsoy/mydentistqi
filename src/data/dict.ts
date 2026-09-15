@@ -9,7 +9,7 @@
 
 import type { Locale } from "./locales";
 
-export type TreatmentIconKey = "hair" | "tooth" | "face" | "ortho";
+export type TreatmentIconKey = "implant" | "smile" | "crown" | "allon4";
 export type ServiceIconKey =
   | "plane"
   | "hotel"
@@ -19,7 +19,7 @@ export type ServiceIconKey =
   | "shield";
 
 /** Hero etiketlerinin ikon sırası (görseller detail-pages.ts içinde). */
-export const heroPillIcons: TreatmentIconKey[] = ["hair", "tooth", "face", "ortho"];
+export const heroPillIcons: TreatmentIconKey[] = ["implant", "smile", "crown", "allon4"];
 
 /** Yörünge diyagramındaki sıra = altıgen yerleşim sırası. */
 export const serviceIcons: ServiceIconKey[] = [
@@ -66,12 +66,22 @@ export type Dict = {
       phone: string;
       email: string;
       submit: string;
+      /** Gönderim sürerken butonun metni */
+      sending: string;
       sent: string;
+      /** Otomasyona ulaşılamadığında gösterilen metin */
+      error: string;
       countryLabel: string;
       searchCountry: string;
       noResults: string;
       invalidPhone: string;
     };
+  };
+  /** "Hakkımızda" bölümü — navigasyondaki #hakkimizda çıpası buraya bağlı. */
+  about: {
+    eyebrow: string;
+    title: string;
+    paragraphs: string[];
   };
   treatments: {
     eyebrow: string;
@@ -131,7 +141,6 @@ export type Dict = {
     description: string;
     columns: { title: string; links: { label: string; href: string }[] }[];
     contactTitle: string;
-    address: string[];
     legal: string;
     privacy: string;
     terms: string;
