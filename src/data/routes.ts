@@ -15,7 +15,7 @@ import {
   type DetailKind,
   type DetailPage,
 } from "./detail-pages";
-import { legal, type LegalDocs } from "./legal";
+import { legal, legalSlug, type LegalDocKey } from "./legal";
 import {
   LOCALES,
   localePrefix,
@@ -25,7 +25,7 @@ import {
   type SegmentKey,
 } from "./locales";
 
-export type LegalDocKey = keyof LegalDocs;
+export type { LegalDocKey };
 
 export type Route =
   | { kind: "home"; locale: Locale }
@@ -55,7 +55,7 @@ export function routeSegments(route: Route): string[] {
         route.page.slug[route.locale],
       ];
     case "legal":
-      return [...prefix, legal[route.locale][route.doc].slug];
+      return [...prefix, legalSlug(route.locale, route.doc)];
   }
 }
 
@@ -103,9 +103,8 @@ export function resolveRoute(path: string[] | undefined): Route | null {
   const seg = segments[locale];
 
   if (rest.length === 1) {
-    const docs = legal[locale];
-    for (const doc of Object.keys(docs) as LegalDocKey[]) {
-      if (docs[doc].slug === rest[0]) return { kind: "legal", locale, doc };
+    for (const doc of Object.keys(legal[locale]) as LegalDocKey[]) {
+      if (legalSlug(locale, doc) === rest[0]) return { kind: "legal", locale, doc };
     }
     return null;
   }

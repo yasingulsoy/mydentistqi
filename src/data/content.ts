@@ -10,6 +10,11 @@ import type { Dict } from "./dict";
 import { LOCALES, type Locale } from "./locales";
 import { tr } from "./content/tr";
 import { en } from "./content/en";
+import { de } from "./content/de";
+import { bg } from "./content/bg";
+import { ar } from "./content/ar";
+import { fr } from "./content/fr";
+import { es } from "./content/es";
 
 export type { Dict } from "./dict";
 export type {
@@ -31,7 +36,7 @@ export {
 } from "./locales";
 export type { Locale, LocaleMeta, SegmentKey } from "./locales";
 
-export const content: Record<Locale, Dict> = { tr, en };
+export const content: Record<Locale, Dict> = { tr, en, de, bg, ar, fr, es };
 
 /** Sözlüğü güvenle almak için — bilinmeyen dil varsayılana düşer. */
 export function dictOf(locale: Locale): Dict {
