@@ -19,24 +19,7 @@ export type ServiceIconKey =
   | "diamond"
   | "shield";
 
-/** Görseller ve ikonlar dile göre değişmiyor, burada tutuluyor. */
-export const treatmentAssets: {
-  slug: string;
-  icon: TreatmentIconKey;
-  image: string;
-}[] = [
-  { slug: "sac-ekimi", icon: "hair", image: "/images/tedaviler/sac-ekimi-desktop.webp" },
-  { slug: "dis-tedavisi", icon: "tooth", image: "/images/tedaviler/dis-tedavileri-desktop.webp" },
-  { slug: "yuz-estetigi", icon: "face", image: "/images/tedaviler/yuz-estetigi-desktop.webp" },
-  { slug: "ortopedi", icon: "ortho", image: "/images/tedaviler/ortopedi-desktop.webp" },
-];
-
-export const destinationAssets: { slug: string; image: string }[] = [
-  { slug: "turkiye", image: "/images/noktalar/turkiye-desktop.webp" },
-  { slug: "almanya", image: "/images/noktalar/almanya-desktop.webp" },
-  { slug: "portekiz", image: "/images/noktalar/portekiz-desktop.webp" },
-];
-
+/** Hero etiketlerinin ikon sırası (görseller detail-pages.ts içinde). */
 export const heroPillIcons: TreatmentIconKey[] = ["hair", "tooth", "face", "ortho"];
 
 /** Yörünge diyagramındaki sıra = altıgen yerleşim sırası. */
@@ -148,6 +131,17 @@ export type Dict = {
     description: string;
     cta: string;
     labels: string[];
+  };
+  detail: {
+    treatmentsCrumb: string;
+    destinationsCrumb: string;
+    highlights: string;
+    faqTitle: string;
+    otherTreatments: string;
+    otherDestinations: string;
+    medicalNotice: string;
+    ctaTitle: string;
+    ctaText: string;
   };
   footer: {
     description: string;
@@ -403,6 +397,19 @@ const tr: Dict = {
       "Profesyonel\nDanışmanlar",
       "Otel Konaklama",
     ],
+  },
+  detail: {
+    treatmentsCrumb: "Tedaviler",
+    destinationsCrumb: "Rotalar",
+    highlights: "ÖNE ÇIKAN BİLGİLER",
+    faqTitle: "Sık Sorulan Sorular",
+    otherTreatments: "Diğer tedaviler",
+    otherDestinations: "Diğer rotalar",
+    medicalNotice:
+      "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır; tıbbi tavsiye niteliği taşımaz ve hekim muayenesinin yerine geçmez. Süreler ve sonuçlar kişiden kişiye değişir. Nihai değerlendirmeyi yalnızca sizi muayene eden hekim yapabilir.",
+    ctaTitle: "Ücretsiz ön değerlendirme",
+    ctaText:
+      "Raporlarınızı ve sorularınızı paylaşın; size uygun klinik ve hekim alternatiflerini, tahmini süre ve süreç planıyla birlikte sunalım.",
   },
   footer: {
     description:
@@ -691,6 +698,19 @@ const en: Dict = {
       "Professional\nConsultants",
       "Hotel Accommodation",
     ],
+  },
+  detail: {
+    treatmentsCrumb: "Treatments",
+    destinationsCrumb: "Destinations",
+    highlights: "AT A GLANCE",
+    faqTitle: "Frequently Asked Questions",
+    otherTreatments: "Other treatments",
+    otherDestinations: "Other destinations",
+    medicalNotice:
+      "The information on this page is for general guidance only. It is not medical advice and is not a substitute for examination by a physician. Timeframes and results vary from person to person. Only the physician examining you can make a final assessment.",
+    ctaTitle: "Free pre-assessment",
+    ctaText:
+      "Share your reports and questions, and we will present suitable clinic and physician options together with an estimated timeframe and process plan.",
   },
   footer: {
     description:

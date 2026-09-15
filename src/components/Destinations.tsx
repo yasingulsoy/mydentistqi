@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { SectionHeading } from "./SectionHeading";
 import { ArrowRightIcon } from "./icons";
-import { destinationAssets, type Dict } from "@/data/content";
+import Link from "next/link";
+import { type Dict } from "@/data/content";
+import { destinationPages, detailPath } from "@/data/detail-pages";
 
 export function Destinations({ dict }: { dict: Dict }) {
   const t = dict.destinations;
@@ -13,17 +15,17 @@ export function Destinations({ dict }: { dict: Dict }) {
 
         <ul className="no-scrollbar mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 sm:mt-12 sm:grid sm:grid-cols-3 sm:overflow-visible sm:pb-0 lg:gap-6">
           {t.items.map((place, i) => {
-            const asset = destinationAssets[i];
+            const detail = destinationPages[i];
             return (
               <li
-                key={asset.slug}
+                key={detail.key}
                 data-reveal
                 style={{ "--reveal-delay": `${i * 90}ms` } as React.CSSProperties}
                 className="w-[260px] shrink-0 snap-start sm:w-auto"
               >
                 <article className="group relative aspect-[384/340] overflow-hidden rounded-[14px] transition-transform duration-300 hover:-translate-y-1">
                   <Image
-                    src={asset.image}
+                    src={detail.image}
                     alt={`${place.title} - ${place.cities}`}
                     fill
                     sizes="(min-width: 1024px) 384px, (min-width: 640px) 33vw, 260px"
@@ -34,13 +36,13 @@ export function Destinations({ dict }: { dict: Dict }) {
                   <div className="absolute inset-x-0 bottom-0 p-6 lg:p-7">
                     <h3 className="font-serif text-[24px] leading-tight text-white">{place.title}</h3>
                     <p className="mt-1 text-[14px] text-white/80">{place.cities}</p>
-                    <a
-                      href={`#${asset.slug}`}
+                    <Link
+                      href={detailPath("destination", dict.locale, detail)}
                       className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/15 px-5 py-2.5 text-[14px] text-white backdrop-blur-sm transition-colors hover:bg-white/25"
                     >
                       {t.cta}
                       <ArrowRightIcon className="h-4 w-4" />
-                    </a>
+                    </Link>
                   </div>
                 </article>
               </li>
