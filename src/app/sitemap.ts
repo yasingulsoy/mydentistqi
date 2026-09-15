@@ -1,44 +1,38 @@
 import type { MetadataRoute } from "next";
-import { siteUrl } from "@/data/content";
-import { legalPath } from "@/data/legal";
-import { detailPath, destinationPages, treatmentPages } from "@/data/detail-pages";
+import { siteUrl } from "@/data/site";
+import { defaultLocale } from "@/data/locales";
+import { allRoutes, routeAlternates, routeHref, type Route } from "@/data/routes";
+
+/** Sayfa türüne göre temel öncelik; çeviriler bir kademe altta. */
+const PRIORITY: Record<Route["kind"], number> = {
+  home: 1,
+  detail: 0.8,
+  legal: 0.4,
+};
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const pair = (
-    trPath: string,
-    enPath: string,
-    priority: number,
-  ): MetadataRoute.Sitemap => {
-    const languages = { tr: `${siteUrl}${trPath}`, en: `${siteUrl}${enPath}` };
-    return [
-      {
-        url: `${siteUrl}${trPath}`,
-        lastModified,
-        changeFrequency: "monthly",
-        priority,
-        alternates: { languages },
-      },
-      {
-        url: `${siteUrl}${enPath}`,
-        lastModified,
-        changeFrequency: "monthly",
-        priority: Math.round((priority - 0.1) * 10) / 10,
-        alternates: { languages },
-      },
-    ];
-  };
+  return allRoutes().map((route) => {
+    const base = PRIORITY[route.kind];
+    const priority =
+      route.locale === defaultLocale
+        ? base
+        : Math.round((base - 0.1) * 10) / 10;
 
-  return [
-    ...pair("", "/en", 1),
-    ...treatmentPages.flatMap((p) =>
-      pair(detailPath("treatment", "tr", p), detailPath("treatment", "en", p), 0.8),
-    ),
-    ...destinationPages.flatMap((p) =>
-      pair(detailPath("destination", "tr", p), detailPath("destination", "en", p), 0.7),
-    ),
-    ...pair(legalPath("tr", "privacy"), legalPath("en", "privacy"), 0.4),
-    ...pair(legalPath("tr", "terms"), legalPath("en", "terms"), 0.4),
-  ];
+    const languages = Object.fromEntries(
+      Object.entries(routeAlternates(route)).map(([l, href]) => [
+        l,
+        `${siteUrl}${href}`,
+      ]),
+    );
+
+    return {
+      url: `${siteUrl}${routeHref(route)}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority,
+      alternates: { languages },
+    };
+  });
 }

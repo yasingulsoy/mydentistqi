@@ -6,7 +6,7 @@
  * `legal` sözlüklerine karşılığı. TypeScript eksik kalanı derlemede söyler.
  */
 
-export const LOCALES = ["tr", "en"] as const;
+export const LOCALES = ["tr", "en", "de", "bg", "ar", "fr", "es"] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
@@ -30,6 +30,11 @@ export type LocaleMeta = {
 export const localeMeta: Record<Locale, LocaleMeta> = {
   tr: { code: "tr", htmlLang: "tr", dir: "ltr", label: "Türkçe", short: "TR", ogLocale: "tr_TR" },
   en: { code: "en", htmlLang: "en", dir: "ltr", label: "English", short: "EN", ogLocale: "en_US" },
+  de: { code: "de", htmlLang: "de", dir: "ltr", label: "Deutsch", short: "DE", ogLocale: "de_DE" },
+  bg: { code: "bg", htmlLang: "bg", dir: "ltr", label: "Български", short: "BG", ogLocale: "bg_BG" },
+  ar: { code: "ar", htmlLang: "ar", dir: "rtl", label: "العربية", short: "AR", ogLocale: "ar_AR" },
+  fr: { code: "fr", htmlLang: "fr", dir: "ltr", label: "Français", short: "FR", ogLocale: "fr_FR" },
+  es: { code: "es", htmlLang: "es", dir: "ltr", label: "Español", short: "ES", ogLocale: "es_ES" },
 };
 
 export function isLocale(value: string): value is Locale {
@@ -70,6 +75,39 @@ export const segments: Record<Locale, Record<SegmentKey, string>> = {
     destinations: "destinations",
     privacy: "privacy-policy",
     terms: "terms-of-use",
+  },
+  de: {
+    treatments: "behandlungen",
+    destinations: "reiseziele",
+    privacy: "datenschutz",
+    terms: "nutzungsbedingungen",
+  },
+  bg: {
+    treatments: "lecheniya",
+    destinations: "destinatsii",
+    privacy: "poveritelnost",
+    terms: "usloviya-za-polzvane",
+  },
+  // Arapça'da yol segmentleri İngilizce: Arap alfabeli URL'ler yüzde
+  // kodlandığında paylaşılırken okunmaz hâle geliyor, latin harfle
+  // uydurma transliterasyon ise kimsenin aradığı bir şey değil.
+  ar: {
+    treatments: "treatments",
+    destinations: "destinations",
+    privacy: "privacy-policy",
+    terms: "terms-of-use",
+  },
+  fr: {
+    treatments: "traitements",
+    destinations: "destinations",
+    privacy: "politique-de-confidentialite",
+    terms: "conditions-d-utilisation",
+  },
+  es: {
+    treatments: "tratamientos",
+    destinations: "destinos",
+    privacy: "politica-de-privacidad",
+    terms: "condiciones-de-uso",
   },
 };
 
