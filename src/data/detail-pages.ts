@@ -1,4 +1,5 @@
-import type { Locale, TreatmentIconKey } from "./content";
+import type { TreatmentIconKey } from "./dict";
+import { localePrefix, segments, toHref, type Locale } from "./locales";
 
 /**
  * "Detaylı Bilgi" ve "Keşfedin" bağlantılarının açtığı alt sayfalar.
@@ -28,6 +29,8 @@ export type DetailContent = {
 
 export type DetailPage = {
   key: string;
+  /** Rota sayfalarinda o ulkenin kliniklerini listelemek icin */
+  countryCode?: string;
   slug: Record<Locale, string>;
   image: string;
   icon?: TreatmentIconKey;
@@ -36,10 +39,6 @@ export type DetailPage = {
 
 export type DetailKind = "treatment" | "destination";
 
-export const detailBase: Record<DetailKind, Record<Locale, string>> = {
-  treatment: { tr: "/tedaviler", en: "/en/treatments" },
-  destination: { tr: "/rotalar", en: "/en/destinations" },
-};
 
 /* ------------------------------------------------------------------ */
 /*  TEDAVİLER                                                          */
@@ -558,6 +557,7 @@ export const treatmentPages: DetailPage[] = [
 export const destinationPages: DetailPage[] = [
   {
     key: "turkiye",
+    countryCode: "TR",
     slug: { tr: "turkiye", en: "turkiye" },
     image: "/images/noktalar/turkiye-desktop.webp",
     content: {
@@ -680,6 +680,7 @@ export const destinationPages: DetailPage[] = [
 
   {
     key: "almanya",
+    countryCode: "DE",
     slug: { tr: "almanya", en: "germany" },
     image: "/images/noktalar/almanya-desktop.webp",
     content: {
@@ -804,6 +805,7 @@ export const destinationPages: DetailPage[] = [
 
   {
     key: "portekiz",
+    countryCode: "PT",
     slug: { tr: "portekiz", en: "portugal" },
     image: "/images/noktalar/portekiz-desktop.webp",
     content: {
@@ -927,12 +929,24 @@ export const destinationPages: DetailPage[] = [
 /*  Yardımcılar                                                        */
 /* ------------------------------------------------------------------ */
 
+/** Tur -> sayfa listesi. routes.ts tum rotalari buradan tariyor. */
+export const detailPages: Record<DetailKind, DetailPage[]> = {
+  treatment: treatmentPages,
+  destination: destinationPages,
+};
+
 export function pagesOf(kind: DetailKind) {
-  return kind === "treatment" ? treatmentPages : destinationPages;
+  return detailPages[kind];
 }
 
+/**
+ * Yol uretimi locales.ts'teki segment tablosundan turetiliyor; boylece yeni
+ * dil eklerken URL'ler tek yerden yonetiliyor.
+ */
 export function detailPath(kind: DetailKind, locale: Locale, page: DetailPage) {
-  return `${detailBase[kind][locale]}/${page.slug[locale]}`;
+  const segment =
+    kind === "treatment" ? segments[locale].treatments : segments[locale].destinations;
+  return toHref([...localePrefix(locale), segment, page.slug[locale]]);
 }
 
 export function findBySlug(kind: DetailKind, locale: Locale, slug: string) {

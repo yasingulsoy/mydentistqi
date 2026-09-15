@@ -1,7 +1,7 @@
 import {
   AE, AT, AU, AZ, BE, BG, BH, CA, CH, CZ, DE, DK, DZ, EG, ES, FI, FR, GB, GE,
-  GR, IE, IL, IQ, IR, IT, JO, KW, KZ, LB, LY, MA, NL, NO, OM, PL, PT, QA, RO,
-  RU, SA, SE, TN, TR, UA, US,
+  GR, HU, IE, IL, IQ, IR, IT, JO, KW, KZ, LB, LY, MA, NL, NO, OM, PL, PT, QA,
+  RO, RU, SA, SE, TN, TR, UA, US,
 } from "country-flag-icons/react/3x2";
 
 /**
@@ -14,8 +14,8 @@ import {
  */
 const FLAGS: Record<string, React.ComponentType<{ className?: string; title?: string }>> = {
   AE, AT, AU, AZ, BE, BG, BH, CA, CH, CZ, DE, DK, DZ, EG, ES, FI, FR, GB, GE,
-  GR, IE, IL, IQ, IR, IT, JO, KW, KZ, LB, LY, MA, NL, NO, OM, PL, PT, QA, RO,
-  RU, SA, SE, TN, TR, UA, US,
+  GR, HU, IE, IL, IQ, IR, IT, JO, KW, KZ, LB, LY, MA, NL, NO, OM, PL, PT, QA,
+  RO, RU, SA, SE, TN, TR, UA, US,
 };
 
 export function CountryFlag({

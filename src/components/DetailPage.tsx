@@ -4,6 +4,8 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { RevealObserver } from "./RevealObserver";
 import { ArrowRightIcon, treatmentIcons } from "./icons";
+import { CountryFlag } from "./CountryFlag";
+import { clinicsByCountry } from "@/data/partners";
 import { localePath, sectionHref, siteUrl, type Dict } from "@/data/content";
 import {
   detailPath,
@@ -33,6 +35,7 @@ export function DetailPage({
   );
   const others = pagesOf(kind).filter((p) => p.key !== page.key);
   const Icon = page.icon ? treatmentIcons[page.icon] : null;
+  const countryClinics = page.countryCode ? clinicsByCountry(page.countryCode) : [];
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -242,6 +245,57 @@ export function DetailPage({
             </div>
           </div>
         </section>
+
+        {/* --- Bu ülkedeki anlaşmalı klinikler --- */}
+        {countryClinics.length > 0 && (
+          <section className="bg-surface py-16 lg:py-20">
+            <div className="section-x">
+              <h2 className="font-serif text-[24px] leading-snug text-ink sm:text-[28px]">
+                {t.clinicsTitle}
+              </h2>
+              <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {countryClinics.map((clinic, i) => (
+                  <li
+                    key={clinic.slug}
+                    data-reveal
+                    style={{ "--reveal-delay": `${i * 80}ms` } as React.CSSProperties}
+                    className="overflow-hidden rounded-[14px] border border-cream-200 bg-surface"
+                  >
+                    <Image
+                      src={clinic.image}
+                      alt={clinic.name}
+                      width={384}
+                      height={220}
+                      className="aspect-[384/220] w-full object-cover"
+                    />
+                    <div className="p-5">
+                      <h3 className="font-serif text-[18px] leading-tight text-ink">
+                        {clinic.name}
+                      </h3>
+                      <p className="mt-2 flex items-center gap-2 text-[13px] text-muted">
+                        <CountryFlag iso2={clinic.countryCode} />
+                        {clinic.city[dict.locale]} · {clinic.country[dict.locale]}
+                      </p>
+                      {clinic.address && (
+                        <p className="mt-2 text-[14px] leading-[1.6] text-body">
+                          {clinic.address}
+                        </p>
+                      )}
+                      {clinic.phone && (
+                        <a
+                          href={`tel:${clinic.phone.replace(/\s/g, "")}`}
+                          className="mt-3 inline-block text-[14px] font-medium text-brand-700 transition-opacity hover:opacity-75"
+                        >
+                          {clinic.phone}
+                        </a>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         {/* --- Diğer sayfalar --- */}
         <section className="bg-surface py-16 lg:py-20">

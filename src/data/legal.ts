@@ -1,4 +1,4 @@
-import type { Locale } from "./content";
+import { localePrefix, toHref, type Locale } from "./locales";
 
 /**
  * ŞABLON HUKUKİ METİNLER.
@@ -475,6 +475,5 @@ export const legal: Record<Locale, LegalDocs> = { tr, en };
 
 /** Dil + belge -> URL yolu (footer, sitemap ve hreflang bunu kullanır). */
 export function legalPath(locale: Locale, doc: keyof LegalDocs) {
-  const slug = legal[locale][doc].slug;
-  return locale === "tr" ? `/${slug}` : `/en/${slug}`;
+  return toHref([...localePrefix(locale), legal[locale][doc].slug]);
 }
