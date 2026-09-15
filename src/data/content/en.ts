@@ -254,6 +254,12 @@ export const en: Dict = {
       "Hotel Accommodation",
     ],
   },
+  contact: {
+    eyebrow: "CONTACT",
+    title: "Let us answer your questions",
+    description:
+      "Fill in the form and our consultants will get back to you. We offer a free pre-assessment covering your treatment plan, the process and travel details.",
+  },
   detail: {
     treatmentsCrumb: "Treatments",
     destinationsCrumb: "Destinations",

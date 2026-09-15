@@ -174,6 +174,25 @@ export function MoonIcon(props: IconProps) {
 
 /* ---------- Sosyal medya ---------- */
 
+/* ---------- İletişim ikonları ---------- */
+
+export function MailIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="m3.5 7 7.3 5.2a2 2 0 0 0 2.4 0L20.5 7" />
+    </svg>
+  );
+}
+
+export function PhoneIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M8.3 3.8 9.8 7a1.6 1.6 0 0 1-.4 1.9l-1.2 1a12 12 0 0 0 5.9 5.9l1-1.2a1.6 1.6 0 0 1 1.9-.4l3.2 1.5c.6.3.9 1 .7 1.6l-.6 2a1.8 1.8 0 0 1-1.9 1.3A16.8 16.8 0 0 1 3.4 5.5a1.8 1.8 0 0 1 1.3-1.9l2-.6c.6-.2 1.3.1 1.6.8Z" />
+    </svg>
+  );
+}
+
 export function InstagramIcon(props: IconProps) {
   return (
     <svg {...base} {...props}>

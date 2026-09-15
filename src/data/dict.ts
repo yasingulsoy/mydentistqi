@@ -100,6 +100,12 @@ export type Dict = {
     cta: string;
     labels: string[];
   };
+  /** Sayfa altındaki iletişim bölümü (#iletisim çıpası buraya bağlı). */
+  contact: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
   detail: {
     treatmentsCrumb: string;
     destinationsCrumb: string;

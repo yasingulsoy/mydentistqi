@@ -10,10 +10,17 @@ import { ServiceOrbit } from "./ServiceOrbit";
 import { Footer } from "./Footer";
 import { JsonLd } from "./JsonLd";
 import { RevealObserver } from "./RevealObserver";
-import type { Dict } from "@/data/content";
+import { ContactSection } from "./ContactSection";
+import type { Dict, Locale } from "@/data/content";
 
-/** Tek sayfa; Türkçe (/) ve İngilizce (/en) sürümleri bunu paylaşır. */
-export function Landing({ dict }: { dict: Dict }) {
+/** Tek sayfa; 7 dilin tamamı bu bileşeni paylaşır. */
+export function Landing({
+  dict,
+  alternates,
+}: {
+  dict: Dict;
+  alternates: Record<Locale, string>;
+}) {
   return (
     <>
       <JsonLd dict={dict} />
@@ -26,7 +33,7 @@ export function Landing({ dict }: { dict: Dict }) {
         {dict.skipToContent}
       </a>
 
-      <Navbar dict={dict} />
+      <Navbar dict={dict} alternates={alternates} />
       <main id="icerik">
         <Hero dict={dict} />
         <Treatments dict={dict} />
@@ -36,6 +43,7 @@ export function Landing({ dict }: { dict: Dict }) {
         <Stats dict={dict} />
         <TestimonialsFaq dict={dict} />
         <ServiceOrbit dict={dict} />
+        <ContactSection dict={dict} />
       </main>
       <Footer dict={dict} />
     </>

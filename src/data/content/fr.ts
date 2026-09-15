@@ -261,6 +261,12 @@ export const fr: Dict = {
       "Hébergement à l'hôtel",
     ],
   },
+  contact: {
+    eyebrow: "CONTACT",
+    title: "Laissez-nous répondre à vos questions",
+    description:
+      "Remplissez le formulaire et nos conseillers vous recontacteront. Nous proposons une pré-évaluation gratuite portant sur votre plan de traitement, le parcours et les détails du voyage.",
+  },
   detail: {
     treatmentsCrumb: "Traitements",
     destinationsCrumb: "Destinations",

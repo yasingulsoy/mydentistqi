@@ -254,6 +254,12 @@ export const tr: Dict = {
       "Otel Konaklama",
     ],
   },
+  contact: {
+    eyebrow: "İLETİŞİM",
+    title: "Sorularınızı yanıtlayalım",
+    description:
+      "Formu doldurun, uzman danışmanlarımız size dönsün. Tedavi planınız, süreç ve seyahat detayları için ücretsiz ön değerlendirme sunuyoruz.",
+  },
   detail: {
     treatmentsCrumb: "Tedaviler",
     destinationsCrumb: "Rotalar",

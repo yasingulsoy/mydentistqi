@@ -1,21 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
 import { ChevronDownIcon } from "./icons";
 import { ThemeToggle } from "./ThemeToggle";
-import { localePath, sectionHref, type Dict, type Locale } from "@/data/content";
+import {
+  LOCALES,
+  localeMeta,
+  sectionHref,
+  type Dict,
+  type Locale,
+} from "@/data/content";
 
-const LOCALE_LABELS: Record<Locale, string> = { tr: "TR", en: "EN" };
-const LOCALE_NAMES: Record<Locale, string> = { tr: "Türkçe", en: "English" };
-
-function LanguageSwitcher({ locale }: { locale: Locale }) {
+/**
+ * Dil değiştirici.
+ *
+ * `alternates` sayfanın kendi çevirilerinin yollarını taşıyor; böylece
+ * kullanıcı bir tedavi sayfasındayken dil değiştirdiğinde ana sayfaya
+ * düşmüyor, AYNI tedavinin o dildeki sayfasına gidiyor.
+ */
+function LanguageSwitcher({
+  locale,
+  alternates,
+}: {
+  locale: Locale;
+  alternates: Record<Locale, string>;
+}) {
   const [open, setOpen] = useState(false);
-  const locales: Locale[] = ["tr", "en"];
+  const box = useRef<HTMLDivElement>(null);
+
+  // 7 dil bir açılır listede; dışarı tıklama ve Esc ile kapanmazsa
+  // kullanıcıyı hapsediyor.
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (!box.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
-    <div className="relative">
+    <div className="relative" ref={box}>
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
@@ -23,7 +57,7 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
         aria-haspopup="true"
         className="flex items-center gap-1 text-[15px] font-medium text-nav-fg"
       >
-        {LOCALE_LABELS[locale]}
+        {localeMeta[locale].short}
         <ChevronDownIcon
           className={`h-4 w-4 text-nav-muted transition-transform duration-200 ${
             open ? "rotate-180" : ""
@@ -32,18 +66,20 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
       </button>
 
       {open && (
-        <ul className="absolute right-0 top-full z-50 mt-2 min-w-[130px] overflow-hidden rounded-lg border border-nav-border bg-surface py-1 shadow-[0_12px_30px_-10px_rgba(10,25,40,0.35)]">
-          {locales.map((l) => (
+        <ul className="absolute end-0 top-full z-50 mt-2 min-w-[150px] overflow-hidden rounded-lg border border-nav-border bg-surface py-1 shadow-[0_12px_30px_-10px_rgba(10,25,40,0.35)]">
+          {LOCALES.map((l) => (
             <li key={l}>
               <Link
-                href={localePath[l]}
+                href={alternates[l]}
                 onClick={() => setOpen(false)}
                 hrefLang={l}
-                className={`block px-4 py-2 text-[14px] transition-colors hover:bg-cream ${
+                lang={l}
+                dir={localeMeta[l].dir}
+                className={`block px-4 py-2 text-start text-[14px] transition-colors hover:bg-cream ${
                   l === locale ? "font-semibold text-ink" : "text-body"
                 }`}
               >
-                {LOCALE_NAMES[l]}
+                {localeMeta[l].label}
               </Link>
             </li>
           ))}
@@ -53,13 +89,19 @@ function LanguageSwitcher({ locale }: { locale: Locale }) {
   );
 }
 
-export function Navbar({ dict }: { dict: Dict }) {
+export function Navbar({
+  dict,
+  alternates,
+}: {
+  dict: Dict;
+  alternates: Record<Locale, string>;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-nav-border bg-nav/95 backdrop-blur-md">
       <nav className="section-x flex h-[72px] items-center gap-8 lg:h-[85px]">
-        <Link href={localePath[dict.locale]} className="shrink-0">
+        <Link href={alternates[dict.locale]} className="shrink-0">
           <Logo tone="auto" priority />
         </Link>
 
@@ -69,7 +111,7 @@ export function Navbar({ dict }: { dict: Dict }) {
             <li key={link.href} className={link.wideOnly ? "hidden lg:block" : ""}>
               <a
                 href={sectionHref(dict.locale, link.href)}
-                className="relative whitespace-nowrap py-1 transition-colors after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 hover:text-nav-fg hover:after:scale-x-100"
+                className="relative whitespace-nowrap py-1 transition-colors after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 hover:text-nav-fg hover:after:scale-x-100 rtl:after:origin-right"
               >
                 {link.label}
               </a>
@@ -77,11 +119,11 @@ export function Navbar({ dict }: { dict: Dict }) {
           ))}
         </ul>
 
-        <div className="ml-auto flex items-center gap-3 sm:ml-0 lg:gap-5">
+        <div className="ms-auto flex items-center gap-3 sm:ms-0 lg:gap-5">
           <ThemeToggle label={dict.nav.themeToggle} />
 
           <div className="hidden sm:block">
-            <LanguageSwitcher locale={dict.locale} />
+            <LanguageSwitcher locale={dict.locale} alternates={alternates} />
           </div>
 
           <a
@@ -101,17 +143,17 @@ export function Navbar({ dict }: { dict: Dict }) {
           >
             <span className="relative block h-4 w-5">
               <span
-                className={`absolute left-0 block h-0.5 w-5 bg-current transition-all duration-300 ${
+                className={`absolute start-0 block h-0.5 w-5 bg-current transition-all duration-300 ${
                   open ? "top-[7px] rotate-45" : "top-0"
                 }`}
               />
               <span
-                className={`absolute left-0 top-[7px] block h-0.5 w-5 bg-current transition-opacity duration-200 ${
+                className={`absolute start-0 top-[7px] block h-0.5 w-5 bg-current transition-opacity duration-200 ${
                   open ? "opacity-0" : "opacity-100"
                 }`}
               />
               <span
-                className={`absolute left-0 block h-0.5 w-5 bg-current transition-all duration-300 ${
+                className={`absolute start-0 block h-0.5 w-5 bg-current transition-all duration-300 ${
                   open ? "top-[7px] -rotate-45" : "top-[14px]"
                 }`}
               />
@@ -134,7 +176,7 @@ export function Navbar({ dict }: { dict: Dict }) {
                 </a>
               </li>
             ))}
-            <li className="flex items-center gap-4 py-3">
+            <li className="py-3">
               <a
                 href={sectionHref(dict.locale, "#iletisim")}
                 onClick={() => setOpen(false)}
@@ -142,18 +184,29 @@ export function Navbar({ dict }: { dict: Dict }) {
               >
                 {dict.nav.cta}
               </a>
-              {(["tr", "en"] as Locale[])
-                .filter((l) => l !== dict.locale)
-                .map((l) => (
-                  <Link
-                    key={l}
-                    href={localePath[l]}
-                    hrefLang={l}
-                    className="text-[15px] text-nav-muted underline underline-offset-4"
-                  >
-                    {LOCALE_NAMES[l]}
-                  </Link>
+            </li>
+            {/* 7 dil satır içine sığmıyor; telefonda ayrı bir ızgara olarak */}
+            <li className="border-t border-nav-border pt-3 pb-1">
+              <ul className="grid grid-cols-3 gap-2">
+                {LOCALES.map((l) => (
+                  <li key={l}>
+                    <Link
+                      href={alternates[l]}
+                      onClick={() => setOpen(false)}
+                      hrefLang={l}
+                      lang={l}
+                      dir={localeMeta[l].dir}
+                      className={`block rounded-lg border border-nav-border px-2 py-2 text-center text-[13px] ${
+                        l === dict.locale
+                          ? "border-brand-500 font-semibold text-ink"
+                          : "text-nav-muted"
+                      }`}
+                    >
+                      {localeMeta[l].label}
+                    </Link>
+                  </li>
                 ))}
+              </ul>
             </li>
           </ul>
         </div>

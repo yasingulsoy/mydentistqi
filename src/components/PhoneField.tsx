@@ -27,10 +27,15 @@ import type { Dict, Locale } from "@/data/content";
 export function PhoneField({
   t,
   locale,
+  idPrefix,
 }: {
   t: Dict["hero"]["form"];
   locale: Locale;
+  /** Form sayfada birden fazla kez render edildiği için id'ler öneklenir. */
+  idPrefix: string;
 }) {
+  const fieldId = `${idPrefix}-tel`;
+  const errorId = `${idPrefix}-tel-hata`;
   const [country, setCountry] = useState<Country>(defaultCountry);
   const [national, setNational] = useState("");
   const [open, setOpen] = useState(false);
@@ -112,7 +117,7 @@ export function PhoneField({
 
   return (
     <div ref={wrapRef} className="relative">
-      <label className="sr-only" htmlFor="telefon">
+      <label className="sr-only" htmlFor={fieldId}>
         {t.phone}
       </label>
 
@@ -130,7 +135,7 @@ export function PhoneField({
           aria-expanded={open}
           aria-haspopup="listbox"
           aria-label={`${t.countryLabel}: ${countryName(country, locale)} ${country.dial}`}
-          className="flex shrink-0 items-center gap-2 border-r border-line pl-3.5 pr-3 text-[16px] text-ink transition-colors hover:bg-cream"
+          className="flex shrink-0 items-center gap-2 border-e border-line ps-3.5 pe-3 text-[16px] text-ink transition-colors hover:bg-cream"
         >
           <CountryFlag iso2={country.iso2} title={countryName(country, locale)} />
           <span className="tabular-nums">{country.dial}</span>
@@ -143,7 +148,7 @@ export function PhoneField({
 
         <input
           ref={numberRef}
-          id="telefon"
+          id={fieldId}
           type="tel"
           inputMode="numeric"
           autoComplete="tel-national"
@@ -152,7 +157,7 @@ export function PhoneField({
           onChange={(e) => handleNumber(e.target.value)}
           placeholder={t.phone}
           aria-invalid={invalid}
-          aria-describedby={invalid ? "telefon-hata" : undefined}
+          aria-describedby={invalid ? errorId : undefined}
           className="h-full w-full min-w-0 bg-transparent px-3.5 text-[16px] text-ink outline-none placeholder:text-placeholder"
         />
       </div>
@@ -161,7 +166,7 @@ export function PhoneField({
       <input type="hidden" name="telefon" value={toE164(country, national)} />
 
       {invalid && (
-        <p id="telefon-hata" className="mt-1.5 px-1 text-[13px] text-brand-700">
+        <p id={errorId} className="mt-1.5 px-1 text-[13px] text-brand-700">
           {t.invalidPhone}
         </p>
       )}
@@ -169,7 +174,7 @@ export function PhoneField({
       {open && (
         <div
           onKeyDown={onListKeyDown}
-          className="absolute left-0 top-[calc(100%+6px)] z-40 w-full min-w-[280px] overflow-hidden rounded-[12px] border border-line bg-surface shadow-[0_18px_44px_-16px_rgba(10,25,40,0.35)]"
+          className="absolute start-0 top-[calc(100%+6px)] z-40 w-full min-w-[280px] overflow-hidden rounded-[12px] border border-line bg-surface shadow-[0_18px_44px_-16px_rgba(10,25,40,0.35)]"
         >
           <div className="border-b border-line p-2">
             <input

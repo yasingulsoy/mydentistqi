@@ -2,15 +2,17 @@ import Link from "next/link";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { RevealObserver } from "./RevealObserver";
-import { localePath, siteUrl, type Dict } from "@/data/content";
+import { localePath, siteUrl, type Dict, type Locale } from "@/data/content";
 import type { LegalDoc } from "@/data/legal";
 
 export function LegalPage({
   dict,
+  alternates,
   doc,
   path,
 }: {
   dict: Dict;
+  alternates: Record<Locale, string>;
   doc: LegalDoc;
   path: string;
 }) {
@@ -61,7 +63,7 @@ export function LegalPage({
         {dict.skipToContent}
       </a>
 
-      <Navbar dict={dict} />
+      <Navbar dict={dict} alternates={alternates} />
 
       <main id="icerik" className="bg-cream">
         <div className="section-x py-14 lg:py-20">

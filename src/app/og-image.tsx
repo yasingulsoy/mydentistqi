@@ -1,19 +1,38 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { content, type Locale } from "@/data/content";
+import { content, localeMeta, type Locale } from "@/data/content";
 
 export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
+
+/**
+ * Arapça için ayrı font şart: Satori'nin varsayılan yedek fontu Arap
+ * alfabesini şekillendiremiyor ve derlemeyi "lookupType: 5 - substFormat: 3"
+ * hatasıyla kırıyor.
+ *
+ * Font seçimi denenerek yapıldı — Noto Sans Arabic ve Amiri AYNI hatayı
+ * veriyor (GSUB tablolarında Satori'nin desteklemediği bağlamsal
+ * değiştirme var). Cairo (OFL) sorunsuz çalışıyor; değiştirmeden önce
+ * yenisini gerçekten render ettirip dene.
+ */
+const arabicFonts = () =>
+  ([400, 600] as const).map((weight) => ({
+    name: "Cairo",
+    data: readFileSync(join(process.cwd(), `src/app/fonts/Cairo-${weight}.ttf`)),
+    weight,
+    style: "normal" as const,
+  }));
 
 /** Gerçek marka logosu (beyaz, 486x153) build sırasında gömülüyor. */
 const logo = `data:image/png;base64,${readFileSync(
   join(process.cwd(), "public/logo/mydentist-logo-white@300.png"),
 ).toString("base64")}`;
 
-/** Her iki dil için paylaşılan Open Graph görseli. */
+/** 7 dilin tamamının paylaştığı Open Graph görseli. */
 export function renderOgImage(locale: Locale) {
   const dict = content[locale];
+  const rtl = localeMeta[locale].dir === "rtl";
 
   return new ImageResponse(
     (
@@ -27,7 +46,9 @@ export function renderOgImage(locale: Locale) {
           padding: "68px 80px",
           background: "linear-gradient(150deg, #253346 0%, #354356 55%, #3c536c 100%)",
           color: "#ffffff",
-          fontFamily: "sans-serif",
+          fontFamily: rtl ? "Cairo, sans-serif" : "sans-serif",
+          direction: rtl ? "rtl" : "ltr",
+          textAlign: rtl ? "right" : "left",
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -59,6 +80,8 @@ export function renderOgImage(locale: Locale) {
         </div>
       </div>
     ),
-    ogSize,
+    // Font yalnızca gerektiğinde okunuyor; diğer diller varsayılan yedeği
+    // kullanmaya devam ediyor.
+    rtl ? { ...ogSize, fonts: arabicFonts() } : ogSize,
   );
 }

@@ -132,18 +132,26 @@ export default async function Page({
   if (!route) notFound();
 
   const dict = content[route.locale];
+  // Dil değiştiricinin aynı sayfanın çevirisine gidebilmesi için.
+  const langs = routeAlternates(route);
 
   switch (route.kind) {
     case "home":
-      return <Landing dict={dict} />;
+      return <Landing dict={dict} alternates={langs} />;
     case "detail":
       return (
-        <DetailPage dict={dict} kind={route.detailKind} page={route.page} />
+        <DetailPage
+          dict={dict}
+          alternates={langs}
+          kind={route.detailKind}
+          page={route.page}
+        />
       );
     case "legal":
       return (
         <LegalPage
           dict={dict}
+          alternates={langs}
           doc={legal[route.locale][route.doc]}
           path={routeHref(route)}
         />

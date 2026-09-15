@@ -258,6 +258,12 @@ export const de: Dict = {
       "Hotelunterkunft",
     ],
   },
+  contact: {
+    eyebrow: "KONTAKT",
+    title: "Wir beantworten Ihre Fragen",
+    description:
+      "Füllen Sie das Formular aus und unsere Berater melden sich bei Ihnen. Wir bieten eine kostenlose Vorabprüfung zu Behandlungsplan, Ablauf und Reisedetails.",
+  },
   detail: {
     treatmentsCrumb: "Behandlungen",
     destinationsCrumb: "Reiseziele",

@@ -259,6 +259,12 @@ export const es: Dict = {
       "Alojamiento en hotel",
     ],
   },
+  contact: {
+    eyebrow: "CONTACTO",
+    title: "Permítanos responder a sus preguntas",
+    description:
+      "Rellene el formulario y nuestros asesores se pondrán en contacto con usted. Ofrecemos una evaluación previa gratuita sobre su plan de tratamiento, el proceso y los detalles del viaje.",
+  },
   detail: {
     treatmentsCrumb: "Tratamientos",
     destinationsCrumb: "Destinos",

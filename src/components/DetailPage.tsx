@@ -6,7 +6,8 @@ import { RevealObserver } from "./RevealObserver";
 import { ArrowRightIcon, treatmentIcons } from "./icons";
 import { CountryFlag } from "./CountryFlag";
 import { clinicCountry, clinicsByCountry } from "@/data/partners";
-import { localePath, sectionHref, siteUrl, type Dict } from "@/data/content";
+import { ContactSection } from "./ContactSection";
+import { localePath, sectionHref, siteUrl, type Dict, type Locale } from "@/data/content";
 import {
   detailPath,
   pagesOf,
@@ -16,10 +17,12 @@ import {
 
 export function DetailPage({
   dict,
+  alternates,
   kind,
   page,
 }: {
   dict: Dict;
+  alternates: Record<Locale, string>;
   kind: DetailKind;
   page: DetailPageData;
 }) {
@@ -92,7 +95,7 @@ export function DetailPage({
         {dict.skipToContent}
       </a>
 
-      <Navbar dict={dict} />
+      <Navbar dict={dict} alternates={alternates} />
 
       <main id="icerik">
         {/* --- Başlık --- */}

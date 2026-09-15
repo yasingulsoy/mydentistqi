@@ -47,13 +47,13 @@ export function Hero({ dict }: { dict: Dict }) {
           </a>
 
           {/* Masaüstü: görselin sağına taşan yüzen tedavi etiketleri */}
-          <ul className="absolute right-[-25px] top-[133px] hidden flex-col gap-4 lg:flex">
+          <ul className="absolute end-[-25px] top-[133px] hidden flex-col gap-4 lg:flex">
             {hero.pills.map((label, i) => {
               const Icon = treatmentIcons[heroPillIcons[i]];
               return (
                 <li
                   key={label}
-                  className="flex min-h-[58px] w-[240px] items-center gap-3 rounded-full bg-surface py-2 pl-2.5 pr-4 shadow-[0_12px_30px_-14px_rgba(10,25,40,0.45)]"
+                  className="flex min-h-[58px] w-[240px] items-center gap-3 rounded-full bg-surface py-2 ps-2.5 pe-4 shadow-[0_12px_30px_-14px_rgba(10,25,40,0.45)]"
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[9px] bg-sky-soft">
                     <Icon className="h-[18px] w-[18px] text-sky-ink" />
@@ -66,7 +66,11 @@ export function Hero({ dict }: { dict: Dict }) {
         </div>
 
         {/* Form */}
-        <div className="px-5 py-14 sm:py-20 lg:order-1 lg:flex lg:items-center lg:px-0 lg:py-0">
+        {/* Form, görselle AYNI üst hizada başlıyor (ikisi de pt-24).
+            Önceden dikey ortalıydı; 870px kapsayıcıda 416px kart
+            üstünde 227px boşluk bırakıyor, görselin 96px'iyle
+            uyuşmadığı için sarkmış gibi duruyordu. */}
+        <div className="px-5 py-14 sm:py-20 lg:order-1 lg:px-0 lg:py-0 lg:pt-24">
           <ContactForm t={hero.form} locale={dict.locale} />
         </div>
       </div>
