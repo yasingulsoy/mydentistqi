@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { fontClass } from "../fonts";
 import "../globals.css";
 import { ThemeScript } from "../theme-script";
 import { brand, siteUrl } from "@/data/site";
 import { defaultLocale, localeMeta } from "@/data/locales";
 import { resolveRoute } from "@/data/routes";
+import { jivoScriptSrc } from "@/data/integrations";
 
 /**
  * Tek root layout — 7 dilin tamamı buradan geçiyor.
@@ -44,6 +46,7 @@ export default async function RootLayout({
   const { path } = await params;
   const locale = resolveRoute(path)?.locale ?? defaultLocale;
   const { htmlLang, dir } = localeMeta[locale];
+  const jivo = jivoScriptSrc(locale);
 
   return (
     <html
@@ -55,7 +58,19 @@ export default async function RootLayout({
       <head>
         <ThemeScript />
       </head>
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        {children}
+
+        {/*
+          Dile özel canlı destek (JivoChat).
+          lazyOnload: tarayıcı boşa çıkınca yüklenir, sayfa hızını etkilemez
+          — Next dokümanı sohbet eklentileri için bunu öneriyor.
+          DİKKAT: root layout'taki script'ler belge başına BİR KEZ çalışır;
+          istemci tarafı dil geçişinde eski dilin balonu ekranda kalırdı.
+          Bu yüzden dil değiştirici tam sayfa yüklemesi yapıyor (Navbar).
+        */}
+        {jivo && <Script id="jivo-widget" src={jivo} strategy="lazyOnload" />}
+      </body>
     </html>
   );
 }

@@ -19,6 +19,11 @@ import {
  * `alternates` sayfanın kendi çevirilerinin yollarını taşıyor; böylece
  * kullanıcı bir tedavi sayfasındayken dil değiştirdiğinde ana sayfaya
  * düşmüyor, AYNI tedavinin o dildeki sayfasına gidiyor.
+ *
+ * Bağlantılar BİLİNÇLİ OLARAK `<Link>` değil düz `<a>`: dil geçişi tam
+ * sayfa yüklemesi yapmalı. Her dilin kendi canlı destek (Jivo) widget'ı
+ * var ve root layout'taki script'ler belge başına bir kez çalışıyor —
+ * istemci tarafı geçişte eski dilin sohbet balonu ekranda kalırdı.
  */
 function LanguageSwitcher({
   locale,
@@ -69,7 +74,7 @@ function LanguageSwitcher({
         <ul className="absolute end-0 top-full z-50 mt-2 min-w-[150px] overflow-hidden rounded-lg border border-nav-border bg-surface py-1 shadow-[0_12px_30px_-10px_rgba(10,25,40,0.35)]">
           {LOCALES.map((l) => (
             <li key={l}>
-              <Link
+              <a
                 href={alternates[l]}
                 onClick={() => setOpen(false)}
                 hrefLang={l}
@@ -80,7 +85,7 @@ function LanguageSwitcher({
                 }`}
               >
                 {localeMeta[l].label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -185,12 +190,13 @@ export function Navbar({
                 {dict.nav.cta}
               </a>
             </li>
-            {/* 7 dil satır içine sığmıyor; telefonda ayrı bir ızgara olarak */}
+            {/* 7 dil satır içine sığmıyor; telefonda ayrı bir ızgara olarak.
+                Düz <a>: dil geçişi tam sayfa yüklemesi olmalı (bkz. LanguageSwitcher). */}
             <li className="border-t border-nav-border pt-3 pb-1">
               <ul className="grid grid-cols-3 gap-2">
                 {LOCALES.map((l) => (
                   <li key={l}>
-                    <Link
+                    <a
                       href={alternates[l]}
                       onClick={() => setOpen(false)}
                       hrefLang={l}
@@ -203,7 +209,7 @@ export function Navbar({
                       }`}
                     >
                       {localeMeta[l].label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

@@ -11,12 +11,37 @@ import { LOCALES, type Locale } from "@/data/locales";
  *  2. Tarayıcıdan çapraz kaynak POST, karşı tarafın CORS başlıklarına
  *     bağlı kalır; sunucudan giden istek bu kısıttan etkilenmez.
  *
- * Adres `LEAD_WEBHOOK_URL` ortam değişkeniyle ezilebilir (önerilen: Dokploy
- * panelinde tanımla, böylece anahtar git geçmişine hiç girmez).
+ * HER DİLİN KENDİ UCU VAR (ayrı otomasyon/ekip). Uç seçimi, öncelik sırasıyla:
+ *   1. `LEAD_WEBHOOK_URL_<DİL>` ortam değişkeni (örn. LEAD_WEBHOOK_URL_DE)
+ *   2. Aşağıdaki WEBHOOKS tablosu
+ *   3. `LEAD_WEBHOOK_URL` ortam değişkeni
+ *   4. Türkçe uç
+ *
+ * Ucu henüz verilmemiş dillerin formları Türkçe uca düşüyor: lead
+ * kaybolmasın diye. Gövdedeki `locale` alanı hangi dilden geldiğini
+ * gösterdiği için otomasyonda ayırt edilebilir.
+ *
+ * Adresleri Dokploy panelinde ortam değişkeni olarak tanımlamak daha
+ * doğru — o zaman anahtarlar git geçmişine hiç girmez.
  */
-const WEBHOOK_URL =
-  process.env.LEAD_WEBHOOK_URL ??
+const TR_WEBHOOK =
   "https://hospitadent.ulakbel.com/client_lead_automation/webhook/fu0q5UkN5nFaEktUiBMiD7YnM8c8aBweIkbJ";
+
+const WEBHOOKS: Partial<Record<Locale, string>> = {
+  tr: TR_WEBHOOK,
+  en: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/rCGhqZq98m7QSlYRklvrFHRiuLU6XCBNMipU",
+  // de, bg, ar, fr, es — uçları gönderildikçe buraya. Tanımlanana kadar
+  // Türkçe uca düşüyorlar; gövdedeki `locale` ile ayırt edilebiliyorlar.
+};
+
+function webhookFor(locale: Locale): string {
+  return (
+    process.env[`LEAD_WEBHOOK_URL_${locale.toUpperCase()}`] ??
+    WEBHOOKS[locale] ??
+    process.env.LEAD_WEBHOOK_URL ??
+    TR_WEBHOOK
+  );
+}
 
 /** Statik sayfaların aksine bu uç her istekte çalışmalı. */
 export const dynamic = "force-dynamic";
@@ -89,7 +114,7 @@ export async function POST(request: Request) {
 
   try {
     // Otomasyon yanıt vermezse kullanıcıyı süresiz bekletme.
-    const response = await fetch(WEBHOOK_URL, {
+    const response = await fetch(webhookFor(locale), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
