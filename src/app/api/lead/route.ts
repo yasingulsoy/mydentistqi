@@ -12,14 +12,15 @@ import { LOCALES, type Locale } from "@/data/locales";
  *     bağlı kalır; sunucudan giden istek bu kısıttan etkilenmez.
  *
  * HER DİLİN KENDİ UCU VAR (ayrı otomasyon/ekip). Uç seçimi, öncelik sırasıyla:
- *   1. `LEAD_WEBHOOK_URL_<DİL>` ortam değişkeni (örn. LEAD_WEBHOOK_URL_DE)
+ *   1. `LEAD_WEBHOOK_URL_<DİL>` ortam değişkeni (örn. LEAD_WEBHOOK_URL_FR)
  *   2. Aşağıdaki WEBHOOKS tablosu
  *   3. `LEAD_WEBHOOK_URL` ortam değişkeni
- *   4. Türkçe uç
+ *   4. Türkçe için TR ucu, diğer tüm diller için YURTDIŞI ucu
  *
- * Ucu henüz verilmemiş dillerin formları Türkçe uca düşüyor: lead
- * kaybolmasın diye. Gövdedeki `locale` alanı hangi dilden geldiğini
- * gösterdiği için otomasyonda ayırt edilebilir.
+ * Ucu henüz verilmemiş yabancı diller yurtdışı ucuna düşüyor (Türkçe uca
+ * değil): lead kaybolmasın ama Türkçe ekibin kuyruğuna da düşmesin diye.
+ * Gövdedeki `locale` alanı hangi dilden geldiğini gösterdiği için
+ * otomasyonda ayırt edilebiliyor.
  *
  * Adresleri Dokploy panelinde ortam değişkeni olarak tanımlamak daha
  * doğru — o zaman anahtarlar git geçmişine hiç girmez.
@@ -27,11 +28,20 @@ import { LOCALES, type Locale } from "@/data/locales";
 const TR_WEBHOOK =
   "https://hospitadent.ulakbel.com/client_lead_automation/webhook/fu0q5UkN5nFaEktUiBMiD7YnM8c8aBweIkbJ";
 
+const EN_WEBHOOK =
+  "https://hospitadent.ulakbel.com/client_lead_automation/webhook/rCGhqZq98m7QSlYRklvrFHRiuLU6XCBNMipU";
+
+/** "Yurtdışı" ucu. Almanca için verildi; ucu belirlenmemiş diğer yabancı
+ *  dillerin yedeği de bu. */
+const INTL_WEBHOOK =
+  "https://hospitadent.ulakbel.com/client_lead_automation/webhook/7FrmZXAfzLQnkWOCfbZbaFZ9aCjV7vyZsZO2";
+
 const WEBHOOKS: Partial<Record<Locale, string>> = {
   tr: TR_WEBHOOK,
-  en: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/rCGhqZq98m7QSlYRklvrFHRiuLU6XCBNMipU",
-  // de, bg, ar, fr, es — uçları gönderildikçe buraya. Tanımlanana kadar
-  // Türkçe uca düşüyorlar; gövdedeki `locale` ile ayırt edilebiliyorlar.
+  en: EN_WEBHOOK,
+  de: INTL_WEBHOOK,
+  // bg, ar, fr, es — kendi uçları gelince buraya; o zamana kadar
+  // aşağıdaki yedek onları yurtdışı ucuna gönderiyor.
 };
 
 function webhookFor(locale: Locale): string {
@@ -39,7 +49,7 @@ function webhookFor(locale: Locale): string {
     process.env[`LEAD_WEBHOOK_URL_${locale.toUpperCase()}`] ??
     WEBHOOKS[locale] ??
     process.env.LEAD_WEBHOOK_URL ??
-    TR_WEBHOOK
+    (locale === "tr" ? TR_WEBHOOK : INTL_WEBHOOK)
   );
 }
 
