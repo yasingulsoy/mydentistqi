@@ -17,10 +17,10 @@ import { LOCALES, type Locale } from "@/data/locales";
  *   3. `LEAD_WEBHOOK_URL` ortam değişkeni
  *   4. Türkçe için TR ucu, diğer tüm diller için YURTDIŞI ucu
  *
- * Ucu henüz verilmemiş yabancı diller yurtdışı ucuna düşüyor (Türkçe uca
- * değil): lead kaybolmasın ama Türkçe ekibin kuyruğuna da düşmesin diye.
- * Gövdedeki `locale` alanı hangi dilden geldiğini gösterdiği için
- * otomasyonda ayırt edilebiliyor.
+ * 7 dilin de kendi ucu TANIMLI; 4. adım yalnızca ileride yeni bir dil
+ * eklenip ucu unutulursa devreye giren güvenlik ağı. Gövdedeki `locale`
+ * alanı hangi dilden geldiğini gösterdiği için otomasyonda ayırt
+ * edilebiliyor.
  *
  * Adresleri Dokploy panelinde ortam değişkeni olarak tanımlamak daha
  * doğru — o zaman anahtarlar git geçmişine hiç girmez.
@@ -42,8 +42,8 @@ const WEBHOOKS: Partial<Record<Locale, string>> = {
   de: INTL_WEBHOOK,
   ar: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/aTUORyC8F9IZPYLVgYhVMdbUT0XrHTusHYYW",
   fr: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/WYUxDCWSYJ90wcfLMaXEwha9Q6kljANutZDT",
-  // bg, es — kendi uçları gelince buraya; o zamana kadar aşağıdaki
-  // yedek onları yurtdışı ucuna gönderiyor.
+  es: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/JoCEywx7s7GGWnf2IWTz42Wd1zZKOriTBXjV",
+  bg: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/2nV0TLJn2FocMylHn2L5flrNgtURwMg0y53E",
 };
 
 function webhookFor(locale: Locale): string {
