@@ -40,8 +40,9 @@ const WEBHOOKS: Partial<Record<Locale, string>> = {
   tr: TR_WEBHOOK,
   en: EN_WEBHOOK,
   de: INTL_WEBHOOK,
-  // bg, ar, fr, es — kendi uçları gelince buraya; o zamana kadar
-  // aşağıdaki yedek onları yurtdışı ucuna gönderiyor.
+  ar: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/aTUORyC8F9IZPYLVgYhVMdbUT0XrHTusHYYW",
+  // bg, fr, es — kendi uçları gelince buraya; o zamana kadar aşağıdaki
+  // yedek onları yurtdışı ucuna gönderiyor.
 };
 
 function webhookFor(locale: Locale): string {
