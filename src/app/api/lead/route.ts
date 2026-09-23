@@ -41,7 +41,8 @@ const WEBHOOKS: Partial<Record<Locale, string>> = {
   en: EN_WEBHOOK,
   de: INTL_WEBHOOK,
   ar: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/aTUORyC8F9IZPYLVgYhVMdbUT0XrHTusHYYW",
-  // bg, fr, es — kendi uçları gelince buraya; o zamana kadar aşağıdaki
+  fr: "https://hospitadent.ulakbel.com/client_lead_automation/webhook/WYUxDCWSYJ90wcfLMaXEwha9Q6kljANutZDT",
+  // bg, es — kendi uçları gelince buraya; o zamana kadar aşağıdaki
   // yedek onları yurtdışı ucuna gönderiyor.
 };
 
