@@ -1,9 +1,20 @@
-/** Arapça blog makaleleri. Sayfa RTL render edilir. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * Arapça blog makaleleri. Sayfa RTL render edilir.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ *
+ * Slug'lar İNGİLİZCE anahtar kelimeden: Arap alfabeli URL'ler yüzde
+ * kodlandığında paylaşılırken okunmaz hâle geliyor — sitedeki diğer
+ * Arapça yollarla (örn. /ar/treatments/...) aynı kural.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const ar: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "dental-implant-treatment",
     title: "ما هو علاج زراعة الأسنان؟",
     seoTitle: "ما هو علاج زراعة الأسنان؟ | MyDentist",
     metaDescription:
@@ -45,6 +56,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "implant-treatment-duration",
     title: "كم يستغرق علاج زراعة الأسنان؟",
     seoTitle: "كم يستغرق علاج زراعة الأسنان؟ | MyDentist",
     metaDescription:
@@ -86,6 +98,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "dental-implant-vs-bridge",
     title: "الزرعة أم جسر الأسنان: أيهما أنسب؟",
     seoTitle: "الزرعة أم جسر الأسنان: أيهما أنسب؟ | MyDentist",
     metaDescription:
@@ -127,6 +140,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "post-implant-care",
     title: "العناية بعد زراعة الأسنان",
     seoTitle: "العناية بعد زراعة الأسنان | MyDentist",
     metaDescription:
@@ -168,6 +182,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "dental-implants-in-turkiye",
     title: "زراعة الأسنان في تركيا: دليل المريض",
     seoTitle: "زراعة الأسنان في تركيا: دليل المريض | MyDentist",
     metaDescription:
@@ -209,6 +224,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "zirconia-crowns",
     title: "ما هي تيجان الزركونيا؟",
     seoTitle: "ما هي تيجان الزركونيا؟ | MyDentist",
     metaDescription:
@@ -250,6 +266,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "zirconia-vs-e-max",
     title: "الزركونيا أم إي ماكس: الفروق",
     seoTitle: "الزركونيا أم إي ماكس: الفروق | MyDentist",
     metaDescription:
@@ -291,6 +308,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "zirconia-crown-longevity",
     title: "كم تدوم تيجان الزركونيا؟",
     seoTitle: "كم تدوم تيجان الزركونيا؟ | MyDentist",
     metaDescription:
@@ -332,6 +350,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "zirconia-crown-procedure",
     title: "كيف يتم تركيب تاج الزركونيا؟",
     seoTitle: "كيف يتم تركيب تاج الزركونيا؟ | MyDentist",
     metaDescription:
@@ -373,6 +392,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "zirconia-crown-care",
     title: "العناية بتيجان الزركونيا",
     seoTitle: "العناية بتيجان الزركونيا | MyDentist",
     metaDescription:
@@ -414,6 +434,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "all-on-4-treatment",
     title: "ما هو علاج All-on-4؟",
     seoTitle: "ما هو علاج All-on-4؟ | MyDentist",
     metaDescription:
@@ -455,6 +476,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "all-on-6-treatment",
     title: "ما هو علاج All-on-6؟",
     seoTitle: "ما هو علاج All-on-6؟ | MyDentist",
     metaDescription:
@@ -496,6 +518,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-4-vs-all-on-6",
     title: "الفرق بين All-on-4 وAll-on-6",
     seoTitle: "الفرق بين All-on-4 وAll-on-6 | MyDentist",
     metaDescription:
@@ -537,6 +560,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "all-on-4-treatment-timeline",
     title: "كم يستغرق علاج All-on-4؟",
     seoTitle: "كم يستغرق علاج All-on-4؟ | MyDentist",
     metaDescription:
@@ -578,6 +602,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "full-arch-implant-aftercare",
     title: "العناية بعد All-on-4 وAll-on-6",
     seoTitle: "العناية بعد All-on-4 وAll-on-6 | MyDentist",
     metaDescription:
@@ -619,6 +644,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "teeth-whitening",
     title: "تبييض الأسنان: الطرق والملاءمة",
     seoTitle: "تبييض الأسنان: الطرق والملاءمة | MyDentist",
     metaDescription:
@@ -660,6 +686,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "dental-scaling",
     title: "كم مرة يجب تنظيف جير الأسنان؟",
     seoTitle: "كم مرة يجب تنظيف جير الأسنان؟ | MyDentist",
     metaDescription:
@@ -701,6 +728,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "root-canal-treatment",
     title: "علاج عصب الأسنان: ما المتوقع؟",
     seoTitle: "علاج عصب الأسنان: ما المتوقع؟ | MyDentist",
     metaDescription:
@@ -742,6 +770,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "dental-fillings",
     title: "حشوات الأسنان: الأنواع والخطوات",
     seoTitle: "حشوات الأسنان: الأنواع والخطوات | MyDentist",
     metaDescription:
@@ -783,6 +812,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "tooth-extraction-aftercare",
     title: "العناية بعد خلع الأسنان",
     seoTitle: "العناية بعد خلع الأسنان | MyDentist",
     metaDescription:
@@ -824,6 +854,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "wisdom-tooth-removal",
     title: "متى يجب خلع ضرس العقل؟",
     seoTitle: "متى يجب خلع ضرس العقل؟ | MyDentist",
     metaDescription:
@@ -865,6 +896,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "clear-aligner-orthodontics",
     title: "ما هي التقويمات الشفافة؟",
     seoTitle: "ما هي التقويمات الشفافة؟ | MyDentist",
     metaDescription:
@@ -906,6 +938,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "bleeding-gums",
     title: "لماذا تنزف اللثة؟",
     seoTitle: "لماذا تنزف اللثة؟ | MyDentist",
     metaDescription:
@@ -947,6 +980,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "bruxism-night-guard",
     title: "صرير الأسنان والواقي الليلي",
     seoTitle: "صرير الأسنان والواقي الليلي | MyDentist",
     metaDescription:
@@ -988,6 +1022,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "smile-design",
     title: "ما هو تصميم الابتسامة؟",
     seoTitle: "ما هو تصميم الابتسامة؟ | MyDentist",
     metaDescription:
@@ -1029,6 +1064,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "hollywood-smile",
     title: "ما هي ابتسامة هوليوود؟",
     seoTitle: "ما هي ابتسامة هوليوود؟ | MyDentist",
     metaDescription:
@@ -1070,6 +1106,7 @@ export const ar: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "gummy-smile",
     title: "الابتسامة اللثوية: الأسباب والعلاج",
     seoTitle: "الابتسامة اللثوية: الأسباب والعلاج | MyDentist",
     metaDescription:

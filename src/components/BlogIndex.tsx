@@ -124,7 +124,7 @@ export function BlogIndex({
                         }
                       >
                         <Link
-                          href={articlePath(locale, article.key)}
+                          href={articlePath(locale, article)}
                           className="group flex h-full flex-col rounded-[14px] border border-line bg-surface p-6 transition-shadow hover:shadow-[0_14px_34px_-18px_rgba(10,25,40,0.35)]"
                         >
                           <h3 className="font-serif text-[18px] leading-snug text-ink">

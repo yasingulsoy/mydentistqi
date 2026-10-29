@@ -1,9 +1,16 @@
-/** Bulgarca blog makaleleri. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * Bulgarca blog makaleleri.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const bg: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "kakvo-predstavlyava-zabniyat-implant",
     title: "Какво представлява зъбният имплант?",
     seoTitle: "Какво представлява зъбният имплант? | MyDentist",
     metaDescription:
@@ -45,6 +52,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "kolko-vreme-prodalzhava-implantnoto-lechenie",
     title: "Колко време продължава имплантното лечение?",
     seoTitle: "Колко време продължава имплантното лечение? | MyDentist",
     metaDescription:
@@ -86,6 +94,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "implant-ili-most-kakvo-da-izberem",
     title: "Имплант или мост: какво да изберем?",
     seoTitle: "Имплант или мост: какво да изберем? | MyDentist",
     metaDescription:
@@ -127,6 +136,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "grizhi-sled-postavyane-na-implant",
     title: "Грижи след поставяне на имплант",
     seoTitle: "Грижи след поставяне на имплант | MyDentist",
     metaDescription:
@@ -168,6 +178,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "zabni-implanti-v-turtsiya-narachnik",
     title: "Зъбни импланти в Турция: наръчник",
     seoTitle: "Зъбни импланти в Турция: наръчник | MyDentist",
     metaDescription:
@@ -209,6 +220,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "kakvo-predstavlyavat-tsirkonievite-koronki",
     title: "Какво представляват циркониевите коронки?",
     seoTitle: "Какво представляват циркониевите коронки? | MyDentist",
     metaDescription:
@@ -250,6 +262,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "tsirkoniy-ili-e-max-razliki",
     title: "Цирконий или E-max: разлики",
     seoTitle: "Цирконий или E-max: разлики | MyDentist",
     metaDescription:
@@ -291,6 +304,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "kolko-izdarzhat-tsirkonievite-koronki",
     title: "Колко издържат циркониевите коронки?",
     seoTitle: "Колко издържат циркониевите коронки? | MyDentist",
     metaDescription:
@@ -332,6 +346,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "kak-se-postavyat-tsirkonievite-koronki",
     title: "Как се поставят циркониевите коронки?",
     seoTitle: "Как се поставят циркониевите коронки? | MyDentist",
     metaDescription:
@@ -373,6 +388,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "grizha-za-tsirkonievite-koronki",
     title: "Грижа за циркониевите коронки",
     seoTitle: "Грижа за циркониевите коронки | MyDentist",
     metaDescription:
@@ -414,6 +430,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "kakvo-e-all-on-4",
     title: "Какво е All-on-4?",
     seoTitle: "Какво е All-on-4? | MyDentist",
     metaDescription:
@@ -455,6 +472,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "kakvo-e-all-on-6",
     title: "Какво е All-on-6?",
     seoTitle: "Какво е All-on-6? | MyDentist",
     metaDescription:
@@ -496,6 +514,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-4-sreshtu-all-on-6",
     title: "All-on-4 срещу All-on-6",
     seoTitle: "All-on-4 срещу All-on-6 | MyDentist",
     metaDescription:
@@ -537,6 +556,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "kolko-vreme-prodalzhava-all-on-4",
     title: "Колко време продължава All-on-4?",
     seoTitle: "Колко време продължава All-on-4? | MyDentist",
     metaDescription:
@@ -578,6 +598,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "grizhi-sled-all-on-4-i-all-on-6",
     title: "Грижи след All-on-4 и All-on-6",
     seoTitle: "Грижи след All-on-4 и All-on-6 | MyDentist",
     metaDescription:
@@ -619,6 +640,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "izbelvane-na-zabi-metodi",
     title: "Избелване на зъби: методи",
     seoTitle: "Избелване на зъби: методи | MyDentist",
     metaDescription:
@@ -660,6 +682,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "kolko-chesto-se-pochistva-zaben-kamak",
     title: "Колко често се почиства зъбен камък?",
     seoTitle: "Колко често се почиства зъбен камък? | MyDentist",
     metaDescription:
@@ -701,6 +724,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "korenovo-lechenie-kak-proticha",
     title: "Кореново лечение: как протича?",
     seoTitle: "Кореново лечение: как протича? | MyDentist",
     metaDescription:
@@ -742,6 +766,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "zabni-plombi-vidove-i-protsedura",
     title: "Зъбни пломби: видове и процедура",
     seoTitle: "Зъбни пломби: видове и процедура | MyDentist",
     metaDescription:
@@ -783,6 +808,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "grizhi-sled-vadene-na-zab",
     title: "Грижи след вадене на зъб",
     seoTitle: "Грижи след вадене на зъб | MyDentist",
     metaDescription:
@@ -824,6 +850,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "koga-se-vadyat-madretsite",
     title: "Кога се вадят мъдреците?",
     seoTitle: "Кога се вадят мъдреците? | MyDentist",
     metaDescription:
@@ -865,6 +892,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "kakvo-predstavlyavat-prozrachnite-alayneri",
     title: "Какво представляват прозрачните алайнери?",
     seoTitle: "Какво представляват прозрачните алайнери? | MyDentist",
     metaDescription:
@@ -906,6 +934,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "zashto-karvyat-ventsite",
     title: "Защо кървят венците?",
     seoTitle: "Защо кървят венците? | MyDentist",
     metaDescription:
@@ -947,6 +976,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "bruksizam-i-noshtna-shina",
     title: "Бруксизъм и нощна шина",
     seoTitle: "Бруксизъм и нощна шина | MyDentist",
     metaDescription:
@@ -988,6 +1018,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "kakvo-e-dizayn-na-usmivkata",
     title: "Какво е дизайн на усмивката?",
     seoTitle: "Какво е дизайн на усмивката? | MyDentist",
     metaDescription:
@@ -1029,6 +1060,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "kakvo-e-hollywood-smile",
     title: "Какво е Hollywood Smile?",
     seoTitle: "Какво е Hollywood Smile? | MyDentist",
     metaDescription:
@@ -1070,6 +1102,7 @@ export const bg: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "gingivalna-usmivka-prichini-i-lechenie",
     title: "Гингивална усмивка: причини и лечение",
     seoTitle: "Гингивална усмивка: причини и лечение | MyDentist",
     metaDescription:

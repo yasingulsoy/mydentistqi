@@ -27,7 +27,7 @@ export function ArticlePage({
   const home = localePath[locale];
   // Bu bileşen yalnızca o dilde metni olan makaleler için render ediliyor.
   const c = article.content[locale]!;
-  const pageUrl = `${siteUrl}${articlePath(locale, article.key)}`;
+  const pageUrl = `${siteUrl}${articlePath(locale, article)}`;
 
   /**
    * SSS bölümü: 2 paragraflı ve ilki soru işaretiyle biten bölüm
@@ -182,7 +182,7 @@ export function ArticlePage({
                 {related.map((a) => (
                   <li key={a.key}>
                     <Link
-                      href={articlePath(locale, a.key)}
+                      href={articlePath(locale, a)}
                       className="group flex items-center justify-between gap-4 rounded-[12px] border border-line bg-surface px-5 py-4 text-[15px] text-ink transition-colors hover:border-brand-500/50"
                     >
                       {a.content[locale]!.title}

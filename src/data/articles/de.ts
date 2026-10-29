@@ -1,9 +1,16 @@
-/** Almanca blog makaleleri. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * Almanca blog makaleleri.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const de: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "was-ist-eine-zahnimplantat-behandlung",
     title: "Was ist eine Zahnimplantat-Behandlung?",
     seoTitle: "Was ist eine Zahnimplantat-Behandlung? | MyDentist",
     metaDescription:
@@ -45,6 +52,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "wie-lange-dauert-eine-implantatbehandlung",
     title: "Wie lange dauert eine Implantatbehandlung?",
     seoTitle: "Wie lange dauert eine Implantatbehandlung? | MyDentist",
     metaDescription:
@@ -86,6 +94,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "implantat-oder-brucke-was-ist-besser-geeignet",
     title: "Implantat oder Brücke: Was ist besser geeignet?",
     seoTitle: "Implantat oder Brücke: Was ist besser geeignet? | MyDentist",
     metaDescription:
@@ -127,6 +136,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "was-ist-nach-einer-implantation-zu-beachten",
     title: "Was ist nach einer Implantation zu beachten?",
     seoTitle: "Was ist nach einer Implantation zu beachten? | MyDentist",
     metaDescription:
@@ -168,6 +178,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "zahnimplantate-in-der-turkei-patientenratgeber",
     title: "Zahnimplantate in der Türkei: Patientenratgeber",
     seoTitle: "Zahnimplantate in der Türkei: Patientenratgeber | MyDentist",
     metaDescription:
@@ -209,6 +220,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "was-sind-zirkonkronen",
     title: "Was sind Zirkonkronen?",
     seoTitle: "Was sind Zirkonkronen? | MyDentist",
     metaDescription:
@@ -250,6 +262,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "zirkon-oder-e-max-unterschiede",
     title: "Zirkon oder E-max: Unterschiede",
     seoTitle: "Zirkon oder E-max: Unterschiede | MyDentist",
     metaDescription:
@@ -291,6 +304,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "wie-lange-halten-zirkonkronen",
     title: "Wie lange halten Zirkonkronen?",
     seoTitle: "Wie lange halten Zirkonkronen? | MyDentist",
     metaDescription:
@@ -332,6 +346,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "wie-lauft-die-versorgung-mit-zirkonkronen-ab",
     title: "Wie läuft die Versorgung mit Zirkonkronen ab?",
     seoTitle: "Wie läuft die Versorgung mit Zirkonkronen ab? | MyDentist",
     metaDescription:
@@ -373,6 +388,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "pflege-und-reinigung-von-zirkonzahnen",
     title: "Pflege und Reinigung von Zirkonzähnen",
     seoTitle: "Pflege und Reinigung von Zirkonzähnen | MyDentist",
     metaDescription:
@@ -414,6 +430,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "was-ist-all-on-4",
     title: "Was ist All-on-4?",
     seoTitle: "Was ist All-on-4? | MyDentist",
     metaDescription:
@@ -455,6 +472,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "was-ist-all-on-6",
     title: "Was ist All-on-6?",
     seoTitle: "Was ist All-on-6? | MyDentist",
     metaDescription:
@@ -496,6 +514,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-4-und-all-on-6-im-vergleich",
     title: "All-on-4 und All-on-6 im Vergleich",
     seoTitle: "All-on-4 und All-on-6 im Vergleich | MyDentist",
     metaDescription:
@@ -537,6 +556,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "wie-lange-dauert-eine-all-on-4-behandlung",
     title: "Wie lange dauert eine All-on-4-Behandlung?",
     seoTitle: "Wie lange dauert eine All-on-4-Behandlung? | MyDentist",
     metaDescription:
@@ -578,6 +598,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "pflege-nach-all-on-4-und-all-on-6",
     title: "Pflege nach All-on-4 und All-on-6",
     seoTitle: "Pflege nach All-on-4 und All-on-6 | MyDentist",
     metaDescription:
@@ -619,6 +640,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "zahnaufhellung-methoden-und-eignung",
     title: "Zahnaufhellung: Methoden und Eignung",
     seoTitle: "Zahnaufhellung: Methoden und Eignung | MyDentist",
     metaDescription:
@@ -660,6 +682,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "wie-oft-ist-eine-zahnsteinentfernung-sinnvoll",
     title: "Wie oft ist eine Zahnsteinentfernung sinnvoll?",
     seoTitle: "Wie oft ist eine Zahnsteinentfernung sinnvoll? | MyDentist",
     metaDescription:
@@ -701,6 +724,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "wurzelkanalbehandlung-ablauf-und-schmerzen",
     title: "Wurzelkanalbehandlung: Ablauf und Schmerzen",
     seoTitle: "Wurzelkanalbehandlung: Ablauf und Schmerzen | MyDentist",
     metaDescription:
@@ -742,6 +766,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "zahnfullungen-arten-und-ablauf",
     title: "Zahnfüllungen: Arten und Ablauf",
     seoTitle: "Zahnfüllungen: Arten und Ablauf | MyDentist",
     metaDescription:
@@ -783,6 +808,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "verhalten-nach-einer-zahnentfernung",
     title: "Verhalten nach einer Zahnentfernung",
     seoTitle: "Verhalten nach einer Zahnentfernung | MyDentist",
     metaDescription:
@@ -824,6 +850,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "wann-mussen-weisheitszahne-entfernt-werden",
     title: "Wann müssen Weisheitszähne entfernt werden?",
     seoTitle: "Wann müssen Weisheitszähne entfernt werden? | MyDentist",
     metaDescription:
@@ -865,6 +892,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "was-sind-transparente-aligner",
     title: "Was sind transparente Aligner?",
     seoTitle: "Was sind transparente Aligner? | MyDentist",
     metaDescription:
@@ -906,6 +934,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "warum-blutet-das-zahnfleisch",
     title: "Warum blutet das Zahnfleisch?",
     seoTitle: "Warum blutet das Zahnfleisch? | MyDentist",
     metaDescription:
@@ -947,6 +976,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "zahneknirschen-und-knirscherschiene",
     title: "Zähneknirschen und Knirscherschiene",
     seoTitle: "Zähneknirschen und Knirscherschiene | MyDentist",
     metaDescription:
@@ -988,6 +1018,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "was-ist-smile-design",
     title: "Was ist Smile Design?",
     seoTitle: "Was ist Smile Design? | MyDentist",
     metaDescription:
@@ -1029,6 +1060,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "was-bedeutet-hollywood-smile",
     title: "Was bedeutet Hollywood Smile?",
     seoTitle: "Was bedeutet Hollywood Smile? | MyDentist",
     metaDescription:
@@ -1070,6 +1102,7 @@ export const de: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "gummy-smile-ursachen-und-behandlungen",
     title: "Gummy Smile: Ursachen und Behandlungen",
     seoTitle: "Gummy Smile: Ursachen und Behandlungen | MyDentist",
     metaDescription:

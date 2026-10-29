@@ -1,9 +1,16 @@
-/** Türkçe blog makaleleri. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * Türkçe blog makaleleri.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const tr: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "implant-tedavisi",
     title: "İmplant Tedavisi Nedir? Nasıl Yapılır?",
     seoTitle: "İmplant Tedavisi Nedir? Nasıl Yapılır? | MyDentist",
     metaDescription:
@@ -47,6 +54,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "implant-tedavisi-ne-kadar-surer",
     title: "İmplant Tedavisi Ne Kadar Sürer?",
     seoTitle: "İmplant Tedavisi Ne Kadar Sürer? | MyDentist",
     metaDescription:
@@ -90,6 +98,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "implant-mi-kopru-mu",
     title: "İmplant mı Köprü mü?",
     seoTitle: "İmplant mı Köprü mü? | MyDentist",
     metaDescription:
@@ -133,6 +142,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "implant-sonrasi-bakim",
     title: "İmplant Sonrası Nelere Dikkat Edilmeli?",
     seoTitle: "İmplant Sonrası Nelere Dikkat Edilmeli? | MyDentist",
     metaDescription:
@@ -176,6 +186,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "turkiyede-implant-tedavisi",
     title: "Türkiye’de İmplant Tedavisi: Hasta Rehberi",
     seoTitle: "Türkiye’de İmplant Tedavisi: Hasta Rehberi | MyDentist",
     metaDescription:
@@ -219,6 +230,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "zirkonyum-kaplama",
     title: "Zirkonyum Kaplama Nedir? Kimlere Uygulanır?",
     seoTitle: "Zirkonyum Kaplama Nedir? Kimlere Uygulanır? | MyDentist",
     metaDescription:
@@ -262,6 +274,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "zirkonyum-mu-emax-mi",
     title: "Zirkonyum mu E-max mı?",
     seoTitle: "Zirkonyum mu E-max mı? | MyDentist",
     metaDescription:
@@ -305,6 +318,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "zirkonyum-kaplama-omru",
     title: "Zirkonyum Kaplama Kaç Yıl Kullanılır?",
     seoTitle: "Zirkonyum Kaplama Kaç Yıl Kullanılır? | MyDentist",
     metaDescription:
@@ -348,6 +362,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "zirkonyum-dis-nasil-yapilir",
     title: "Zirkonyum Kaplama Nasıl Yapılır?",
     seoTitle: "Zirkonyum Kaplama Nasıl Yapılır? | MyDentist",
     metaDescription:
@@ -391,6 +406,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "zirkonyum-dis-bakimi",
     title: "Zirkonyum Diş Bakımı ve Temizliği",
     seoTitle: "Zirkonyum Diş Bakımı ve Temizliği | MyDentist",
     metaDescription:
@@ -434,6 +450,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "all-on-four-nedir",
     title: "All-on-4 Nedir? Kimler İçin Uygundur?",
     seoTitle: "All-on-4 Nedir? Kimler İçin Uygundur? | MyDentist",
     metaDescription:
@@ -477,6 +494,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "all-on-six-nedir",
     title: "All-on-6 Nedir? Tedavi Aşamaları",
     seoTitle: "All-on-6 Nedir? Tedavi Aşamaları | MyDentist",
     metaDescription:
@@ -520,6 +538,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-four-all-on-six-farki",
     title: "All-on-4 ile All-on-6 Arasındaki Farklar",
     seoTitle: "All-on-4 ile All-on-6 Arasındaki Farklar | MyDentist",
     metaDescription:
@@ -563,6 +582,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "all-on-four-tedavi-suresi",
     title: "All-on-4 Tedavisi Kaç Günde Biter?",
     seoTitle: "All-on-4 Tedavisi Kaç Günde Biter? | MyDentist",
     metaDescription:
@@ -606,6 +626,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "all-on-four-bakimi",
     title: "All-on-4 ve All-on-6 Sonrası Bakım",
     seoTitle: "All-on-4 ve All-on-6 Sonrası Bakım | MyDentist",
     metaDescription:
@@ -649,6 +670,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "dis-beyazlatma",
     title: "Diş Beyazlatma Nedir, Kimlere Uygundur?",
     seoTitle: "Diş Beyazlatma Nedir, Kimlere Uygundur? | MyDentist",
     metaDescription:
@@ -692,6 +714,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "dis-tasi-temizligi",
     title: "Diş Taşı Temizliği Ne Sıklıkla Yapılır?",
     seoTitle: "Diş Taşı Temizliği Ne Sıklıkla Yapılır? | MyDentist",
     metaDescription:
@@ -735,6 +758,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "kanal-tedavisi",
     title: "Kanal Tedavisi Nedir? Ağrılı mıdır?",
     seoTitle: "Kanal Tedavisi Nedir? Ağrılı mıdır? | MyDentist",
     metaDescription:
@@ -778,6 +802,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "dis-dolgusu",
     title: "Diş Dolgusu Çeşitleri ve Uygulaması",
     seoTitle: "Diş Dolgusu Çeşitleri ve Uygulaması | MyDentist",
     metaDescription:
@@ -821,6 +846,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "dis-cekimi-sonrasi",
     title: "Diş Çekimi Sonrası İyileşme Rehberi",
     seoTitle: "Diş Çekimi Sonrası İyileşme Rehberi | MyDentist",
     metaDescription:
@@ -864,6 +890,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "20-yas-disi-cekimi",
     title: "20 Yaş Dişi Ne Zaman Çekilir?",
     seoTitle: "20 Yaş Dişi Ne Zaman Çekilir? | MyDentist",
     metaDescription:
@@ -907,6 +934,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "seffaf-plak-tedavisi",
     title: "Şeffaf Plak Tedavisi Nedir?",
     seoTitle: "Şeffaf Plak Tedavisi Nedir? | MyDentist",
     metaDescription:
@@ -950,6 +978,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "dis-eti-kanamasi",
     title: "Diş Eti Kanaması Neden Olur?",
     seoTitle: "Diş Eti Kanaması Neden Olur? | MyDentist",
     metaDescription:
@@ -993,6 +1022,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "gece-plagi-bruksizm",
     title: "Bruksizm ve Gece Plağı Tedavisi",
     seoTitle: "Bruksizm ve Gece Plağı Tedavisi | MyDentist",
     metaDescription:
@@ -1036,6 +1066,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "gulus-tasarimi",
     title: "Gülüş Tasarımı Nedir?",
     seoTitle: "Gülüş Tasarımı Nedir? | MyDentist",
     metaDescription:
@@ -1079,6 +1110,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "hollywood-smile",
     title: "Hollywood Smile Nedir?",
     seoTitle: "Hollywood Smile Nedir? | MyDentist",
     metaDescription:
@@ -1122,6 +1154,7 @@ export const tr: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "gummy-smile-tedavisi",
     title: "Gummy Smile Nedir? Diş Eti Gülüşü Tedavisi",
     seoTitle: "Gummy Smile Nedir? Diş Eti Gülüşü Tedavisi | MyDentist",
     metaDescription:

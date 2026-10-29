@@ -3,9 +3,14 @@
  *
  * Kaynak: "MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx" (29 Ekim 2026).
  * Belgede 9 dil var; bunlardan RUSÇA, ROMENCE ve FELEMENKÇE sitede
- * olmadığı için alınmadı (81 makale kullanılmadı). Sitedeki İSPANYOLCA
- * ise belgede yok — `es` için makale YOK, blog bölümü o dilde hiç
- * görünmüyor (boş bir liste göstermektense).
+ * olmadığı için alınmadı (81 makale kullanılmadı). Belgede olmayan
+ * İSPANYOLCA ise Türkçe kaynaktan çevrildi — böylece 7 dilin hepsinde
+ * blog var.
+ *
+ * URL'ler belgedeki `/blog/implant-01` biçiminde DEĞİL: her dilde o
+ * makalenin kendi SEO anahtar kelimesinden üretilen slug kullanılıyor
+ * (`/blog/implant-tedavisi`). `key` ise dilden bağımsız kimlik olarak
+ * kalıyor; çeviriler arası eşleşme ve hreflang bunun üzerinden kuruluyor.
  *
  * İÇERİK UYARISI: Makaleler birbirine çok benziyor — her birinin 9
  * paragrafından yalnızca 2'si özgün, 5 paragraf 27 makalenin hepsinde
@@ -22,6 +27,7 @@ import { de } from "./articles/de";
 import { bg } from "./articles/bg";
 import { ar } from "./articles/ar";
 import { fr } from "./articles/fr";
+import { es } from "./articles/es";
 
 export type ArticleSection = {
   heading: string;
@@ -29,6 +35,8 @@ export type ArticleSection = {
 };
 
 export type ArticleContent = {
+  /** URL slug'ı — her dilde o dilin anahtar kelimesinden üretildi. */
+  slug: string;
   title: string;
   seoTitle: string;
   metaDescription: string;
@@ -47,7 +55,7 @@ export type Article = {
   content: Partial<Record<Locale, ArticleContent>>;
 };
 
-/** Dil -> (makale anahtarı -> metin). `es` bilerek yok. */
+/** Dil -> (makale anahtarı -> metin). */
 const TEXTS: Partial<Record<Locale, Record<string, ArticleContent>>> = {
   tr,
   en,
@@ -55,6 +63,7 @@ const TEXTS: Partial<Record<Locale, Record<string, ArticleContent>>> = {
   bg,
   ar,
   fr,
+  es,
 };
 
 /** Belgedeki sıra: 5 implant, 5 zirkonyum, 5 All-on, 12 genel tedavi. */
@@ -109,13 +118,22 @@ export function articlesOf(locale: Locale): Article[] {
   return articles.filter((a) => a.content[locale]);
 }
 
-/** O dilde blog bölümü gösterilmeli mi? (es için false) */
+/** O dilde blog bölümü gösterilmeli mi? */
 export function hasBlog(locale: Locale): boolean {
   return articlesOf(locale).length > 0;
 }
 
+/** Dilden bağımsız kimlikle bul (çeviriler arası eşleşme için). */
 export function findArticle(locale: Locale, key: string): Article | undefined {
   return articles.find((a) => a.key === key && a.content[locale]);
+}
+
+/** URL'den bul — slug o dile özel. */
+export function findArticleBySlug(
+  locale: Locale,
+  slug: string,
+): Article | undefined {
+  return articles.find((a) => a.content[locale]?.slug === slug);
 }
 
 /** Blog listesi yolu: tr -> "/blog", en -> "/en/blog" */
@@ -123,7 +141,11 @@ export function blogPath(locale: Locale): string {
   return toHref([...localePrefix(locale), segments[locale].blog]);
 }
 
-/** Makale yolu: tr -> "/blog/implant-01" */
-export function articlePath(locale: Locale, key: string): string {
-  return toHref([...localePrefix(locale), segments[locale].blog, key]);
+/** Makale yolu: tr -> "/blog/implant-tedavisi" */
+export function articlePath(locale: Locale, article: Article): string {
+  const slug = article.content[locale]?.slug;
+  if (!slug) {
+    throw new Error(`"${article.key}" makalesinin ${locale} sürümü yok.`);
+  }
+  return toHref([...localePrefix(locale), segments[locale].blog, slug]);
 }

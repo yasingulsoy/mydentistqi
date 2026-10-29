@@ -1,9 +1,16 @@
-/** İngilizce blog makaleleri. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * İngilizce blog makaleleri.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const en: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "dental-implant-treatment",
     title: "What Is Dental Implant Treatment and How Does It Work?",
     seoTitle: "What Is Dental Implant Treatment and How Does It Work? | MyDentist",
     metaDescription:
@@ -45,6 +52,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "implant-treatment-duration",
     title: "How Long Does Dental Implant Treatment Take?",
     seoTitle: "How Long Does Dental Implant Treatment Take? | MyDentist",
     metaDescription:
@@ -86,6 +94,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "dental-implant-vs-bridge",
     title: "Dental Implant or Bridge: Which Is Suitable?",
     seoTitle: "Dental Implant or Bridge: Which Is Suitable? | MyDentist",
     metaDescription:
@@ -127,6 +136,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "post-implant-care",
     title: "What to Do After Dental Implant Surgery",
     seoTitle: "What to Do After Dental Implant Surgery | MyDentist",
     metaDescription:
@@ -168,6 +178,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "dental-implants-in-turkiye",
     title: "Dental Implant Treatment in Türkiye: Patient Guide",
     seoTitle: "Dental Implant Treatment in Türkiye: Patient Guide | MyDentist",
     metaDescription:
@@ -209,6 +220,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "zirconia-crowns",
     title: "What Are Zirconia Dental Crowns?",
     seoTitle: "What Are Zirconia Dental Crowns? | MyDentist",
     metaDescription:
@@ -250,6 +262,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "zirconia-vs-e-max",
     title: "Zirconia vs E-max: Key Differences",
     seoTitle: "Zirconia vs E-max: Key Differences | MyDentist",
     metaDescription:
@@ -291,6 +304,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "zirconia-crown-longevity",
     title: "How Long Do Zirconia Crowns Last?",
     seoTitle: "How Long Do Zirconia Crowns Last? | MyDentist",
     metaDescription:
@@ -332,6 +346,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "zirconia-crown-procedure",
     title: "Zirconia Crown Procedure Step by Step",
     seoTitle: "Zirconia Crown Procedure Step by Step | MyDentist",
     metaDescription:
@@ -373,6 +388,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "zirconia-crown-care",
     title: "How to Care for Zirconia Crowns",
     seoTitle: "How to Care for Zirconia Crowns | MyDentist",
     metaDescription:
@@ -414,6 +430,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "all-on-4-treatment",
     title: "What Is All-on-4 and Who Is Eligible?",
     seoTitle: "What Is All-on-4 and Who Is Eligible? | MyDentist",
     metaDescription:
@@ -455,6 +472,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "all-on-6-treatment",
     title: "What Is All-on-6? Treatment Stages",
     seoTitle: "What Is All-on-6? Treatment Stages | MyDentist",
     metaDescription:
@@ -496,6 +514,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-4-vs-all-on-6",
     title: "All-on-4 vs All-on-6: Main Differences",
     seoTitle: "All-on-4 vs All-on-6: Main Differences | MyDentist",
     metaDescription:
@@ -537,6 +556,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "all-on-4-treatment-timeline",
     title: "How Long Does All-on-4 Treatment Take?",
     seoTitle: "How Long Does All-on-4 Treatment Take? | MyDentist",
     metaDescription:
@@ -578,6 +598,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "full-arch-implant-aftercare",
     title: "Care After All-on-4 and All-on-6 Treatment",
     seoTitle: "Care After All-on-4 and All-on-6 Treatment | MyDentist",
     metaDescription:
@@ -619,6 +640,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "teeth-whitening",
     title: "Teeth Whitening: Methods and Suitability",
     seoTitle: "Teeth Whitening: Methods and Suitability | MyDentist",
     metaDescription:
@@ -660,6 +682,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "dental-scaling",
     title: "How Often Should You Get Dental Scaling?",
     seoTitle: "How Often Should You Get Dental Scaling? | MyDentist",
     metaDescription:
@@ -701,6 +724,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "root-canal-treatment",
     title: "Root Canal Treatment: What to Expect",
     seoTitle: "Root Canal Treatment: What to Expect | MyDentist",
     metaDescription:
@@ -742,6 +766,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "dental-fillings",
     title: "Types of Dental Fillings and Procedure",
     seoTitle: "Types of Dental Fillings and Procedure | MyDentist",
     metaDescription:
@@ -783,6 +808,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "tooth-extraction-aftercare",
     title: "Tooth Extraction Aftercare Guide",
     seoTitle: "Tooth Extraction Aftercare Guide | MyDentist",
     metaDescription:
@@ -824,6 +850,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "wisdom-tooth-removal",
     title: "When Should Wisdom Teeth Be Removed?",
     seoTitle: "When Should Wisdom Teeth Be Removed? | MyDentist",
     metaDescription:
@@ -865,6 +892,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "clear-aligner-orthodontics",
     title: "Clear Aligners: How Treatment Works",
     seoTitle: "Clear Aligners: How Treatment Works | MyDentist",
     metaDescription:
@@ -906,6 +934,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "bleeding-gums",
     title: "Why Do Gums Bleed?",
     seoTitle: "Why Do Gums Bleed? | MyDentist",
     metaDescription:
@@ -947,6 +976,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "bruxism-night-guard",
     title: "Teeth Grinding and Night Guards",
     seoTitle: "Teeth Grinding and Night Guards | MyDentist",
     metaDescription:
@@ -988,6 +1018,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "smile-design",
     title: "What Is Digital Smile Design?",
     seoTitle: "What Is Digital Smile Design? | MyDentist",
     metaDescription:
@@ -1029,6 +1060,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "hollywood-smile",
     title: "What Is a Hollywood Smile?",
     seoTitle: "What Is a Hollywood Smile? | MyDentist",
     metaDescription:
@@ -1070,6 +1102,7 @@ export const en: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "gummy-smile",
     title: "Gummy Smile: Causes and Treatment Options",
     seoTitle: "Gummy Smile: Causes and Treatment Options | MyDentist",
     metaDescription:

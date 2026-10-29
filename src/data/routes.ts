@@ -16,7 +16,12 @@ import {
   type DetailPage,
 } from "./detail-pages";
 import { legal, legalSlug, type LegalDocKey } from "./legal";
-import { articlesOf, findArticle, hasBlog, type Article } from "./articles";
+import {
+  articlesOf,
+  findArticleBySlug,
+  hasBlog,
+  type Article,
+} from "./articles";
 import {
   LOCALES,
   localePrefix,
@@ -62,7 +67,11 @@ export function routeSegments(route: Route): string[] {
     case "blog":
       return [...prefix, segments[route.locale].blog];
     case "article":
-      return [...prefix, segments[route.locale].blog, route.article.key];
+      return [
+        ...prefix,
+        segments[route.locale].blog,
+        route.article.content[route.locale]!.slug,
+      ];
   }
 }
 
@@ -149,7 +158,7 @@ export function resolveRoute(path: string[] | undefined): Route | null {
 
   if (rest.length === 2) {
     if (rest[0] === seg.blog) {
-      const article = findArticle(locale, rest[1]);
+      const article = findArticleBySlug(locale, rest[1]);
       return article ? { kind: "article", locale, article } : null;
     }
     const kind: DetailKind | null =

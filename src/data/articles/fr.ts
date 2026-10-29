@@ -1,9 +1,16 @@
-/** Fransızca blog makaleleri. Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026). */
+/**
+ * Fransızca blog makaleleri.
+ *
+ * Kaynak: MyDentist_27_Konu_9_Dil_243_SEO_Makale.docx (29 Ekim 2026).
+ * `slug` belgedeki SEO anahtar kelimesinden üretildi; belgenin kendi
+ * önerdiği /blog/implant-01 biçimi anahtar kelimeyi kullanmıyordu.
+ */
 
 import type { ArticleContent } from "../articles";
 
 export const fr: Record<string, ArticleContent> = {
   "implant-01": {
+    slug: "implant-dentaire-definition-et-etapes",
     title: "Implant dentaire : définition et étapes",
     seoTitle: "Implant dentaire : définition et étapes | MyDentist",
     metaDescription:
@@ -45,6 +52,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "implant-02": {
+    slug: "combien-de-temps-dure-un-traitement-implantaire",
     title: "Combien de temps dure un traitement implantaire ?",
     seoTitle: "Combien de temps dure un traitement implantaire ? | MyDentist",
     metaDescription:
@@ -86,6 +94,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "implant-03": {
+    slug: "implant-ou-bridge-dentaire-que-choisir",
     title: "Implant ou bridge dentaire : que choisir ?",
     seoTitle: "Implant ou bridge dentaire : que choisir ? | MyDentist",
     metaDescription:
@@ -127,6 +136,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "implant-04": {
+    slug: "precautions-apres-la-pose-d-un-implant",
     title: "Précautions après la pose d’un implant",
     seoTitle: "Précautions après la pose d’un implant | MyDentist",
     metaDescription:
@@ -168,6 +178,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "implant-05": {
+    slug: "implants-dentaires-en-turquie-guide",
     title: "Implants dentaires en Turquie : guide",
     seoTitle: "Implants dentaires en Turquie : guide | MyDentist",
     metaDescription:
@@ -209,6 +220,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-06": {
+    slug: "qu-est-ce-qu-une-couronne-en-zircone",
     title: "Qu’est-ce qu’une couronne en zircone ?",
     seoTitle: "Qu’est-ce qu’une couronne en zircone ? | MyDentist",
     metaDescription:
@@ -250,6 +262,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-07": {
+    slug: "zircone-ou-e-max-quelles-differences",
     title: "Zircone ou E-max : quelles différences ?",
     seoTitle: "Zircone ou E-max : quelles différences ? | MyDentist",
     metaDescription:
@@ -291,6 +304,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-08": {
+    slug: "quelle-est-la-duree-de-vie-d-une-couronne-en-zircone",
     title: "Quelle est la durée de vie d’une couronne en zircone ?",
     seoTitle: "Quelle est la durée de vie d’une couronne en zircone ? | MyDentist",
     metaDescription:
@@ -332,6 +346,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-09": {
+    slug: "comment-se-deroule-la-pose-d-une-couronne-en-zircone",
     title: "Comment se déroule la pose d’une couronne en zircone ?",
     seoTitle: "Comment se déroule la pose d’une couronne en zircone ? | MyDentist",
     metaDescription:
@@ -373,6 +388,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "zirconia-10": {
+    slug: "entretien-des-couronnes-en-zircone",
     title: "Entretien des couronnes en zircone",
     seoTitle: "Entretien des couronnes en zircone | MyDentist",
     metaDescription:
@@ -414,6 +430,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-11": {
+    slug: "qu-est-ce-que-le-all-on-4",
     title: "Qu’est-ce que le All-on-4 ?",
     seoTitle: "Qu’est-ce que le All-on-4 ? | MyDentist",
     metaDescription:
@@ -455,6 +472,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-12": {
+    slug: "qu-est-ce-que-le-all-on-6",
     title: "Qu’est-ce que le All-on-6 ?",
     seoTitle: "Qu’est-ce que le All-on-6 ? | MyDentist",
     metaDescription:
@@ -496,6 +514,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-13": {
+    slug: "all-on-4-ou-all-on-6-comparaison",
     title: "All-on-4 ou All-on-6 : comparaison",
     seoTitle: "All-on-4 ou All-on-6 : comparaison | MyDentist",
     metaDescription:
@@ -537,6 +556,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-14": {
+    slug: "combien-de-temps-dure-le-all-on-4",
     title: "Combien de temps dure le All-on-4 ?",
     seoTitle: "Combien de temps dure le All-on-4 ? | MyDentist",
     metaDescription:
@@ -578,6 +598,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "all-on-15": {
+    slug: "entretien-apres-all-on-4-et-all-on-6",
     title: "Entretien après All-on-4 et All-on-6",
     seoTitle: "Entretien après All-on-4 et All-on-6 | MyDentist",
     metaDescription:
@@ -619,6 +640,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-16": {
+    slug: "blanchiment-dentaire-indications",
     title: "Blanchiment dentaire : indications",
     seoTitle: "Blanchiment dentaire : indications | MyDentist",
     metaDescription:
@@ -660,6 +682,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-17": {
+    slug: "a-quelle-frequence-faire-un-detartrage",
     title: "À quelle fréquence faire un détartrage ?",
     seoTitle: "À quelle fréquence faire un détartrage ? | MyDentist",
     metaDescription:
@@ -701,6 +724,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-18": {
+    slug: "traitement-de-canal-deroulement",
     title: "Traitement de canal : déroulement",
     seoTitle: "Traitement de canal : déroulement | MyDentist",
     metaDescription:
@@ -742,6 +766,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-19": {
+    slug: "plombage-dentaire-materiaux-et-etapes",
     title: "Plombage dentaire : matériaux et étapes",
     seoTitle: "Plombage dentaire : matériaux et étapes | MyDentist",
     metaDescription:
@@ -783,6 +808,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-20": {
+    slug: "conseils-apres-une-extraction-dentaire",
     title: "Conseils après une extraction dentaire",
     seoTitle: "Conseils après une extraction dentaire | MyDentist",
     metaDescription:
@@ -824,6 +850,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-21": {
+    slug: "quand-extraire-les-dents-de-sagesse",
     title: "Quand extraire les dents de sagesse ?",
     seoTitle: "Quand extraire les dents de sagesse ? | MyDentist",
     metaDescription:
@@ -865,6 +892,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-22": {
+    slug: "gouttieres-transparentes-principe",
     title: "Gouttières transparentes : principe",
     seoTitle: "Gouttières transparentes : principe | MyDentist",
     metaDescription:
@@ -906,6 +934,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-23": {
+    slug: "pourquoi-les-gencives-saignent-elles",
     title: "Pourquoi les gencives saignent-elles ?",
     seoTitle: "Pourquoi les gencives saignent-elles ? | MyDentist",
     metaDescription:
@@ -947,6 +976,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-24": {
+    slug: "bruxisme-et-gouttiere-nocturne",
     title: "Bruxisme et gouttière nocturne",
     seoTitle: "Bruxisme et gouttière nocturne | MyDentist",
     metaDescription:
@@ -988,6 +1018,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-25": {
+    slug: "qu-est-ce-que-le-smile-design",
     title: "Qu’est-ce que le smile design ?",
     seoTitle: "Qu’est-ce que le smile design ? | MyDentist",
     metaDescription:
@@ -1029,6 +1060,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-26": {
+    slug: "qu-est-ce-que-le-hollywood-smile",
     title: "Qu’est-ce que le Hollywood Smile ?",
     seoTitle: "Qu’est-ce que le Hollywood Smile ? | MyDentist",
     metaDescription:
@@ -1070,6 +1102,7 @@ export const fr: Record<string, ArticleContent> = {
     ],
   },
   "dental-27": {
+    slug: "sourire-gingival-causes-et-solutions",
     title: "Sourire gingival : causes et solutions",
     seoTitle: "Sourire gingival : causes et solutions | MyDentist",
     metaDescription:
