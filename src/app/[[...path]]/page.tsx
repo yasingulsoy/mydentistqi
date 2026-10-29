@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { Landing } from "@/components/Landing";
 import { DetailPage } from "@/components/DetailPage";
 import { LegalPage } from "@/components/LegalPage";
+import { BlogIndex } from "@/components/BlogIndex";
+import { ArticlePage } from "@/components/ArticlePage";
 import { content } from "@/data/content";
 import { legal } from "@/data/legal";
 import { brand } from "@/data/site";
@@ -11,6 +13,7 @@ import {
   allRoutes,
   resolveRoute,
   routeAlternates,
+  routeHreflangs,
   routeHref,
   routeSegments,
   type Route,
@@ -29,10 +32,18 @@ export function generateStaticParams() {
 
 /** hreflang kümesi — her dil + arama motorlarına varsayılan olarak Türkçe. */
 function alternates(route: Route) {
-  const languages = routeAlternates(route);
+  // Dil değiştirici karşılığı olmayan dilde ana sayfaya düşer; hreflang'de
+  // bunu yapamayız (sayfanın İspanyolcası ana sayfa değildir), o yüzden
+  // burada yalnızca gerçekten var olan diller listeleniyor.
+  const languages = routeHreflangs(route);
   return {
     canonical: routeHref(route),
-    languages: { ...languages, "x-default": languages[defaultLocale] },
+    languages: {
+      ...languages,
+      ...(languages[defaultLocale]
+        ? { "x-default": languages[defaultLocale] }
+        : {}),
+    },
   };
 }
 
@@ -88,23 +99,50 @@ export async function generateMetadata({
     };
   }
 
-  const { title, description } =
-    route.kind === "detail"
-      ? {
-          title: route.page.content[route.locale].title,
-          description: route.page.content[route.locale].metaDescription,
-        }
-      : {
-          title: legal[route.locale][route.doc].title,
-          description: legal[route.locale][route.doc].description,
-        };
+  let title: string;
+  let description: string;
+  let ogType: "article" | "website" = "article";
+
+  if (route.kind === "detail") {
+    title = route.page.content[route.locale].title;
+    description = route.page.content[route.locale].metaDescription;
+  } else if (route.kind === "legal") {
+    title = legal[route.locale][route.doc].title;
+    description = legal[route.locale][route.doc].description;
+  } else if (route.kind === "article") {
+    const c = route.article.content[route.locale]!;
+    // Belgedeki SEO Title zaten "... | MyDentist" ile bitiyor; marka adını
+    // ikinci kez eklemiyoruz.
+    return {
+      title: c.seoTitle,
+      description: c.metaDescription,
+      keywords: [c.keyword],
+      alternates: alternates(route),
+      openGraph: {
+        type: "article",
+        title: c.title,
+        description: c.metaDescription,
+        ...shared(route),
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: c.title,
+        description: c.metaDescription,
+        images: [`/og/${route.locale}`],
+      },
+    };
+  } else {
+    title = dict.blog.title;
+    description = dict.blog.description;
+    ogType = "website";
+  }
 
   return {
     title: `${title} | ${brand.name}`,
     description,
     alternates: alternates(route),
     openGraph: {
-      type: "article",
+      type: ogType,
       title,
       description,
       ...shared(route),
@@ -155,6 +193,12 @@ export default async function Page({
           doc={legal[route.locale][route.doc]}
           path={routeHref(route)}
         />
+      );
+    case "blog":
+      return <BlogIndex dict={dict} alternates={langs} />;
+    case "article":
+      return (
+        <ArticlePage dict={dict} alternates={langs} article={route.article} />
       );
   }
 }

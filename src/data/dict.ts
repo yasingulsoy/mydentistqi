@@ -125,6 +125,26 @@ export type Dict = {
     title: string;
     description: string;
   };
+  /** Blog listesi ve makale sayfalarının arayüz metinleri. */
+  blog: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    /** Navigasyon ve kırıntı yolu etiketi */
+    crumb: string;
+    readMore: string;
+    backToBlog: string;
+    related: string;
+    /** Yazının hedeflediği arama terimi etiketi (makale altı) */
+    categories: {
+      implant: string;
+      zirconia: string;
+      "all-on": string;
+      dental: string;
+    };
+    /** Tıbbi sorumluluk reddi — her makalenin altında */
+    notice: string;
+  };
   detail: {
     treatmentsCrumb: string;
     destinationsCrumb: string;

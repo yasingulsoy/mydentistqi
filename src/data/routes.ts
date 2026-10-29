@@ -16,6 +16,7 @@ import {
   type DetailPage,
 } from "./detail-pages";
 import { legal, legalSlug, type LegalDocKey } from "./legal";
+import { articlesOf, findArticle, hasBlog, type Article } from "./articles";
 import {
   LOCALES,
   localePrefix,
@@ -30,7 +31,9 @@ export type { LegalDocKey };
 export type Route =
   | { kind: "home"; locale: Locale }
   | { kind: "detail"; locale: Locale; detailKind: DetailKind; page: DetailPage }
-  | { kind: "legal"; locale: Locale; doc: LegalDocKey };
+  | { kind: "legal"; locale: Locale; doc: LegalDocKey }
+  | { kind: "blog"; locale: Locale }
+  | { kind: "article"; locale: Locale; article: Article };
 
 /** Detay türünün hangi yol segmentini kullandığı. */
 const DETAIL_SEGMENT: Record<DetailKind, SegmentKey> = {
@@ -56,6 +59,10 @@ export function routeSegments(route: Route): string[] {
       ];
     case "legal":
       return [...prefix, legalSlug(route.locale, route.doc)];
+    case "blog":
+      return [...prefix, segments[route.locale].blog];
+    case "article":
+      return [...prefix, segments[route.locale].blog, route.article.key];
   }
 }
 
@@ -63,8 +70,21 @@ export function routeHref(route: Route): string {
   return toHref(routeSegments(route));
 }
 
-/** Aynı sayfanın diğer dillerdeki hâli — hreflang ve dil değiştirici için. */
+/**
+ * Aynı sayfanın başka bir dildeki hâli.
+ *
+ * Blog her dilde YOK (İspanyolca'da makale yok) ve bir makale yalnızca
+ * metni olan dillerde var. Karşılığı olmayan dillerde ana sayfaya
+ * düşüyoruz; böylece dil değiştirici 404'e götürmüyor ve hreflang
+ * olmayan bir sayfayı göstermiyor.
+ */
 export function translateRoute(route: Route, locale: Locale): Route {
+  if (route.kind === "blog" && !hasBlog(locale)) {
+    return { kind: "home", locale };
+  }
+  if (route.kind === "article" && !route.article.content[locale]) {
+    return { kind: "home", locale };
+  }
   return { ...route, locale };
 }
 
@@ -76,6 +96,21 @@ export function routeAlternates(route: Route): Record<Locale, string> {
   return Object.fromEntries(
     LOCALES.map((l) => [l, routeHref(translateRoute(route, l))]),
   ) as Record<Locale, string>;
+}
+
+/**
+ * hreflang için: SADECE bu sayfanın gerçekten karşılığı olan diller.
+ * `routeAlternates` dil değiştirici içindir ve karşılığı olmayan dilde
+ * ana sayfaya düşer; hreflang'de bunu yapmak "bu sayfanın İspanyolcası
+ * ana sayfadır" demek olur ve yanlıştır.
+ */
+export function routeHreflangs(route: Route): Partial<Record<Locale, string>> {
+  const out: Partial<Record<Locale, string>> = {};
+  for (const l of LOCALES) {
+    const t = translateRoute(route, l);
+    if (t.kind === route.kind) out[l] = routeHref(t);
+  }
+  return out;
 }
 
 /* ------------------------------------------------------------------ */
@@ -103,6 +138,9 @@ export function resolveRoute(path: string[] | undefined): Route | null {
   const seg = segments[locale];
 
   if (rest.length === 1) {
+    if (rest[0] === seg.blog) {
+      return hasBlog(locale) ? { kind: "blog", locale } : null;
+    }
     for (const doc of Object.keys(legal[locale]) as LegalDocKey[]) {
       if (legalSlug(locale, doc) === rest[0]) return { kind: "legal", locale, doc };
     }
@@ -110,6 +148,10 @@ export function resolveRoute(path: string[] | undefined): Route | null {
   }
 
   if (rest.length === 2) {
+    if (rest[0] === seg.blog) {
+      const article = findArticle(locale, rest[1]);
+      return article ? { kind: "article", locale, article } : null;
+    }
     const kind: DetailKind | null =
       rest[0] === seg.treatments
         ? "treatment"
@@ -135,6 +177,12 @@ export function allRoutes(): Route[] {
     routes.push({ kind: "home", locale });
     for (const doc of Object.keys(legal[locale]) as LegalDocKey[]) {
       routes.push({ kind: "legal", locale, doc });
+    }
+    if (hasBlog(locale)) {
+      routes.push({ kind: "blog", locale });
+      for (const article of articlesOf(locale)) {
+        routes.push({ kind: "article", locale, article });
+      }
     }
     for (const [detailKind, pages] of Object.entries(detailPages) as [
       DetailKind,

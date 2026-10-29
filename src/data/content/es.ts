@@ -287,6 +287,24 @@ export const es: Dict = {
     description:
       "Rellene el formulario y nuestros asesores se pondrán en contacto con usted. Ofrecemos una evaluación previa gratuita sobre su plan de tratamiento, el proceso y los detalles del viaje.",
   },
+  blog: {
+    eyebrow: "BLOG",
+    title: "Guía de tratamientos dentales",
+    description:
+      "Artículos informativos sobre implantes, coronas de circonio, All-on-4 y tratamientos dentales generales.",
+    crumb: "Blog",
+    readMore: "Leer el artículo",
+    backToBlog: "Todos los artículos",
+    related: "Artículos relacionados",
+    categories: {
+      implant: "Implantes",
+      zirconia: "Coronas de circonio",
+      "all-on": "All-on-4 / All-on-6",
+      dental: "Odontología general",
+    },
+    notice:
+      "Este artículo tiene únicamente carácter informativo general. No constituye asesoramiento médico ni sustituye a un examen por parte de un dentista. Para un diagnóstico y un plan de tratamiento, consulte al dentista que le examine.",
+  },
   detail: {
     treatmentsCrumb: "Tratamientos",
     destinationsCrumb: "Destinos",

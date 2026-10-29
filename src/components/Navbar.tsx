@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
 import { ChevronDownIcon } from "./icons";
 import { ThemeToggle } from "./ThemeToggle";
+import { blogPath, hasBlog } from "@/data/articles";
 import {
   LOCALES,
   localeMeta,
@@ -103,6 +104,21 @@ export function Navbar({
 }) {
   const [open, setOpen] = useState(false);
 
+  /**
+   * Sözlükteki linkler çıpa ("#tedaviler"); blog gerçek bir sayfa olduğu
+   * için `path` ile geliyor ve sectionHref'ten geçmiyor. Makalesi olmayan
+   * dilde (İspanyolca) hiç eklenmiyor.
+   */
+  const navLinks: { href: string; label: string; wideOnly?: boolean; path?: string }[] =
+    [...dict.nav.links];
+  if (hasBlog(dict.locale)) {
+    navLinks.splice(navLinks.length - 1, 0, {
+      href: "blog",
+      label: dict.blog.crumb,
+      path: blogPath(dict.locale),
+    });
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-nav-border bg-nav/95 backdrop-blur-md">
       <nav className="section-x flex h-[72px] items-center gap-8 lg:h-[85px]">
@@ -112,10 +128,10 @@ export function Navbar({
 
         {/* sm-lg arası: Figma'nın 709px mobil düzeni — linkler satır içi, CTA yok */}
         <ul className="no-scrollbar hidden min-w-0 flex-1 items-center gap-4 overflow-x-auto text-[14px] text-nav-muted sm:flex lg:gap-8 lg:overflow-visible lg:text-[15px]">
-          {dict.nav.links.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.href} className={link.wideOnly ? "hidden lg:block" : ""}>
               <a
-                href={sectionHref(dict.locale, link.href)}
+                href={link.path ?? sectionHref(dict.locale, link.href)}
                 className="relative whitespace-nowrap py-1 transition-colors after:absolute after:inset-x-0 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-brand-500 after:transition-transform after:duration-300 hover:text-nav-fg hover:after:scale-x-100 rtl:after:origin-right"
               >
                 {link.label}
@@ -170,10 +186,10 @@ export function Navbar({
       {open && (
         <div className="border-t border-nav-border sm:hidden">
           <ul className="section-x flex flex-col py-2">
-            {dict.nav.links.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.href}>
                 <a
-                  href={sectionHref(dict.locale, link.href)}
+                  href={link.path ?? sectionHref(dict.locale, link.href)}
                   onClick={() => setOpen(false)}
                   className="block py-3 text-[15px] text-nav-fg"
                 >

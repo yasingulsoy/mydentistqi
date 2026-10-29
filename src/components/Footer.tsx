@@ -9,6 +9,7 @@ import {
 import Link from "next/link";
 import { brand, brandAddress, sectionHref, type Dict } from "@/data/content";
 import { legalPath } from "@/data/legal";
+import { blogPath, hasBlog } from "@/data/articles";
 
 const socials = [
   { label: "Instagram", Icon: InstagramIcon, href: "#" },
@@ -54,7 +55,7 @@ export function Footer({ dict }: { dict: Dict }) {
           </div>
 
           {/* Link sütunları */}
-          {t.columns.map((column) => (
+          {t.columns.map((column, i) => (
             <nav key={column.title} aria-label={column.title}>
               <h2 className={headingClass}>{column.title}</h2>
               <ul className="mt-5 flex flex-col gap-3.5">
@@ -63,6 +64,15 @@ export function Footer({ dict }: { dict: Dict }) {
                     <a href={sectionHref(dict.locale, link.href)} className={linkClass}>{link.label}</a>
                   </li>
                 ))}
+                {/* Blog gerçek bir sayfa (çıpa değil); yalnızca ilk sütunda
+                    ve makalesi olan dillerde gösteriliyor. */}
+                {i === 0 && hasBlog(dict.locale) && (
+                  <li>
+                    <Link href={blogPath(dict.locale)} className={linkClass}>
+                      {dict.blog.crumb}
+                    </Link>
+                  </li>
+                )}
               </ul>
             </nav>
           ))}

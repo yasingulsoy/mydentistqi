@@ -61,7 +61,12 @@ export function localePrefix(locale: Locale): string[] {
  * Kiril ve Arap alfabeli dillerde segmentler bilinçli olarak LATİN
  * harfle yazıldı; yüzde kodlanmış URL'ler paylaşılırken bozuluyor.
  */
-export type SegmentKey = "treatments" | "destinations" | "privacy" | "terms";
+export type SegmentKey =
+  | "treatments"
+  | "destinations"
+  | "privacy"
+  | "terms"
+  | "blog";
 
 export const segments: Record<Locale, Record<SegmentKey, string>> = {
   tr: {
@@ -69,24 +74,28 @@ export const segments: Record<Locale, Record<SegmentKey, string>> = {
     destinations: "rotalar",
     privacy: "gizlilik-politikasi",
     terms: "kullanim-sartlari",
+    blog: "blog",
   },
   en: {
     treatments: "treatments",
     destinations: "destinations",
     privacy: "privacy-policy",
     terms: "terms-of-use",
+    blog: "blog",
   },
   de: {
     treatments: "behandlungen",
     destinations: "reiseziele",
     privacy: "datenschutz",
     terms: "nutzungsbedingungen",
+    blog: "blog",
   },
   bg: {
     treatments: "lecheniya",
     destinations: "destinatsii",
     privacy: "poveritelnost",
     terms: "usloviya-za-polzvane",
+    blog: "blog",
   },
   // Arapça'da yol segmentleri İngilizce: Arap alfabeli URL'ler yüzde
   // kodlandığında paylaşılırken okunmaz hâle geliyor, latin harfle
@@ -96,18 +105,21 @@ export const segments: Record<Locale, Record<SegmentKey, string>> = {
     destinations: "destinations",
     privacy: "privacy-policy",
     terms: "terms-of-use",
+    blog: "blog",
   },
   fr: {
     treatments: "traitements",
     destinations: "destinations",
     privacy: "politique-de-confidentialite",
     terms: "conditions-d-utilisation",
+    blog: "blog",
   },
   es: {
     treatments: "tratamientos",
     destinations: "destinos",
     privacy: "politica-de-privacidad",
     terms: "condiciones-de-uso",
+    blog: "blog",
   },
 };
 

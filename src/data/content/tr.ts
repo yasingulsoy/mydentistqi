@@ -290,6 +290,24 @@ export const tr: Dict = {
     description:
       "Formu doldurun, uzman danışmanlarımız size dönsün. Tedavi planınız, süreç ve seyahat detayları için ücretsiz ön değerlendirme sunuyoruz.",
   },
+  blog: {
+    eyebrow: "BLOG",
+    title: "Diş Tedavileri Rehberi",
+    description:
+      "İmplant, zirkonyum kaplama, All-on-4 ve genel diş tedavileri hakkında bilgilendirme yazıları.",
+    crumb: "Blog",
+    readMore: "Yazıyı oku",
+    backToBlog: "Tüm yazılar",
+    related: "İlgili yazılar",
+    categories: {
+      implant: "İmplant",
+      zirconia: "Zirkonyum Kaplama",
+      "all-on": "All-on-4 / All-on-6",
+      dental: "Genel Diş Tedavileri",
+    },
+    notice:
+      "Bu yazı genel bilgilendirme amaçlıdır. Tıbbi tavsiye değildir ve hekim muayenesinin yerini tutmaz. Kesin tanı ve tedavi planı için sizi muayene eden diş hekimine başvurun.",
+  },
   detail: {
     treatmentsCrumb: "Tedaviler",
     destinationsCrumb: "Rotalar",

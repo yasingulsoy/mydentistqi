@@ -286,6 +286,24 @@ export const de: Dict = {
     description:
       "Füllen Sie das Formular aus und unsere Berater melden sich bei Ihnen. Wir bieten eine kostenlose Vorabprüfung zu Behandlungsplan, Ablauf und Reisedetails.",
   },
+  blog: {
+    eyebrow: "BLOG",
+    title: "Ratgeber Zahnbehandlung",
+    description:
+      "Informationsbeiträge zu Implantaten, Zirkonkronen, All-on-4 und allgemeiner Zahnbehandlung.",
+    crumb: "Blog",
+    readMore: "Beitrag lesen",
+    backToBlog: "Alle Beiträge",
+    related: "Ähnliche Beiträge",
+    categories: {
+      implant: "Implantate",
+      zirconia: "Zirkonkronen",
+      "all-on": "All-on-4 / All-on-6",
+      dental: "Allgemeine Zahnpflege",
+    },
+    notice:
+      "Dieser Beitrag dient ausschließlich der allgemeinen Information. Er stellt keine medizinische Beratung dar und ersetzt keine zahnärztliche Untersuchung. Für Diagnose und Behandlungsplan wenden Sie sich an den Sie untersuchenden Zahnarzt.",
+  },
   detail: {
     treatmentsCrumb: "Behandlungen",
     destinationsCrumb: "Reiseziele",

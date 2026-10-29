@@ -289,6 +289,24 @@ export const fr: Dict = {
     description:
       "Remplissez le formulaire et nos conseillers vous recontacteront. Nous proposons une pré-évaluation gratuite portant sur votre plan de traitement, le parcours et les détails du voyage.",
   },
+  blog: {
+    eyebrow: "BLOG",
+    title: "Guide des soins dentaires",
+    description:
+      "Articles d'information sur les implants, les couronnes en zircone, l'All-on-4 et les soins dentaires généraux.",
+    crumb: "Blog",
+    readMore: "Lire l'article",
+    backToBlog: "Tous les articles",
+    related: "Articles liés",
+    categories: {
+      implant: "Implants",
+      zirconia: "Couronnes en zircone",
+      "all-on": "All-on-4 / All-on-6",
+      dental: "Soins dentaires généraux",
+    },
+    notice:
+      "Cet article est fourni à titre d'information générale. Il ne constitue pas un avis médical et ne remplace pas un examen par un dentiste. Pour un diagnostic et un plan de traitement, consultez le dentiste qui vous examine.",
+  },
   detail: {
     treatmentsCrumb: "Traitements",
     destinationsCrumb: "Destinations",

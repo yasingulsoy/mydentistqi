@@ -282,6 +282,24 @@ export const en: Dict = {
     description:
       "Fill in the form and our consultants will get back to you. We offer a free pre-assessment covering your treatment plan, the process and travel details.",
   },
+  blog: {
+    eyebrow: "BLOG",
+    title: "Dental Treatment Guide",
+    description:
+      "Informational articles on implants, zirconium crowns, All-on-4 and general dental treatments.",
+    crumb: "Blog",
+    readMore: "Read article",
+    backToBlog: "All articles",
+    related: "Related articles",
+    categories: {
+      implant: "Implants",
+      zirconia: "Zirconium Crowns",
+      "all-on": "All-on-4 / All-on-6",
+      dental: "General Dental Care",
+    },
+    notice:
+      "This article is for general information only. It is not medical advice and does not replace an examination by a dentist. For a diagnosis and treatment plan, consult the dentist examining you.",
+  },
   detail: {
     treatmentsCrumb: "Treatments",
     destinationsCrumb: "Destinations",
